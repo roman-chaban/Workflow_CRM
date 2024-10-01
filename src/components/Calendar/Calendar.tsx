@@ -1,12 +1,14 @@
 'use client';
 
 import { useState } from 'react';
+import { Button } from '../ui/Button/Button';
+import { Next, Previous } from 'grommet-icons';
+
 import dayjs from 'dayjs';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
 import advancedFormat from 'dayjs/plugin/advancedFormat';
+
 import styles from './Calendar.module.scss';
-import { Button } from '../ui/Button/Button';
-import { Next, Previous } from 'grommet-icons';
 
 dayjs.extend(customParseFormat);
 dayjs.extend(advancedFormat);

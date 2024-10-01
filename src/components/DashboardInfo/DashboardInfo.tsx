@@ -2,16 +2,18 @@
 
 import type { FC } from 'react';
 import { useState } from 'react';
-import styles from './DashboardInfo.module.scss';
-import { Calendar } from '../Calendar/Calendar';
-import formatTodayDate from '@/utils/formateDate';
 import Image from 'next/image';
 
+import { Calendar } from '../Calendar/Calendar';
+import formatTodayDate from '@/utils/formateDate';
+
+import styles from './DashboardInfo.module.scss';
+
 export const DashboardInfo: FC = () => {
-  const [isCalendarVisible, setIsCalendarVisible] = useState(false);
+  const [isCalendarVisible, setIsCalendarVisible] = useState<boolean>(false);
 
   const toggleCalendar = () => {
-    setIsCalendarVisible((prev) => !prev);
+    setIsCalendarVisible((prevState) => !prevState);
   };
 
   return (

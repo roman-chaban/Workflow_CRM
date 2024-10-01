@@ -1,10 +1,12 @@
 import type { FC } from 'react';
-import styles from './Sidebar.module.scss';
 import Image from 'next/image';
+import Link from 'next/link';
+
+import styles from './Sidebar.module.scss';
+
 import { Nav } from '../Nav/Nav';
 import { nav } from '@/types/nav';
 import { Button } from '../ui/Button/Button';
-import Link from 'next/link';
 
 export const Sidebar: FC = () => {
   return (

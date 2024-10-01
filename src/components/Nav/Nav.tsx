@@ -1,8 +1,10 @@
 import type { FC } from 'react';
-import styles from './Nav.module.scss';
-import { NavItem } from '@/types/nav';
 import Link from 'next/link';
 import Image from 'next/image';
+
+import { NavItem } from '@/types/nav';
+
+import styles from './Nav.module.scss';
 
 interface NavProps {
   nav: Array<NavItem>;

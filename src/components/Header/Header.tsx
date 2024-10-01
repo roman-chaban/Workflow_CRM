@@ -1,12 +1,16 @@
 'use client';
 
 import { useState, type FC } from 'react';
-import styles from './Header.module.scss';
-import { Input } from '../ui/Input/Input';
 import Image from 'next/image';
+
+import { Input } from '../ui/Input/Input';
 import { Button } from '../ui/Button/Button';
 
+import styles from './Header.module.scss';
+
 export const Header: FC = () => {
+  const [search, setSearch] = useState<string>('');
+
   const searchIcon = (
     <Image
       priority
@@ -16,7 +20,7 @@ export const Header: FC = () => {
       height={20}
     />
   );
-  const [search, setSearch] = useState<string>('');
+
   return (
     <header className={styles['header']}>
       <div className={styles['header__container']}>
