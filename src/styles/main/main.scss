@@ -1,0 +1,10 @@
+@use '../colors/colors' as color;
+@use '../functions/functions' as *;
+@import '../fonts/fonts';
+@import '../reset/reset';
+
+body {
+  font-family: 'Nunito Sans';
+  background: color.$color-main-background;
+  padding: rem(20px) rem(20px) rem(25px) rem(20px);
+}

@@ -1,0 +1,22 @@
+@use '../../styles/colors/colors' as color;
+@use '../../styles/functions/functions' as *;
+@use '../../styles/globals/globals' as size;
+
+.nav {
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    gap: rem(30px);
+  }
+  &__menu-item {
+    display: flex;
+    align-items: center;
+    gap: rem(16px);
+  }
+  &__menu-link {
+    color: color.$color-gray;
+    font-size: size.$font-size-16px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,10 @@
+$base-font-size: 16px;
+
+@function rem($px, $base-font-size: $base-font-size) {
+  @if (type-of($px) == 'number' and $px > 0) {
+    @return $px / $base-font-size * 1rem;
+  } @else {
+    @warn "The value #{$px} is not a valid number or less than 0.";
+    @return null;
+  }
+}

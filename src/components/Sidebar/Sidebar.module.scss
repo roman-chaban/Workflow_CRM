@@ -1,0 +1,71 @@
+@use '../../styles/colors/colors' as color;
+@use '../../styles/functions/functions' as *;
+@use '../../styles/globals/globals' as size;
+
+.sidebar {
+  width: 100%;
+  max-width: rem(200px);
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: rem(42px);
+    width: 100%;
+    max-width: rem(200px);
+    height: 100%;
+    background: color.$color-white;
+    box-shadow: color.$color-box-shadow-background;
+    border-radius: rem(24px);
+    padding: rem(40px) 0 rem(45px) rem(16px);
+  }
+
+  &__logo {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  &__support {
+    display: flex;
+    flex-direction: column;
+    gap: rem(50px);
+  }
+  &__support-block {
+    width: 100%;
+    max-width: rem(168px);
+    position: relative;
+  }
+  &__support-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: rem(129px);
+    height: rem(46px);
+    background: color.$color-support-background;
+    box-shadow: color.$color-support-box-shadow;
+    position: absolute;
+    color: color.$color-white;
+    font-size: size.$font-size-16px;
+    font-weight: 700;
+    border-radius: rem(14px);
+    left: 16.5px;
+    top: 122.6px;
+  }
+  &__image-support {
+    width: 100%;
+    max-width: rem(168px);
+    height: auto;
+    object-fit: cover;
+  }
+  &__logout {
+    display: flex;
+    align-items: center;
+    gap: rem(16px);
+    background: transparent;
+    font-weight: 600;
+    font-size: size.$font-size-16px;
+    > a {
+      color: color.$color-gray;
+    }
+  }
+}
