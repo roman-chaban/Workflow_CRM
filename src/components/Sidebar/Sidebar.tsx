@@ -23,6 +23,7 @@ export const Sidebar: FC = () => {
         <div className={styles['sidebar__support']}>
           <div className={styles['sidebar__support-block']}>
             <Image
+              priority
               src="/images/support/Support.svg"
               alt="Support Image"
               width={148}

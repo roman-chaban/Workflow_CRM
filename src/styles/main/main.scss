@@ -4,7 +4,21 @@
 @import '../reset/reset';
 
 body {
+  display: grid;
+  grid-template-columns: rem(200px) 1fr;
+  gap: rem(30px);
   font-family: 'Nunito Sans';
   background: color.$color-main-background;
   padding: rem(20px) rem(20px) rem(25px) rem(20px);
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: rem(50px);
 }
