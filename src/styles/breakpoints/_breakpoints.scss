@@ -1,0 +1,33 @@
+@use '../functions/functions' as *;
+
+$breakpoint-large: rem(1440px);
+$breakpoint-lmedium: rem(1200px);
+$breakpoint-medium: rem(1024px);
+$breakpoint-small: rem(768px);
+$breakpoint-xsmall: rem(600px);
+
+$breakpoint-lmedium: 1200px;
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == large {
+    @media (max-width: $breakpoint-large) {
+      @content;
+    }
+  } @else if $breakpoint == lmedium {
+    @media (max-width: $breakpoint-lmedium) {
+      @content;
+    }
+  } @else if $breakpoint == medium {
+    @media (max-width: $breakpoint-medium) {
+      @content;
+    }
+  } @else if $breakpoint == small {
+    @media (max-width: $breakpoint-small) {
+      @content;
+    }
+  } @else if $breakpoint == xsmall {
+    @media (max-width: $breakpoint-xsmall) {
+      @content;
+    }
+  }
+}

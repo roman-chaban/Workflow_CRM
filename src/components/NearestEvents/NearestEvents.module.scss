@@ -2,6 +2,7 @@
 @use '../../styles/globals/globals' as size;
 @use '../../styles/functions/functions' as *;
 @use '../../styles/mixins/mixins' as *;
+@use '../../styles/breakpoints/breakpoints' as *;
 
 .nearest {
   width: 100%;

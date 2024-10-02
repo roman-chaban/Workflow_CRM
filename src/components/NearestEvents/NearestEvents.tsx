@@ -9,6 +9,7 @@ import { useFetch } from '@/hooks/useFetch';
 import { TEvents } from '@/types/events';
 
 import styles from './NearestEvents.module.scss';
+import { PATHS } from '@/constants/paths';
 
 export const NearestEvents: FC = () => {
   const { data, loading, error } = useFetch<TEvents>({
@@ -23,7 +24,7 @@ export const NearestEvents: FC = () => {
       <div className={styles['nearest__container']}>
         <div className={styles['nearest__header']}>
           <h3 className={styles['nearest__header-title']}>Nearest Events</h3>
-          <Link href={''} className={styles['nearest__header-link']}>
+          <Link href={PATHS.NEAREST} className={styles['nearest__header-link']}>
             View all{' '}
             <Image
               src="/icons/workload/arrow-right.svg"
