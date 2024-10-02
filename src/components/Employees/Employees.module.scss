@@ -1,0 +1,10 @@
+@use '../../styles/colors/colors' as color;
+@use '../../styles/globals/globals' as size;
+@use '../../styles/functions/functions' as *;
+
+.employees {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  gap: rem(16px);
+}

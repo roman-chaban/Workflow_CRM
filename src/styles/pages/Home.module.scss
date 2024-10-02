@@ -1,6 +1,17 @@
-
+@use '../functions/functions' as *;
 
 .home {
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: rem(28px);
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: rem(30px);
 }

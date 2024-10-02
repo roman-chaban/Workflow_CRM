@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "image": "/images/employees/primary-employee.svg",
+        "fullName": "Shawn Stone",
+        "role": "UI/UX Designer",
+        "position": "Middle",
+        "employment": 80
+    },
+    {
+        "id": 2,
+        "image": "/images/employees/secondary-employee.svg",
+        "fullName": "Randy Delgado",
+        "role": "UI/UX Designer",
+        "position": "Junior",
+        "employment": 68
+    },
+    {
+        "id": 3,
+        "image": "/images/employees/tertiary-employee.svg",
+        "fullName": "Emily Tyler",
+        "role": "Copywriter",
+        "position": "Middle",
+        "employment": 55
+    },
+    {
+        "id": 4,
+        "image": "/images/employees/fourth-employee.svg",
+        "fullName": "Louis Castro",
+        "role": "UI/UX Designer",
+        "position": "Senior",
+        "employment": 25
+    },
+    {
+        "id": 5,
+        "image": "/images/employees/five-employee.svg",
+        "fullName": "Blake Silva",
+        "role": "IOS Developer",
+        "position": "Senior",
+        "employment": 80
+    },
+    {
+        "id": 6,
+        "image": "/images/employees/six-employee.svg",
+        "fullName": "Joel Phillips",
+        "role": "UI/UX Designer",
+        "position": "Middle",
+        "employment": 40
+    },
+    {
+        "id": 7,
+        "image": "/images/employees/seven-employee.svg",
+        "fullName": "Wayne Marsh",
+        "role": "Copywriter",
+        "position": "Junior",
+        "employment": 90
+    },
+    {
+        "id": 8,
+        "image": "/images/employees/eight-employee.svg",
+        "fullName": "Oscar Holloway",
+        "role": "UI/UX Designer",
+        "position": "Middle",
+        "employment": 73
+    }
+]

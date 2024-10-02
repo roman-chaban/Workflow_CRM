@@ -10,4 +10,3 @@ export default function formatTodayDate(): string {
   return `${startDate} - ${endDate}`;
 }
 
-console.log(formatTodayDate());
