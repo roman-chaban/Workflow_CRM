@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "title": "Presentation of the new department",
+        "day": "Today",
+        "hour": "5:00 PM",
+        "duration": "4h"
+    },
+    {
+        "id": 2,
+        "title": "Anna’s Birthday",
+        "day": "Today",
+        "hour": "6:00 PM",
+        "duration": "4h"
+    },
+    {
+        "id": 3,
+        "title": "Ray’s Birthday",
+        "day": "Tomorrow",
+        "hour": "2:00 PM",
+        "duration": "4h"
+    }
+]

@@ -1,12 +1,13 @@
 'use client';
 
 import type { FC } from 'react';
-import styles from './Workload.module.scss';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useFetch } from '@/hooks/useFetch';
 import { TEmployees } from '@/types/employees';
 import { Employees } from '../Employees/Employees';
+
+import styles from './Workload.module.scss';
 
 export const Workload: FC = () => {
   const { data, loading, error } = useFetch<TEmployees>({
