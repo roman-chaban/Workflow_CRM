@@ -1,0 +1,218 @@
+@use '../../../styles/colors/colors' as color;
+@use '../../../styles/globals/globals' as size;
+@use '../../../styles/breakpoints/breakpoints' as *;
+@use '../../../styles/functions/functions' as *;
+@use '../../../styles/mixins/mixins' as *;
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: color.$color-modal-background;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+
+  &__container {
+    position: relative;
+    width: 100%;
+    max-width: rem(620px);
+    height: rem(820px);
+    border-radius: rem(24px);
+    background: color.$color-white;
+    box-shadow: color.$color-box-shadow-background;
+    padding: rem(30px) rem(60px);
+
+    @include respond-to(lmedium) {
+      max-width: 40%;
+      max-height: 95%;
+      padding: rem(20px);
+    }
+  }
+
+  &__close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: color.$color-main-background;
+    border-radius: rem(14px);
+    width: rem(44px);
+    height: rem(44px);
+    right: rem(30px);
+
+    @include respond-to(lmedium) {
+      max-width: rem(30px);
+      max-height: rem(30px);
+      border-radius: rem(10px);
+    }
+
+    &-icon {
+      max-width: rem(18px);
+      max-height: rem(18px);
+    }
+  }
+
+  &__content {
+    display: flex;
+    width: 100%;
+    max-width: 80%;
+    flex-direction: column;
+    min-height: 80%;
+    gap: rem(22px);
+    position: absolute;
+    top: rem(60px);
+
+    @include respond-to(lmedium) {
+      max-width: 90%;
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: rem(30px);
+
+    @include respond-to(lmedium) {
+      gap: rem(15px);
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  &__illustration {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+
+    @include respond-to(lmedium) {
+      max-width: 100%;
+      max-height: rem(130px);
+      object-fit: contain;
+    }
+  }
+
+  &__header-subTitle {
+    font-size: size.$font-size-18px;
+    color: color.$color-black;
+    line-height: 150%;
+    opacity: 0.7;
+    width: 100%;
+    max-width: rem(475px);
+
+    @include respond-to(lmedium) {
+      font-size: size.$font-size-14px;
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    gap: rem(28px);
+    flex: 1 1 auto;
+
+    @include respond-to(lmedium) {
+      gap: rem(15px);
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    gap: rem(7px);
+
+    @include labelTitle;
+  }
+
+  &__textarea {
+    @include defaultContainer(rem(120px));
+    caret-color: color.$color-gray;
+    color: color.$color-gray;
+    resize: none;
+
+    @include respond-to(lmedium) {
+      max-height: rem(100px);
+    }
+  }
+
+  &__title {
+    @include blockTitle;
+  }
+
+  &__send {
+    @include addButton;
+    margin-inline: auto 0;
+  }
+
+  .select {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    @include defaultContainer(rem(50px));
+    padding-block: rem(11.38px) rem(14.22px);
+    color: color.$color-gray;
+    background-color: transparent;
+
+    &::after {
+      content: '';
+      background: url('/images/modal/arrow-down.svg') no-repeat center center;
+      width: rem(24px);
+      height: rem(24px);
+      object-fit: cover;
+    }
+  }
+
+  .select__container {
+    display: flex;
+    flex-direction: column;
+    gap: rem(7px);
+  }
+
+  .options__container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: rem(25px);
+    top: 64%;
+    left: 0;
+    width: 100%;
+    z-index: 300;
+
+    @include defaultContainer(rem(fit-content));
+    background: color.$color-white;
+    box-shadow: color.$color-support-box-shadow;
+    padding-block-end: rem(18px);
+
+    @include respond-to(lmedium) {
+      max-height: rem(200px);
+      gap: rem(10px);
+    }
+  }
+
+  .label {
+    @include labelTitle;
+  }
+
+  .option {
+    width: 100%;
+    font-size: size.$font-size-18px;
+    color: color.$color-gray;
+    padding: rem(12px);
+    cursor: pointer;
+    border-radius: rem(24px);
+    transition: background 0.6s ease-in-out;
+
+    &:hover {
+      background: color.$color-main-background;
+      border-radius: rem(24px);
+    }
+
+    @include respond-to(lmedium) {
+      padding: rem(10px);
+    }
+  }
+}

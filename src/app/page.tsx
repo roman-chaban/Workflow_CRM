@@ -7,6 +7,7 @@ import { NearestEvents } from '@/components/NearestEvents/NearestEvents';
 import { Workload } from '@/components/Workload/Workload';
 
 import styles from '@/styles/pages/Home.module.scss';
+import { Projects } from '@/components/Projects/Projects';
 
 export const metadata: Metadata = {
   title: 'Workflow CRM | Dashboard',
@@ -19,6 +20,9 @@ export default function Home() {
       <Box className={styles['box']}>
         <Workload />
         <NearestEvents />
+      </Box>
+      <Box className={styles['box']}>
+        <Projects />
       </Box>
     </SectionWrapper>
   );

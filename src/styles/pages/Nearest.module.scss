@@ -2,3 +2,9 @@
 @use '../globals/globals' as size;
 @use '../functions/functions' as *;
 @use '../mixins/mixins' as *;
+
+.nearest {
+  display: flex;
+  flex-direction: column;
+  gap: rem(28px);
+}

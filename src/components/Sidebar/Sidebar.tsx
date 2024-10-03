@@ -1,4 +1,6 @@
-import type { FC } from 'react';
+'use client';
+
+import { type FC } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -8,20 +10,26 @@ import { Nav } from '../Nav/Nav';
 import { nav } from '@/types/nav';
 import { Button } from '../ui/Button/Button';
 
-export const Sidebar: FC = () => {
+interface SidebarProps {
+  onOpenModal: () => void;
+}
+
+export const Sidebar: FC<SidebarProps> = ({ onOpenModal }) => {
   return (
     <aside className={styles['sidebar']}>
       <div className={styles['sidebar__container']}>
-        <div className={styles['sidebar__logo']}>
-          <Image
-            priority
-            src="/icons/logo/Logo.svg"
-            alt="Sidebar Logo"
-            width={50}
-            height={50}
-          />
+        <div className={styles['sidebar__nav']}>
+          <div className={styles['sidebar__logo']}>
+            <Image
+              priority
+              src="/icons/logo/Logo.svg"
+              alt="Sidebar Logo"
+              width={50}
+              height={50}
+            />
+          </div>
+          <Nav nav={nav} />
         </div>
-        <Nav nav={nav} />
         <div className={styles['sidebar__support']}>
           <div className={styles['sidebar__support-block']}>
             <Image
@@ -32,7 +40,7 @@ export const Sidebar: FC = () => {
               height={214}
               className={styles['sidebar__image-support']}
             />
-            <Button type="button" className={styles['sidebar__support-button']}>
+            <Button type="button" className={styles['sidebar__support-button']} onClick={onOpenModal}>
               <Image
                 src="/icons/dashboardIcons/white-chat.svg"
                 alt="Chat Icon"

@@ -19,6 +19,12 @@
     padding: rem(40px) 0 rem(45px) rem(16px);
   }
 
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: rem(42px);
+  }
+
   &__logo {
     width: 100%;
     height: auto;

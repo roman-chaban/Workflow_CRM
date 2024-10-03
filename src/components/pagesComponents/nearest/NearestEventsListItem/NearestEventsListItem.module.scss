@@ -1,0 +1,83 @@
+@use '../../../../styles/colors/colors' as color;
+@use '../../../../styles/globals/globals' as size;
+@use '../../../../styles/breakpoints/breakpoints' as *;
+@use '../../../../styles/functions/functions' as *;
+@use '../../../../styles/mixins/mixins' as *;
+
+.nearest__events-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-radius: rem(24px);
+  max-width: rem(660px);
+  height: rem(129px);
+  background: color.$color-white;
+  box-shadow: color.$color-box-shadow-background;
+  padding: rem(28px) rem(25px) rem(24px) rem(24px);
+  position: relative;
+
+  @include respond-to(medium) {
+    max-width: 100%;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    border-radius: rem(2px);
+    width: rem(4px);
+    height: rem(81px);
+  }
+
+  &[id='blue']::before {
+    background: color.$color-support-background;
+  }
+
+  &[id='pink']::before {
+    background: color.$color-variant-second;
+  }
+
+  &[id='orange']::before {
+    background: color.$color-variant-third;
+  }
+
+  &[id='purple']::before {
+    background: color.$color-variant-four;
+  }
+}
+
+.nearest__events-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-inline-start: rem(18px);
+  height: 100%;
+}
+
+.nearest__events-right {
+  width: 100%;
+  max-width: rem(100px);
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  gap: rem(17px);
+}
+
+.nearest__events-top {
+  display: flex;
+  align-items: center;
+  gap: rem(10px);
+}
+
+.nearest__events-title {
+  @include itemTitle;
+}
+
+.nearest__events-date {
+  @include timeTitle;
+}
+
+.event__date {
+  @include dateClock;
+  max-width: fit-content;
+  padding: rem(8px);
+}

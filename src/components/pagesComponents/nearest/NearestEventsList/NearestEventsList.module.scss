@@ -1,0 +1,14 @@
+@use '../../../../styles/colors/colors' as color;
+@use '../../../../styles/globals/globals' as size;
+@use '../../../../styles/breakpoints/breakpoints' as *;
+@use '../../../../styles/functions/functions' as *;
+
+.nearest__events {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: rem(30px);
+
+  @include respond-to(medium) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
