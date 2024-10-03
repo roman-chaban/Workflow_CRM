@@ -27,3 +27,16 @@ body {
   flex-direction: column;
   gap: rem(50px);
 }
+
+::-webkit-scrollbar {
+  width: rem(5px);
+  height: rem(5px);
+}
+
+::-webkit-scrollbar-track {
+  background-color: color.$color-white;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: color.$color-gray;
+}
