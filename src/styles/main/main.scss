@@ -5,6 +5,8 @@
 
 body {
   display: grid;
+  box-sizing: border-box;
+  min-height: 100%;
   grid-template-columns: rem(200px) 1fr;
   gap: rem(30px);
   font-family: 'Nunito Sans';
@@ -18,6 +20,9 @@ body {
 }
 
 .page {
+  width: 100%;
+  max-width: rem(1440px);
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: rem(50px);

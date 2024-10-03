@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "iconUrl": "/images/projects/primary.svg",
+        "projectCode": "PN0001265",
+        "title": "Medical App (iOS native)",
+        "creationDate": "Created Sep 12, 2020",
+        "dateIconUrl": "/images/projects/calendar.svg",
+        "arrowIconUrl": "/images/projects/medium.svg",
+        "positionRating": "Medium",
+        "totalTaskCount": 34,
+        "activeTaskCount": 13,
+        "totalRating": 2,
+        "icons": [
+            "/images/assignees/tertiary.svg",
+            "/images/assignees/secondary.svg",
+            "/images/assignees/primary.svg" 
+        ]
+    },
+    {
+        "id": 2,
+        "iconUrl": "/images/projects/secondary.svg",
+        "projectCode": "PN0001221",
+        "title": "Food Delivery Service",
+        "creationDate": "Created Sep 10, 2020",
+       "dateIconUrl": "/images/projects/calendar.svg",
+       "arrowIconUrl": "/images/projects/medium.svg",
+        "positionRating": "Medium",
+        "totalTaskCount": 50,
+        "activeTaskCount": 24,
+        "totalRating": 0,
+        "icons": [
+            "/images/assignees/five.svg",
+            "/images/assignees/four.svg", 
+            "/images/assignees/primary.svg"
+        ]
+    },
+    {
+        "id": 3,
+        "iconUrl": "/images/projects/tertiary.svg",
+        "projectCode": "PN0001290",
+        "title": "Food Delivery Service",
+        "creationDate": "Created May 28, 2020",
+        "dateIconUrl": "/images/projects/calendar.svg",
+        "arrowIconUrl": "/images/projects/low.svg",
+        "positionRating": "Low",
+        "totalTaskCount": 23,
+        "activeTaskCount": 20,
+        "totalRating": 5,
+        "icons": [
+            "/images/assignees/six.svg",
+            "/images/assignees/secondary.svg",
+            "/images/assignees/primary.svg" 
+        ]
+    }
+]
