@@ -7,7 +7,7 @@ body {
   display: grid;
   box-sizing: border-box;
   min-height: 100%;
-  grid-template-columns: rem(200px) 1fr;
+  grid-template-columns: rem(220px) 1fr;
   gap: rem(30px);
   font-family: 'Nunito Sans';
   background: color.$color-main-background;

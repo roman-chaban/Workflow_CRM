@@ -1,6 +1,6 @@
 'use client';
 
-import { type FC } from 'react';
+import { useState, type FC } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -40,7 +40,11 @@ export const Sidebar: FC<SidebarProps> = ({ onOpenModal }) => {
               height={214}
               className={styles['sidebar__image-support']}
             />
-            <Button type="button" className={styles['sidebar__support-button']} onClick={onOpenModal}>
+            <Button
+              type="button"
+              className={styles['sidebar__support-button']}
+              onClick={onOpenModal}
+            >
               <Image
                 src="/icons/dashboardIcons/white-chat.svg"
                 alt="Chat Icon"
