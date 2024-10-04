@@ -1,4 +1,6 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
+import { Grid } from '@/components/containers/Grid/Grid';
+import { ProjectsNav } from '@/components/pagesComponents/projects/ProjectsNav/ProjectsNav';
 
 export const metadata: Metadata = {
   title: 'Workflow CRM | Projects',
@@ -6,5 +8,9 @@ export const metadata: Metadata = {
 };
 
 export default function Projects() {
-  return <div>Projects!</div>;
+  return (
+    <Grid isSection>
+      <ProjectsNav />
+    </Grid>
+  );
 }

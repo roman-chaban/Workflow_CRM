@@ -1,0 +1,21 @@
+@use '../../../../styles/colors/colors' as color;
+@use '../../../../styles/globals/globals' as size;
+@use '../../../../styles/breakpoints/breakpoints' as *;
+@use '../../../../styles/mixins/mixins' as *;
+@use '../../../../styles/functions/functions' as *;
+
+.projects__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-column: span 12;
+  height: fit-content;
+
+  &-title {
+    @include blockLargeTitle;
+  }
+
+  &-button {
+    @include addButton;
+  }
+}
