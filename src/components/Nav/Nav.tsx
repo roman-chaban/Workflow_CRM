@@ -1,11 +1,11 @@
 import { FC } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 import { NavItem } from '@/types/nav';
 
 import styles from './Nav.module.scss';
-import { usePathname } from 'next/navigation';
 
 interface NavProps {
   nav: Array<NavItem>;

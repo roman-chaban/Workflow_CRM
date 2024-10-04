@@ -8,6 +8,7 @@ import { Workload } from '@/components/Workload/Workload';
 
 import styles from '@/styles/pages/Home.module.scss';
 import { Projects } from '@/components/Projects/Projects';
+import { ActivityStream } from '@/components/ActivityStream/ActivityStream';
 
 export const metadata: Metadata = {
   title: 'Workflow CRM | Dashboard',
@@ -26,6 +27,7 @@ export default function Home() {
       </Box>
       <Box className={styles['box']}>
         <Projects />
+        <ActivityStream />
       </Box>
     </SectionWrapper>
   );

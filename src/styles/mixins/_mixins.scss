@@ -81,3 +81,61 @@
   height: $height;
   box-shadow: color.$color-modal-box-shadow;
 }
+
+@mixin blockContainer(
+  $width: $width,
+  $height: $height,
+  $max-width: $max-width,
+  $border-radius: $border-radius
+) {
+  width: $width;
+  max-width: $max-width;
+  height: $height;
+  border-radius: $border-radius;
+  box-shadow: color.$color-box-shadow-background;
+  background: color.$color-white;
+}
+
+@mixin activityChildContainer(
+  $padding: $padding,
+  $margin-block-start: margin-block-start,
+  $height: $height
+) {
+  margin-block-start: rem(22px);
+  display: flex;
+  gap: rem(16px);
+  width: 100%;
+  border-radius: rem(14px);
+  max-width: rem(391px);
+  height: $height;
+  background: color.$color-main-background;
+  padding: rem(15px) rem(10px) rem(15px) rem(20px);
+}
+
+@mixin activityChildIcon {
+  width: 100%;
+  max-width: rem(27.5px);
+  max-height: rem(27.5px);
+  object-fit: cover;
+}
+
+@mixin activityChildTitle {
+  width: 100%;
+  max-width: rem(221px);
+  color: color.$color-black;
+  font-size: size.$font-size-16px;
+  line-height: 150%;
+}
+
+@mixin viewButton {
+  margin-block-start: rem(22px);
+  display: flex;
+  background: transparent;
+  justify-content: center;
+  align-items: center;
+  gap: rem(1px);
+  font-weight: 600;
+  color: color.$color-support-background;
+  font-size: size.$font-size-18px;
+  text-align: center;
+}
