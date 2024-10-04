@@ -5,7 +5,11 @@ import { PATHS } from '@/constants/paths';
 import Image from 'next/image';
 import { Button } from '@/components/ui/Button/Button';
 
-export const NearestHeader: FC = () => {
+export interface NearestHeaderProps {
+  onAddEvent: () => void;
+}
+
+export const NearestHeader: FC<NearestHeaderProps> = ({onAddEvent}) => {
   return (
     <nav className={styles['nearest__header']}>
       <div className={styles['nearest__header-top']}>
@@ -20,7 +24,7 @@ export const NearestHeader: FC = () => {
         </Link>
         <h2 className={styles['nearest__header-title']}>Nearest Events</h2>
       </div>
-      <Button type="button" className={styles['nearest__header-add']}>
+      <Button type="button" className={styles['nearest__header-add']} onClick={onAddEvent} >
         <Image
           priority
           src="/icons/nearest/plus.svg"

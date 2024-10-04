@@ -26,6 +26,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: rem(50px);
+  padding-block-end: rem(0px);
 }
 
 ::-webkit-scrollbar {

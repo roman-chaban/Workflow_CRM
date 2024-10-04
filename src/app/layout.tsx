@@ -25,6 +25,13 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="shortcut icon"
+          href="/favicon/crm_logo.svg"
+          type="image/x-icon"
+        />
+      </head>
       <body>
         <Sidebar onOpenModal={handleOpenModal} />
         {isOpen && <Modal onClose={handleCloseModal} />}

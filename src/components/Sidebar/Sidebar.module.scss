@@ -12,11 +12,11 @@
     gap: rem(42px);
     width: 100%;
     max-width: rem(220px);
-    height: 100%;
+    height: 99%;
     background: color.$color-white;
     box-shadow: color.$color-box-shadow-background;
     border-radius: rem(24px);
-    padding: rem(40px) 0 rem(45px) rem(16px);
+    padding: rem(40px) 0 rem(40px) rem(16px);
   }
 
   &__nav {

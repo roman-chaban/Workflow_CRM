@@ -1,17 +1,18 @@
 'use client';
 
-import type { FC } from 'react';
+import { type FC } from 'react';
 import styles from './NearestEventsList.module.scss';
-import { useFetch } from '@/hooks/useFetch';
 import { NearestEventsListItem } from '../NearestEventsListItem/NearestEventsListItem';
-import { TEventsItems } from '@/types/event-item';
+import { TEvents } from '@/types/events';
 
-export const NearestEventsList: FC = () => {
-  const { data } = useFetch<TEventsItems>({ url: '/data/nearest-events.json' });
+interface NearestEventsListProps {
+  events: TEvents;
+}
 
+export const NearestEventsList: FC<NearestEventsListProps> = ({ events }) => {
   return (
     <ul className={styles['nearest__events']}>
-      {data?.map((event) => (
+      {events?.map((event) => (
         <NearestEventsListItem key={event.id} event={event} />
       ))}
     </ul>

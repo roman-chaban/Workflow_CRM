@@ -6,7 +6,7 @@
 
 .activity {
   width: 100%;
-  @include blockContainer(100%, rem(580px), rem(439px), rem(24px));
+  @include blockContainer(100%, rem(570px), rem(439px), rem(24px));
 
   @include respond-to(lmedium) {
     max-width: rem(350px);

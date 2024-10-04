@@ -4,6 +4,9 @@ export interface Event {
   day: string;
   hour: string;
   duration: string;
+  colorVariant: string;
+  titleIcon: string;
+  icon: string;
 }
 
 export type TEvents = Array<Event>;
