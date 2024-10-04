@@ -1,14 +1,13 @@
 'use client';
 
-import { useState, type FC } from 'react';
+import { type FC } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 import styles from './Sidebar.module.scss';
 
-import { Nav } from '../Nav/Nav';
+import { Nav, Button } from '@/components/index/index';
 import { nav } from '@/types/nav';
-import { Button } from '../ui/Button/Button';
 
 interface SidebarProps {
   onOpenModal: () => void;

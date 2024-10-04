@@ -2,21 +2,23 @@
 
 import { useState, useEffect } from 'react';
 import styles from '@/styles/pages/Nearest.module.scss';
-import { NearestHeader } from '@/components/pagesComponents/nearest/NearestHeader/NearestHeader';
-import { NearestEventsList } from '@/components/pagesComponents/nearest/NearestEventsList/NearestEventsList';
 import { TEventsItems, EventItem } from '@/types/event-item';
 import { useFetch } from '@/hooks/useFetch';
-import { EventModal } from '@/components/pagesComponents/nearest/EventModal/EventModal';
+import {
+  NearestHeader,
+  NearestEventsList,
+  EventModal,
+} from '@/components/index/index';
+
+import { useDocumentTitle } from '@/hooks/useDocumentTitle';
 
 export default function Nearest() {
-  useEffect(() => {
-    document.title = 'Workflow CRM | Events';
-  }, []);
   const { data: fetchedData } = useFetch<TEventsItems>({
     url: '/data/nearest-events.json',
   });
   const [events, setEvents] = useState<TEventsItems | []>([]);
   const [showModal, setShowModal] = useState(false);
+  useDocumentTitle('Workflow CRM | Events');
 
   useEffect(() => {
     if (fetchedData) {

@@ -3,8 +3,7 @@
 import { useState, type FC } from 'react';
 import Image from 'next/image';
 
-import { Input } from '../ui/Input/Input';
-import { Button } from '../ui/Button/Button';
+import { Input, Button } from '@/components/index/index';
 
 import styles from './Header.module.scss';
 

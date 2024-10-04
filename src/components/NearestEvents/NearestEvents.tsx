@@ -4,8 +4,9 @@ import type { FC } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-import { Events } from './Events/Events';
 import { useFetch } from '@/hooks/useFetch';
+
+import { Events } from './Events/Events';
 import { TEvents } from '@/types/events';
 
 import styles from './NearestEvents.module.scss';

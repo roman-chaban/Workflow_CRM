@@ -4,10 +4,7 @@ import type { FC } from 'react';
 
 import styles from './ActivityStream.module.scss';
 import Image from 'next/image';
-import { Upload } from '../ui/Upload/Upload';
-import { Attached } from '../ui/Attached/Attached';
-import { Button } from '../ui/Button/Button';
-import { Profile } from '../ui/Profile/Profile';
+import { Upload, Attached, Button, Profile } from '@/components/index/index';
 
 export const ActivityStream: FC = () => {
   return (

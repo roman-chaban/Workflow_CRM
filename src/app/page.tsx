@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
 
-import { Box } from '@/components/containers/Box/Box';
-import { SectionWrapper } from '@/components/containers/SectionWrapper/SectionWrapper';
-import { DashboardInfo } from '@/components/DashboardInfo/DashboardInfo';
-import { NearestEvents } from '@/components/NearestEvents/NearestEvents';
-import { Workload } from '@/components/Workload/Workload';
+import {
+  Box,
+  SectionWrapper,
+  DashboardInfo,
+  NearestEvents,
+  Workload,
+} from '@/components/index/index';
 
 import styles from '@/styles/pages/Home.module.scss';
 import { Projects } from '@/components/Projects/Projects';

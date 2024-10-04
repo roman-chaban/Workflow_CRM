@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 import styles from './Projects.module.scss';
-import { ProjectsNav } from './ProjectsNav/ProjectsNav';
-import { ProjectsItems } from './ProjectsItems/ProjectsItems';
+
+import { ProjectsNav, ProjectsItems } from '@/components/index/index';
 
 export const Projects: FC = () => {
   return (
