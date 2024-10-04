@@ -1,16 +1,16 @@
-import type { Metadata } from 'next';
 
+import type { Metadata } from 'next';
 import {
   Box,
   SectionWrapper,
   DashboardInfo,
   NearestEvents,
   Workload,
+  Projects,
+  ActivityStream,
 } from '@/components/index/index';
 
 import styles from '@/styles/pages/Home.module.scss';
-import { Projects } from '@/components/Projects/Projects';
-import { ActivityStream } from '@/components/ActivityStream/ActivityStream';
 
 export const metadata: Metadata = {
   title: 'Workflow CRM | Dashboard',

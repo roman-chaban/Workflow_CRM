@@ -3,9 +3,8 @@
 import '@/styles/fonts/_fonts.scss';
 import '@/styles/main/main.scss';
 
-import { Sidebar } from '@/components/Sidebar/Sidebar';
-import { Header } from '@/components/Header/Header';
-import { Modal } from '@/components/ui/Modal/Modal';
+import { Sidebar, Header, Modal } from '@/components/index/index';
+
 import { useState } from 'react';
 
 export default function RootLayout({
