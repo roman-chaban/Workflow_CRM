@@ -1,0 +1,70 @@
+@use '../../../../styles/colors/colors' as color;
+@use '../../../../styles/globals/globals' as size;
+@use '../../../../styles/mixins/mixins' as *;
+@use '../../../../styles/breakpoints/breakpoints' as *;
+@use '../../../../styles/functions/functions' as *;
+
+.sidebar {
+  width: 100%;
+  border-radius: rem(24px);
+  width: rem(265px);
+  height: rem(1042px);
+  background: color.$color-white;
+  box-shadow: color.$color-box-shadow-background;
+  padding-block-start: rem(26px);
+
+  &__select {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: rem(7px);
+    background: transparent;
+    padding-block-end: rem(20px);
+    padding-inline-start: rem(24px);
+    border-bottom: 1px solid color.$color-border-light;
+
+    color: color.$color-black;
+    font-size: size.$font-size-16px;
+    font-weight: 700;
+    line-height: 150%;
+
+    &::after {
+      content: '';
+      background: url('/icons/projects/select-open.svg') no-repeat center center;
+      background-size: cover;
+      width: 24px;
+      height: 24px;
+    }
+
+    &__default-option {
+      color: color.$color-black;
+      font-size: size.$font-size-16px;
+      font-weight: 700;
+      line-height: 150%;
+    }
+  }
+}
+
+.select {
+  &__container {
+    position: relative;
+    width: 100%;
+  }
+
+  &__options {
+    padding: rem(10px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: rem(20px);
+    background: color.$color-white;
+    box-shadow: color.$color-support-box-shadow;
+    position: absolute;
+  }
+  &__option {
+    font-weight: 600;
+    font-size: size.$font-size-16px;
+  }
+}

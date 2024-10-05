@@ -1,0 +1,19 @@
+@use '../../../../styles/colors/colors' as color;
+@use '../../../../styles/globals/globals' as size;
+@use '../../../../styles/mixins/mixins' as *;
+@use '../../../../styles/breakpoints/breakpoints' as *;
+@use '../../../../styles/functions/functions' as *;
+
+.nav__item {
+  display: flex;
+  flex-direction: column;
+  gap: rem(4px);
+  color: color.$color-black;
+  font-size: size.$font-size-16px;
+  line-height: 150%;
+
+  &-code {
+    color: color.$color-gray-second;
+    font-size: size.$font-size-12px;
+  }
+}

@@ -1,0 +1,11 @@
+@use '../../../../styles/colors/colors' as color;
+@use '../../../../styles/globals/globals' as size;
+@use '../../../../styles/functions/functions' as *;
+@use '../../../../styles/mixins/mixins' as *;
+@use '../../../../styles/breakpoints/breakpoints' as *;
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  gap: rem(16px);
+}

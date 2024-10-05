@@ -12,7 +12,7 @@ export const Select: FC<SelectProps> = ({
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedValue, setSelectedValue] = useState(defaultValue || '');
-  const selectId = useId(); // Generates a unique ID
+  const selectId = useId();
 
   const handleSelectOption = (value: string) => {
     setSelectedValue(value);

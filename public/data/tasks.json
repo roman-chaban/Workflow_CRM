@@ -1,0 +1,56 @@
+[
+  {
+    "taskId": 1,
+    "taskName": "Research",
+    "estimate": "2d 4h",
+    "spentTime": "1d 2h",
+    "assignee": "/images/assignees/primary.svg",
+    "priority": "Medium",
+    "isDone": false
+  },
+  {
+    "taskId": 2,
+    "taskName": "Mind Map",
+    "estimate": "1d 2h",
+    "spentTime": "4h 25m",
+    "assignee": "/images/assignees/primary.svg",
+    "priority": "Medium",
+    "isDone": false
+  },
+  {
+    "taskId": 3,
+    "taskName": "UX sketches",
+    "estimate": "4d",
+    "spentTime": "2d 2h 20m",
+    "assignee": "/images/assignees/primary.svg",
+    "priority": "Low",
+    "isDone": false
+  },
+  {
+    "taskId": 4,
+    "taskName": "UX Login + Registration",
+    "estimate": "2d",
+    "spentTime": "3h 15m",
+    "assignee": "/images/assignees/primary.svg",
+    "priority": "Low",
+    "isDone": false
+  },
+  {
+    "taskId": 5,
+    "taskName": "UI Login + Registration",
+    "estimate": "1d 2h",
+    "spentTime": "4h",
+    "assignee": "/images/assignees/primary.svg",
+    "priority": "Medium",
+    "isDone": false
+  },
+  {
+    "taskId": 6,
+    "taskName": "UI for other screens",
+    "estimate": "4d",
+    "spentTime": "2d 2h 20m",
+    "assignee": "/images/assignees/primary.svg",
+    "priority": "Low",
+    "isDone": false
+  }
+]

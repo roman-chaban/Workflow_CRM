@@ -1,0 +1,50 @@
+@use '../../../../styles/functions/functions' as *;
+@use '../../../../styles/colors/colors' as color;
+@use '../../../../styles/globals/globals' as size;
+@use '../../../../styles/mixins/mixins' as *;
+
+.tasks__nav {
+  display: flex;
+  flex-direction: column;
+  gap: rem(33px);
+
+  height: fit-content;
+  padding-block-start: rem(10px);
+
+  &-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-title {
+    font-weight: 700;
+    font-size: size.$font-size-22px;
+    color: color.$color-black;
+  }
+
+  &-menu {
+    display: flex;
+    align-items: center;
+    gap: rem(28px);
+  }
+}
+
+.menu__button,
+.notifications__button {
+  @include navButton;
+}
+
+.active__tasks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: color.$color-light-gray;
+  color: color.$color-black;
+  font-size: size.$font-size-16px;
+  font-weight: 700;
+  padding-block: rem(9px);
+  border-radius: rem(14px);
+  height: rem(45px);
+}

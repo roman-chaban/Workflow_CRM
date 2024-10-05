@@ -1,5 +1,6 @@
 export { Header } from '@/components/Header/Header';
 export { SectionWrapper } from '@/components/containers/SectionWrapper/SectionWrapper';
+export { Grid } from '@/components/containers/Grid/Grid';
 export { Box } from '@/components/containers/Box/Box';
 export { DashboardInfo } from '@/components/DashboardInfo/DashboardInfo';
 export { NearestEvents } from '@/components/NearestEvents/NearestEvents';
@@ -19,7 +20,12 @@ export { EventModal } from '@/components/pagesComponents/nearest/EventModal/Even
 export { NearestEventsList } from '@/components/pagesComponents/nearest/NearestEventsList/NearestEventsList';
 export { NearestEventsListItem } from '@/components/pagesComponents/nearest/NearestEventsListItem/NearestEventsListItem';
 export { NearestHeader } from '@/components/pagesComponents/nearest/NearestHeader/NearestHeader';
-
+export { ProjectsSidebar } from '@/components/pagesComponents/projects/ProjectsSidebar/ProjectsSidebar';
+export { ProjectsSidebarNav } from '@/components/pagesComponents/projects/ProjectsSidebarNav/ProjectsSidebarNav';
+export { ProjectsSidebarNavItem } from '@/components/pagesComponents/projects/ProjectsSidebarNavItem/ProjectsSidebarNavItem';
+export { Tasks } from '@/components/pagesComponents/projects/Tasks/Tasks';
+export { TaskItem } from '@/components/pagesComponents/projects/Tasks/TaskItem/TaskItem';
+export { TasksNav } from '@/components/pagesComponents/projects/TasksNav/TasksNav';
 export { Attached } from '@/components/ui/Attached/Attached';
 export { Button } from '@/components/ui/Button/Button';
 export { Input } from '@/components/ui/Input/Input';

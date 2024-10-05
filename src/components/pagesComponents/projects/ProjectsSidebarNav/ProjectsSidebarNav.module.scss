@@ -1,0 +1,15 @@
+@use '../../../../styles/colors/colors' as color;
+@use '../../../../styles/globals/globals' as size;
+@use '../../../../styles/mixins/mixins' as *;
+@use '../../../../styles/breakpoints/breakpoints' as *;
+@use '../../../../styles/functions/functions' as *;
+
+.sidebar__nav {
+  &-menu {
+    display: flex;
+    flex-direction: column;
+    gap: rem(16px);
+    padding-inline-start: rem(24px);
+    padding-block-start: rem(8px);
+  }
+}

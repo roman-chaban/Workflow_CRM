@@ -1,0 +1,17 @@
+@use '../colors/colors' as color;
+@use '../globals/globals' as size;
+@use '../functions/functions' as *;
+
+.box {
+  width: 100%;
+  display: grid;
+  column-gap: rem(40px);
+  grid-template-columns: rem(280px) 1fr;
+  grid-column: span 12;
+}
+
+.tasks__box {
+  display: flex;
+  flex-direction: column;
+  gap: rem(20px);
+}

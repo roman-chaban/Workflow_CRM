@@ -139,3 +139,15 @@
   font-size: size.$font-size-18px;
   text-align: center;
 }
+
+@mixin navButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: rem(14px);
+  box-shadow: color.$color-box-shadow-background;
+  width: rem(48px);
+  height: rem(48px);
+  padding: rem(12px);
+  background: color.$color-white;
+}

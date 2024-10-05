@@ -6,6 +6,7 @@ interface GridProps {
   display?: string;
   gridTemplateColumns?: string;
   gridTemplateRows?: string;
+  gap?: string;
   children: ReactNode;
   isSection: boolean;
 }
@@ -14,6 +15,7 @@ export const Grid: FC<GridProps> = ({
   display = 'grid',
   height = '100%',
   width = '100%',
+  gap = '',
   gridTemplateColumns = 'repeat(12, 1fr)',
   gridTemplateRows = '1fr',
   children,
@@ -25,6 +27,7 @@ export const Grid: FC<GridProps> = ({
     display,
     gridTemplateColumns,
     gridTemplateRows,
+    gap
   };
 
   return isSection ? (
