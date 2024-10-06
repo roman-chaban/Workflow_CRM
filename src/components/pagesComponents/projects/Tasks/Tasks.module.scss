@@ -9,3 +9,7 @@
   flex-direction: column;
   gap: rem(16px);
 }
+
+.backlog__tasks {
+  @include headingProjectsNav;
+}

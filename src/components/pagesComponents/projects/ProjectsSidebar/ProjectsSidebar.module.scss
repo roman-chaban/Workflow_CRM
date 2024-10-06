@@ -13,6 +13,10 @@
   box-shadow: color.$color-box-shadow-background;
   padding-block-start: rem(26px);
 
+  @include respond-to(large) {
+    max-width: rem(220px);
+  }
+
   &__select {
     width: 100%;
     position: relative;

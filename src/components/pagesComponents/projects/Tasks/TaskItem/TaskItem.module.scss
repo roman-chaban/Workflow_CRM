@@ -9,18 +9,25 @@
   height: rem(91px);
   border-radius: rem(24px);
   background: color.$color-white;
-  box-sizing: color.$color-box-shadow-background;
+  box-shadow: color.$color-box-shadow-background;
 }
 
 .task__title {
   width: 100%;
   max-width: rem(200px);
   display: flex;
+  flex-shrink: 1;
   flex-direction: column;
   gap: rem(4px);
   font-size: size.$font-size-14px;
   color: color.$color-gray-second;
 
+  @include respond-to(lmedium) {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: rem(100px);
+  }
   > strong {
     color: color.$color-black;
     font-size: size.$font-size-16px;
@@ -33,20 +40,63 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: rem(164px);
+  gap: rem(135px);
   padding: rem(22px) rem(31px) rem(23px) rem(30px);
+
+  @include respond-to(large) {
+    gap: rem(40px);
+  }
 }
 
 .tasks__list {
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   gap: rem(43px);
+  &:last-child {
+    justify-items: center;
+  }
+  @include respond-to(large) {
+    gap: rem(25px);
+  }
 }
 
 #task__priority {
   display: flex;
   align-items: center;
   flex-direction: row;
+  font-size: size.$font-size-14px;
+}
+
+.task__priority {
+  max-width: rem(20px);
+  max-height: rem(20px);
+}
+
+.task__done {
+  @include titleInProgress(
+    color.$color-done,
+    color.$color-is-done,
+    fit-content
+  );
+}
+
+.task__progress {
+  @include titleInProgress(
+    color.$color-support-background,
+    color.$color-in-progress,
+    rem(130px)
+  );
+}
+
+.task__todo {
+  @include titleInProgress(color.$color-gray, color.$color-todo, fit-content);
+}
+
+.task__review {
+  @include titleInProgress(
+    color.$color-preview,
+    color.$color-in-preview,
+    rem(130px)
+  );
 }

@@ -28,7 +28,7 @@
 
     @include respond-to(lmedium) {
       max-width: 40%;
-      max-height: 95%;
+      max-height: rem(570px);
       padding: rem(20px);
     }
   }

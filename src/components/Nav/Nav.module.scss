@@ -1,6 +1,7 @@
 @use '../../styles/colors/colors' as color;
 @use '../../styles/functions/functions' as *;
 @use '../../styles/globals/globals' as size;
+@use '../../styles/breakpoints/breakpoints' as *;
 
 .nav {
   margin-inline-end: rem(8px);
@@ -15,6 +16,10 @@
     gap: rem(16px);
     padding: rem(10px);
     max-width: rem(185px);
+
+    @include respond-to(lmedium) {
+      max-width: rem(165px);
+    }
   }
   &__menu-link {
     color: color.$color-gray;

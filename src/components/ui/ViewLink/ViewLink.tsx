@@ -4,13 +4,13 @@ import type { FC } from 'react';
 import styles from '@/components/Workload/Workload.module.scss';
 
 interface ViewLinkProps {
-    children: string;
+  children: string;
 }
 
 export const ViewLink: FC<ViewLinkProps> = ({ children }) => {
   return (
     <>
-          <h3 className={styles['workload__header-title']}>{children}</h3>
+      <h3 className={styles['workload__header-title']}>{children}</h3>
       <Link href={''} className={styles['workload__header-link']}>
         View all{' '}
         <Image

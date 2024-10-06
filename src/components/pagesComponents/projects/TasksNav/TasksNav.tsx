@@ -3,6 +3,7 @@ import type { FC } from 'react';
 import styles from './TasksNav.module.scss';
 import { Button } from '@/components/index';
 import Image from 'next/image';
+import { Heading } from '@/components/ui/Heading/Heading';
 
 export const TasksNav: FC = () => {
   return (
@@ -45,7 +46,10 @@ export const TasksNav: FC = () => {
           />
         </Button>
       </div>
-      <h5 className={styles['active__tasks']}>Active Tasks</h5>
+
+      <Heading className={styles['active__tasks']} level={'h4'}>
+        Active Tasks
+      </Heading>
     </div>
   );
 };

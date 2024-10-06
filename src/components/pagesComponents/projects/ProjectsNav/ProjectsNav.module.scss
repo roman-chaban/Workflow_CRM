@@ -9,7 +9,6 @@
   align-items: center;
   justify-content: space-between;
   grid-column: span 12;
-  height: fit-content;
 
   &-title {
     @include blockLargeTitle;

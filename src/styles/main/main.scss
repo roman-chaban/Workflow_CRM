@@ -1,5 +1,6 @@
 @use '../colors/colors' as color;
 @use '../functions/functions' as *;
+@use '../breakpoints/breakpoints' as *;
 @import '../fonts/fonts';
 @import '../reset/reset';
 
@@ -12,6 +13,10 @@ body {
   font-family: 'Nunito Sans';
   background: color.$color-main-background;
   padding: rem(20px) rem(20px) rem(25px) rem(20px);
+
+  @include respond-to(lmedium) {
+    gap: 0;
+  }
 }
 
 .main {

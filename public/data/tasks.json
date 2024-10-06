@@ -6,7 +6,7 @@
     "spentTime": "1d 2h",
     "assignee": "/images/assignees/primary.svg",
     "priority": "Medium",
-    "isDone": false
+    "isDone": "Done"
   },
   {
     "taskId": 2,
@@ -15,7 +15,7 @@
     "spentTime": "4h 25m",
     "assignee": "/images/assignees/primary.svg",
     "priority": "Medium",
-    "isDone": false
+    "isDone": "In Progress"
   },
   {
     "taskId": 3,
@@ -24,7 +24,7 @@
     "spentTime": "2d 2h 20m",
     "assignee": "/images/assignees/primary.svg",
     "priority": "Low",
-    "isDone": false
+    "isDone": "In Progress"
   },
   {
     "taskId": 4,
@@ -33,7 +33,7 @@
     "spentTime": "3h 15m",
     "assignee": "/images/assignees/primary.svg",
     "priority": "Low",
-    "isDone": false
+    "isDone": "To Do"
   },
   {
     "taskId": 5,
@@ -42,7 +42,7 @@
     "spentTime": "4h",
     "assignee": "/images/assignees/primary.svg",
     "priority": "Medium",
-    "isDone": false
+    "isDone": "In Review"
   },
   {
     "taskId": 6,
@@ -51,6 +51,6 @@
     "spentTime": "2d 2h 20m",
     "assignee": "/images/assignees/primary.svg",
     "priority": "Low",
-    "isDone": false
+    "isDone": "In Progress"
   }
 ]

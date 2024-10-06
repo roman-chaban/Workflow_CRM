@@ -5,7 +5,7 @@ export interface Task {
   spentTime: string;
   assignee: string;
   priority: string;
-  isDone: boolean;
+  isDone: string;
 }
 
 export type TTasks = Task[];

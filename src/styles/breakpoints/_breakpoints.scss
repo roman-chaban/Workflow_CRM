@@ -6,8 +6,6 @@ $breakpoint-medium: rem(1024px);
 $breakpoint-small: rem(768px);
 $breakpoint-xsmall: rem(600px);
 
-$breakpoint-lmedium: 1200px;
-
 @mixin respond-to($breakpoint) {
   @if $breakpoint == large {
     @media (max-width: $breakpoint-large) {

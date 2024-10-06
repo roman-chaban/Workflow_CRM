@@ -8,6 +8,7 @@ import styles from './Sidebar.module.scss';
 
 import { Nav, Button } from '@/components/index/index';
 import { nav } from '@/types/nav';
+import { PATHS } from '@/constants/paths';
 
 interface SidebarProps {
   onOpenModal: () => void;
@@ -19,13 +20,15 @@ export const Sidebar: FC<SidebarProps> = ({ onOpenModal }) => {
       <div className={styles['sidebar__container']}>
         <div className={styles['sidebar__nav']}>
           <div className={styles['sidebar__logo']}>
-            <Image
-              priority
-              src="/icons/logo/Logo.svg"
-              alt="Sidebar Logo"
-              width={50}
-              height={50}
-            />
+            <Link href={PATHS.HOME}>
+              <Image
+                priority
+                src="/icons/logo/Logo.svg"
+                alt="Sidebar Logo"
+                width={50}
+                height={50}
+              />
+            </Link>
           </div>
           <Nav nav={nav} />
         </div>

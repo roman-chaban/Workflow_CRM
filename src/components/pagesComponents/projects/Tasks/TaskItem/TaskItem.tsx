@@ -2,6 +2,7 @@ import type { FC } from 'react';
 import Image from 'next/image';
 import styles from './TaskItem.module.scss';
 import { Task } from '@/types/tasks';
+import { generateTaskProgressClassNames } from '@/utils/generateTaskProgressClassNames';
 
 interface TaskItemProps {
   task: Task;
@@ -17,7 +18,15 @@ export const TaskItem: FC<TaskItemProps> = ({ task }) => {
         : '/icons/projects/low.svg';
     const altText = `${priority} Priority Icon`;
 
-    return <Image src={iconPath} alt={altText} width={24} height={24} />;
+    return (
+      <Image
+        src={iconPath}
+        alt={altText}
+        width={24}
+        height={24}
+        className={styles.task__priority}
+      />
+    );
   };
 
   const getPriorityColor = (priority: string) => {
@@ -58,6 +67,9 @@ export const TaskItem: FC<TaskItemProps> = ({ task }) => {
             >
               {getPriorityIcon(priority)} {priority}
             </strong>
+          </h4>
+          <h4 className={generateTaskProgressClassNames(task)}>
+            {task.isDone}
           </h4>
         </div>
       </div>

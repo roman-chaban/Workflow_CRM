@@ -1,6 +1,7 @@
 @use '../colors/colors' as color;
 @use '../globals/globals' as size;
 @use '../functions/functions' as *;
+@use '../breakpoints/breakpoints' as *;
 
 .box {
   width: 100%;
@@ -8,6 +9,11 @@
   column-gap: rem(40px);
   grid-template-columns: rem(280px) 1fr;
   grid-column: span 12;
+
+  @include respond-to(large) {
+    grid-template-columns: rem(220px) 1fr;
+    column-gap: rem(20px);
+  }
 }
 
 .tasks__box {

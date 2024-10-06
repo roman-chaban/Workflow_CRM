@@ -37,14 +37,5 @@
 }
 
 .active__tasks {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: color.$color-light-gray;
-  color: color.$color-black;
-  font-size: size.$font-size-16px;
-  font-weight: 700;
-  padding-block: rem(9px);
-  border-radius: rem(14px);
-  height: rem(45px);
+  @include headingProjectsNav;
 }

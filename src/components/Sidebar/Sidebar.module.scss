@@ -1,10 +1,12 @@
 @use '../../styles/colors/colors' as color;
 @use '../../styles/functions/functions' as *;
 @use '../../styles/globals/globals' as size;
+@use '../../styles/breakpoints/breakpoints' as *;
 
 .sidebar {
   width: 100%;
   max-width: rem(220px);
+  height: 100%;
   &__container {
     display: flex;
     flex-direction: column;
@@ -12,17 +14,29 @@
     gap: rem(42px);
     width: 100%;
     max-width: rem(220px);
-    height: 99%;
+    height: 100%;
     background: color.$color-white;
     box-shadow: color.$color-box-shadow-background;
     border-radius: rem(24px);
     padding: rem(40px) 0 rem(40px) rem(16px);
+    @include respond-to(lmedium) {
+      max-width: rem(200px);
+    }
+  }
+
+  @include respond-to(lmedium) {
+    max-width: rem(200px);
   }
 
   &__nav {
     display: flex;
     flex-direction: column;
     gap: rem(42px);
+
+    @include respond-to(lmedium) {
+      gap: rem(30px);
+    }
+
   }
 
   &__logo {

@@ -151,3 +151,36 @@
   padding: rem(12px);
   background: color.$color-white;
 }
+
+@mixin titleInProgress(
+  $color: $color,
+  $background: $background,
+  $max-width: $max-width
+) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: $max-width;
+  font-weight: 700;
+  line-height: 133%;
+  padding: rem(7px) rem(14px) rem(7px) rem(15px);
+  border-radius: rem(8px);
+  font-size: size.$font-size-12px;
+  color: $color;
+  background: $background;
+  height: rem(30px);
+}
+
+@mixin headingProjectsNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: color.$color-light-gray;
+  color: color.$color-black;
+  font-size: size.$font-size-16px;
+  font-weight: 700;
+  padding-block: rem(9px);
+  border-radius: rem(14px);
+  height: rem(45px);
+}
