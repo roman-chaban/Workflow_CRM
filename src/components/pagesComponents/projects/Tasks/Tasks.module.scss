@@ -8,8 +8,15 @@
   display: flex;
   flex-direction: column;
   gap: rem(16px);
+  height: 100%;
 }
 
 .backlog__tasks {
   @include headingProjectsNav;
+}
+
+.tasks__loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

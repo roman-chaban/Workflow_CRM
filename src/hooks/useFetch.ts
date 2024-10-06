@@ -1,34 +1,26 @@
 import { useEffect, useState } from 'react';
 
-type FetchOptions = {
-  url: string;
-  options?: RequestInit;
-};
-
-export const useFetch = <T>({ url, options }: FetchOptions) => {
+export const useFetch = <T>({ url }: { url: string }) => {
   const [data, setData] = useState<T | null>(null);
-  const [loading, setLoading] = useState<boolean>(false);
-  const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
+      setLoading(true);
       try {
-        setLoading(true);
-        const response = await fetch(url, options);
-
-        if (!response.ok) {
-          throw new Error(`Error: ${response.statusText}`);
-        }
+        const response = await fetch(url);
+        if (!response.ok) throw new Error('Network response was not ok');
         const result: T = await response.json();
         setData(result);
-      } catch (err) {
-        setError((err as Error).message);
+      } catch (error) {
+        console.error(error);
       } finally {
         setLoading(false);
       }
     };
-    fetchData();
-  }, [url, options]);
 
-  return { data, loading, error };
+    fetchData();
+  }, [url]);
+
+  return { data, loading };
 };

@@ -1,15 +1,22 @@
 'use client';
 
-import type { FC } from 'react';
+import { type FC } from 'react';
 
 import styles from './Tasks.module.scss';
 import { useFetch } from '@/hooks/useFetch';
 import { TTasks } from '@/types/tasks';
 import { TaskItem } from './TaskItem/TaskItem';
 import { Heading } from '@/components/ui/Heading/Heading';
+import { TasksLoader } from '@/components/ui/TasksLoader/TasksLoader';
 
 export const Tasks: FC = () => {
-  const { data: tasks } = useFetch<TTasks>({ url: '/data/tasks.json' });
+  const { data: tasks, loading } = useFetch<TTasks>({
+    url: '/data/tasks.json',
+  });
+
+  if (loading) {
+    return <TasksLoader />;
+  }
 
   return (
     <>
