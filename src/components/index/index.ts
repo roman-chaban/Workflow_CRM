@@ -23,6 +23,11 @@ export { NearestHeader } from '@/components/pagesComponents/nearest/NearestHeade
 export { ProjectsSidebar } from '@/components/pagesComponents/projects/ProjectsSidebar/ProjectsSidebar';
 export { ProjectsSidebarNav } from '@/components/pagesComponents/projects/ProjectsSidebarNav/ProjectsSidebarNav';
 export { ProjectsSidebarNavItem } from '@/components/pagesComponents/projects/ProjectsSidebarNavItem/ProjectsSidebarNavItem';
+export { FoodDelivery } from '@/components/pagesComponents/projects/FoodDelivery/FoodDelivery';
+export { Fortune } from '@/components/pagesComponents/projects/Fortune/Fortune';
+export { Internal } from '@/components/pagesComponents/projects/Internal/Internal';
+export { PlannerApp } from '@/components/pagesComponents/projects/PlannerApp/PlannerApp';
+export { TimeTracker } from '@/components/pagesComponents/projects/TimeTracker/TimeTracker';
 export { Tasks } from '@/components/pagesComponents/projects/Tasks/Tasks';
 export { TaskItem } from '@/components/pagesComponents/projects/Tasks/TaskItem/TaskItem';
 export { TasksNav } from '@/components/pagesComponents/projects/TasksNav/TasksNav';
@@ -35,3 +40,5 @@ export { Select } from '@/components/ui/Select/Select';
 export { Textarea } from '@/components/ui/Textarea/Textarea';
 export { Upload } from '@/components/ui/Upload/Upload';
 export { ViewLink } from '@/components/ui/ViewLink/ViewLink';
+export { ArrowIcon } from '@/components/ui/ArrowIcon/ArrowIcon';
+export { TasksLoader } from '@/components/ui/TasksLoader/TasksLoader';

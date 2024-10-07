@@ -1,23 +1,24 @@
 'use client';
 
 import { ProjectsNav } from '@/components/pagesComponents/projects/ProjectsNav/ProjectsNav';
+import { useState } from 'react';
 import {
   Grid,
   ProjectsSidebar,
   Box,
   TasksNav,
   Tasks,
+  FoodDelivery,
+  Fortune,
+  PlannerApp,
+  TimeTracker,
+  Internal,
 } from '@/components/index/index';
 
 import styles from '@/styles/pages/Projects.module.scss';
+
 import { useAppSelector } from '@/hooks/useAppSelector';
-import { FoodDelivery } from '@/components/pagesComponents/projects/FoodDelivery/FoodDelivery';
 import { useDocumentTitle } from '@/hooks/useDocumentTitle';
-import { Fortune } from '@/components/pagesComponents/projects/Fortune/Fortune';
-import { PlannerApp } from '@/components/pagesComponents/projects/PlannerApp/PlannerApp';
-import { TimeTracker } from '@/components/pagesComponents/projects/TimeTracker/TimeTracker';
-import { Internal } from '@/components/pagesComponents/projects/Internal/Internal';
-import { useState } from 'react';
 
 export default function Projects() {
   useDocumentTitle('Workflow CRM | Projects');
