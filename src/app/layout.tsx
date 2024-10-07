@@ -6,6 +6,7 @@ import '@/styles/main/main.scss';
 import { Sidebar, Header, Modal } from '@/components/index/index';
 
 import { useState } from 'react';
+import { Providers } from '@/store/providers/providers';
 
 export default function RootLayout({
   children,
@@ -32,12 +33,14 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <Sidebar onOpenModal={handleOpenModal} />
-        {isOpen && <Modal onClose={handleCloseModal} />}
-        <div className="page">
-          <Header />
-          <main className="main">{children}</main>
-        </div>
+        <Providers>
+          <Sidebar onOpenModal={handleOpenModal} />
+          {isOpen && <Modal onClose={handleCloseModal} />}
+          <div className="page">
+            <Header />
+            <main className="main">{children}</main>
+          </div>
+        </Providers>
       </body>
     </html>
   );

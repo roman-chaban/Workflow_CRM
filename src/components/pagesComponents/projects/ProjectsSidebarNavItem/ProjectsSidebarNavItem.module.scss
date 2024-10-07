@@ -8,12 +8,48 @@
   display: flex;
   flex-direction: column;
   gap: rem(4px);
-  color: color.$color-black;
-  font-size: size.$font-size-16px;
-  line-height: 150%;
+  padding: rem(10px);
+  max-width: rem(190px);
+
+  cursor: pointer;
 
   &-code {
     color: color.$color-gray-second;
     font-size: size.$font-size-12px;
+  }
+
+  &-title {
+    color: color.$color-black;
+    font-size: size.$font-size-14px;
+    line-height: 150%;
+  }
+
+  &-view-link {
+    font-weight: 600;
+    font-size: size.$font-size-14px;
+    color: color.$color-support-background;
+    padding-block-start: rem(4px);
+    display: flex;
+    align-items: center;
+  }
+}
+
+.active {
+  padding: rem(10px);
+  max-width: rem(190px);
+  border-radius: rem(10px);
+  color: color.$color-support-background;
+  background-color: rgba(color.$color-support-background, 0.1);
+  position: relative;
+  font-weight: 700;
+  &::after {
+    position: absolute;
+    right: -11px;
+    bottom: 0;
+    content: '';
+    border-radius: 2px;
+    width: 4px;
+    height: 100%;
+    background: color.$color-support-background;
   }
 }

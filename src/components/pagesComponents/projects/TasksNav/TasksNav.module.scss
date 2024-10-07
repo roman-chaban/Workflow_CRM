@@ -39,3 +39,14 @@
 .active__tasks {
   @include headingProjectsNav;
 }
+
+.active {
+  border: 2px solid color.$color-support-background;
+}
+
+.menu__icon {
+  width: 100%;
+  height: auto;
+  max-width: rem(24px);
+  max-height: rem(24px);
+}

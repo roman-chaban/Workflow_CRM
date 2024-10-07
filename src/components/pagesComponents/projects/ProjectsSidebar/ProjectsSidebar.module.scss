@@ -66,6 +66,7 @@
     background: color.$color-white;
     box-shadow: color.$color-support-box-shadow;
     position: absolute;
+    z-index: 20;
   }
   &__option {
     font-weight: 600;
