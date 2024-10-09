@@ -1,0 +1,90 @@
+[
+    {
+        "taskId": 1,
+        "code": "TS0001251",
+        "title": "Wireframes Design",
+        "duration": "3d",
+        "profileIcon": "/images/active/primary-profile.svg",
+        "isUp": true
+    },
+    {
+        "taskId": 2,
+        "code": "TS0001252",
+        "title": "User Flow Optimization",
+        "duration": "2d",
+        "profileIcon": "/images/active/secondary-profile.svg",
+        "isUp": true
+    },
+    {
+        "taskId": 3,
+        "code": "TS0001253",
+        "title": "Prototype Creation",
+        "duration": "3d 4h",
+        "profileIcon": "/images/active/primary-profile.svg",
+        "isUp": true
+    },
+    {
+        "taskId": 4,
+        "code": "TS0001254",
+        "title": "UI Dashboard Design",
+        "duration": "1d 6h",
+        "profileIcon": "/images/active/primary-profile.svg",
+        "isUp": true
+    },
+    {
+        "taskId": 5,
+        "code": "TS0001255",
+        "title": "Competitor Analysis",
+        "duration": "2d 5h",
+        "profileIcon": "/images/active/tertiary-profile.svg",
+        "isUp": true
+    },
+    {
+        "taskId": 6,
+        "code": "TS0001256",
+        "title": "Client Presentation Prep",
+        "duration": "7h",
+        "profileIcon": "/images/active/secondary-profile.svg",
+        "isUp": false
+    },
+    {
+        "taskId": 7,
+        "code": "TS0001257",
+        "title": "Usability Testing",
+        "duration": "1d 7h",
+        "profileIcon": "/images/active/primary-profile.svg",
+        "isUp": true
+    },
+    {
+        "taskId": 8,
+        "code": "TS0001258",
+        "title": "User Research Synthesis",
+        "duration": "4d",
+        "profileIcon": "/images/active/secondary-profile.svg",
+        "isUp": true
+    },
+    {
+        "taskId": 9,
+        "code": "TS0001259",
+        "title": "Low-fidelity Wireframes",
+        "duration": "3d",
+        "profileIcon": "/images/active/primary-profile.svg",
+        "isUp": true
+    },
+    {
+        "taskId": 10,
+        "code": "TS0001260",
+        "title": "UI Prototypes",
+        "duration": "2d 5h",
+        "profileIcon": "/images/active/primary-profile.svg",
+        "isUp": true
+    },
+    {
+        "taskId": 11,
+        "code": "TS0001261",
+        "title": "UX Research Report",
+        "duration": "3d 2h",
+        "profileIcon": "/images/active/primary-profile.svg",
+        "isUp": true
+    }
+]

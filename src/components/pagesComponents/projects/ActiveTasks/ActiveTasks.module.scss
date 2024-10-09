@@ -1,0 +1,43 @@
+@use '../../../../styles/colors/colors' as color;
+@use '../../../../styles/globals/globals' as size;
+@use '../../../../styles/functions/functions' as *;
+@use '../../../../styles/mixins/mixins' as *;
+@use '../../../../styles/breakpoints/breakpoints' as *;
+
+.active {
+  display: flex;
+  flex-direction: column;
+  gap: rem(26px);
+}
+
+.active__tasks {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  gap: rem(30px) rem(16px);
+}
+
+.backlog__tasks {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: rem(16px);
+  border-radius: rem(14px);
+  padding: rem(16px) rem(30px);
+  height: rem(220px);
+  background: color.$color-light-gray;
+}
+
+.backlog__heading {
+  color: color.$color-black;
+  font-size: size.$font-size-16px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.backlog__items {
+  display: flex;
+  align-items: center;
+  gap: rem(30px);
+}

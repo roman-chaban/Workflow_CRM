@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { Heading } from '@/components/ui/Heading/Heading';
 import { MenuButton } from './MenuButton/MenuButton';
 import { menuItems } from '@/constants/menuItems';
+import { TasksActiveNav } from '../../TasksActiveNav/TasksActiveNav';
 
 interface TasksNavProps {
   activeItem: string;
@@ -37,7 +38,7 @@ export const TasksNav: FC<TasksNavProps> = ({ activeItem, onMenuClick }) => {
           />
         </Button>
       </div>
-
+      {activeItem === 'secondary' && <TasksActiveNav />}
       <Heading className={styles['active__tasks']} level={'h4'}>
         Active Tasks
       </Heading>

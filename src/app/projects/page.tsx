@@ -19,6 +19,7 @@ import styles from '@/styles/pages/Projects.module.scss';
 
 import { useAppSelector } from '@/hooks/useAppSelector';
 import { useDocumentTitle } from '@/hooks/useDocumentTitle';
+import { ActiveTasks } from '@/components/pagesComponents/projects/ActiveTasks/ActiveTasks';
 
 export default function Projects() {
   useDocumentTitle('Workflow CRM | Projects');
@@ -29,7 +30,7 @@ export default function Projects() {
     activeTaskItemId === 'primary' ? (
       <Tasks />
     ) : activeTaskItemId === 'secondary' ? (
-      'Secondary'
+      <ActiveTasks />
     ) : (
       'Tertiary'
     );
