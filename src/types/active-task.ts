@@ -1,5 +1,5 @@
 export interface IActiveTask {
-  taskId: number;
+  taskId: string;
   code: string;
   title: string;
   duration: string;

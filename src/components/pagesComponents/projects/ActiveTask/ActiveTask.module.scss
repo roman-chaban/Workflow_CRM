@@ -5,6 +5,7 @@
 @use '../../../../styles/breakpoints/breakpoints' as *;
 
 .active__task {
+  cursor: grab;
   width: 100%;
   display: flex;
   flex-direction: column;
