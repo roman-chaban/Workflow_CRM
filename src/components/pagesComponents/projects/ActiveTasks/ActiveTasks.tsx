@@ -33,11 +33,15 @@ const SortableItem: FC<SortableItemProps> = ({ task }) => {
   const style = {
     transform: CSS.Transform.toString(transform),
     transition,
+    width: '100%',
+    maxWidth: '192px',
+    display: 'flex',
+    justifyContent: 'center',
   };
 
   return (
     <div ref={setNodeRef} style={style} {...attributes} {...listeners}>
-      <ActiveTask task={task} />
+      <ActiveTask task={task} backlogClassName="" />
     </div>
   );
 };
@@ -51,7 +55,6 @@ export const ActiveTasks: FC = () => {
 
   useEffect(() => {
     if (tasks) {
-      console.log('Tasks fetched:', tasks);
       setTaskList(tasks);
     }
   }, [tasks]);
@@ -103,8 +106,12 @@ export const ActiveTasks: FC = () => {
       <div className={styles['backlog__tasks']}>
         <h5 className={styles['backlog__heading']}>Backlog</h5>
         <div className={styles['backlog__items']}>
-          {taskList.slice(0, 4).map((task: IActiveTask) => (
-            <ActiveTask key={task.taskId.toString()} task={task} />
+          {taskList.slice(0, 3).map((task: IActiveTask) => (
+            <ActiveTask
+              key={task.taskId.toString()}
+              task={task}
+              backlogClassName={styles['backlog__task']}
+            />
           ))}
         </div>
       </div>

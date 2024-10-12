@@ -7,9 +7,15 @@
   width: 100%;
   border-radius: rem(24px);
   max-width: rem(781px);
-  height: rem(148px);
+  height: 100%;
+  max-height: rem(148px);
   background: color.$color-white;
   box-shadow: color.$color-box-shadow-background;
+
+  @include respond-to(smedium) {
+    grid-template-columns: 1fr;
+    max-height: rem(400px);
+  }
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -21,6 +27,18 @@
     padding: rem(24px);
     padding-block-end: 0;
     border-right: 2px solid color.$color-border-light;
+
+    @include respond-to(smedium) {
+      padding: rem(16px);
+      border-right: 0;
+    }
+  }
+
+  @include respond-to(smedium) {
+    .item__icon {
+      max-width: rem(40px);
+      max-height: rem(40px);
+    }
   }
 
   &-info {
@@ -78,6 +96,11 @@
     justify-content: space-between;
     gap: rem(15px);
     position: relative;
+
+    @include respond-to(smedium) {
+      border-top: 2px solid color.$color-border-light;
+      padding: rem(16px);
+    }
   }
 
   .project__data-title {
@@ -92,6 +115,11 @@
   display: flex;
   align-items: center;
   gap: rem(43px);
+  width: 100%;
+
+  @include respond-to(smedium) {
+    justify-content: space-between;
+  }
 
   &-item {
     color: color.$color-gray-second;

@@ -8,6 +8,8 @@ import { Heading } from '@/components/ui/Heading/Heading';
 import { MenuButton } from './MenuButton/MenuButton';
 import { menuItems } from '@/constants/menuItems';
 import { TasksActiveNav } from '../../TasksActiveNav/TasksActiveNav';
+import { useAppDispatch } from '@/hooks/useAppDispatch';
+import { toggleFilterBoard } from '@/store/slices/FiltersBoardSlice';
 
 interface TasksNavProps {
   activeItem: string;
@@ -15,6 +17,12 @@ interface TasksNavProps {
 }
 
 export const TasksNav: FC<TasksNavProps> = ({ activeItem, onMenuClick }) => {
+  const dispatch = useAppDispatch();
+
+  const handleOpenFilterBoard = () => {
+    dispatch(toggleFilterBoard());
+  };
+
   return (
     <div className={styles['tasks__nav']}>
       <div className={styles['tasks__nav-container']}>
@@ -29,7 +37,11 @@ export const TasksNav: FC<TasksNavProps> = ({ activeItem, onMenuClick }) => {
             />
           ))}
         </div>
-        <Button type="button" className={styles['notifications__button']}>
+        <Button
+          type="button"
+          className={styles['notifications__button']}
+          onClick={handleOpenFilterBoard}
+        >
           <Image
             alt="Notifications Icon"
             src="/icons/projects/notifications.svg"

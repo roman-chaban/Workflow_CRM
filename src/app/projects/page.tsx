@@ -20,11 +20,14 @@ import styles from '@/styles/pages/Projects.module.scss';
 import { useAppSelector } from '@/hooks/useAppSelector';
 import { useDocumentTitle } from '@/hooks/useDocumentTitle';
 import { ActiveTasks } from '@/components/pagesComponents/projects/ActiveTasks/ActiveTasks';
+import { ActiveTasksTable } from '@/components/pagesComponents/projects/ActiveTasksTable/ActiveTasksTable';
+import { FiltersBoard } from '@/components/FiltersBoard/FiltersBoard';
 
 export default function Projects() {
   useDocumentTitle('Workflow CRM | Projects');
   const activeItemId = useAppSelector((state) => state.navSlice.activeItemId);
   const [activeTaskItemId, setActiveTaskItemId] = useState<string>('primary');
+  const isOpenBoard = useAppSelector((state) => state.filterSlice.isOpen);
 
   const changeAnotherTasksItem =
     activeTaskItemId === 'primary' ? (
@@ -32,7 +35,7 @@ export default function Projects() {
     ) : activeTaskItemId === 'secondary' ? (
       <ActiveTasks />
     ) : (
-      'Tertiary'
+      <ActiveTasksTable />
     );
 
   const renderContent = () => {
@@ -55,7 +58,7 @@ export default function Projects() {
   };
 
   return (
-    <Grid isSection gap="1.75rem">
+    <Grid isSection gap="1.75rem" tag={'section'} position="relative">
       <ProjectsNav />
       <Box className={styles['box']}>
         <ProjectsSidebar />
@@ -67,6 +70,7 @@ export default function Projects() {
           {renderContent()}
         </Box>
       </Box>
+      {isOpenBoard && <FiltersBoard />}
     </Grid>
   );
 }

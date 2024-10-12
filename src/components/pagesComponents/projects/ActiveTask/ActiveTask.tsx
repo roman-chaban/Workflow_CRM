@@ -6,11 +6,12 @@ import Image from 'next/image';
 
 interface ActiveTaskProps {
   task: IActiveTask;
+  backlogClassName: string;
 }
 
-export const ActiveTask: FC<ActiveTaskProps> = ({ task }) => {
+export const ActiveTask: FC<ActiveTaskProps> = ({ task, backlogClassName }) => {
   return (
-    <div className={styles['active__task']}>
+    <div className={`${styles.active__task} ${backlogClassName}`}>
       <div className={styles['active__task-header']}>
         <h5 className={styles['active__task-code']}>{task.code}</h5>
         <h4 className={styles['active__task-title']}>{task.title}</h4>

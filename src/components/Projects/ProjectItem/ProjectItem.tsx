@@ -13,7 +13,13 @@ export const ProjectItem: FC<ProjectItemProps> = ({ item }) => {
     <div className={styles['project__item']}>
       <div className={styles['project__item-left']}>
         <div className={styles['project__item-info']}>
-          <Image src={item.iconUrl} alt={item.title} width={50} height={50} />
+          <Image
+            src={item.iconUrl}
+            alt={item.title}
+            width={50}
+            height={50}
+            className={styles['item__icon']}
+          />
           <div className={styles['project__item-titles']}>
             <span className={styles['project__item-code']}>
               {item.projectCode}

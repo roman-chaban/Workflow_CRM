@@ -39,5 +39,11 @@
 .backlog__items {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: rem(30px);
+}
+
+.backlog__items > .backlog__task {
+  max-width: 300px;
+  cursor: pointer;
 }

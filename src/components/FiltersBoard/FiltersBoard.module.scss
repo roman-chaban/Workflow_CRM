@@ -1,0 +1,93 @@
+@use '../../styles/mixins/mixins' as *;
+@use '../../styles/breakpoints/breakpoints' as *;
+@use '../../styles/functions/functions' as *;
+@use '../../styles/colors/colors' as color;
+@use '../../styles/globals/globals' as size;
+
+.filters__board {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  background: color.$color-modal-background;
+  padding: rem(20px) rem(20px);
+
+  &-container {
+    border-radius: rem(24px);
+    width: rem(413px);
+    background: color.$color-white;
+    box-shadow: color.$color-box-shadow-background;
+  }
+
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: rem(37px) rem(30px) rem(24px) rem(30px);
+    border-bottom: 1.5px solid color.$color-border-light;
+    min-height: 50px;
+  }
+
+  &-header--title {
+    font-weight: 700;
+    font-size: size.$font-size-22px;
+    color: color.$color-black;
+  }
+
+  &-header--close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: rem(14px);
+    background: color.$color-main-background;
+    padding: rem(10px);
+  }
+}
+
+.close__icon {
+  max-width: rem(17px);
+  max-height: rem(17px);
+}
+
+.period {
+  width: 100%;
+  padding: rem(22px) rem(30px) rem(18px) rem(30px);
+  border-bottom: 1.5px solid color.$color-border-light;
+  position: relative;
+
+  &__input {
+    border: 1px solid color.$color-modal-area-background;
+    border-radius: 14px;
+    width: 100%;
+    max-width: 353px;
+    height: 49px;
+    box-shadow: color.$color-modal-box-shadow;
+    padding-inline: rem(18px);
+  }
+
+  &__icon {
+    position: absolute;
+    bottom: 54px;
+    right: 42px;
+  }
+
+  &__label {
+    width: 100%;
+    min-height: 102px;
+    display: flex;
+    flex-direction: column;
+    gap: rem(7px);
+  }
+
+  &__label-text {
+    font-weight: 700;
+    line-height: 171%;
+    font-size: size.$font-size-14px;
+    color: color.$color-gray;
+  }
+}

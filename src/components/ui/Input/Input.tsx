@@ -6,7 +6,8 @@ type InputTypes =
   | 'search'
   | 'password'
   | 'checkbox'
-  | 'radio';
+  | 'radio'
+  | 'date';
 
 interface InputClassNames {
   label: string;
