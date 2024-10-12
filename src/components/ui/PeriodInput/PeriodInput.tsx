@@ -1,7 +1,9 @@
 import { memo, useState, type FC } from 'react';
+
 import { Input } from '../Input/Input';
 
 import styles from '@/components/FiltersBoard/FiltersBoard.module.scss';
+
 import Image from 'next/image';
 
 export const PeriodInput: FC = memo(() => {

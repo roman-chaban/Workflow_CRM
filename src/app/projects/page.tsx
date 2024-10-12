@@ -2,13 +2,18 @@
 
 import { ProjectsNav } from '@/components/pagesComponents/projects/ProjectsNav/ProjectsNav';
 import { useState } from 'react';
-import { Grid, ProjectsSidebar, Box, TasksNav } from '@/components/index/index';
+import {
+  Grid,
+  ProjectsSidebar,
+  Box,
+  TasksNav,
+  FiltersBoard,
+} from '@/components/index/index';
 
 import styles from '@/styles/pages/Projects.module.scss';
 
 import { useAppSelector } from '@/hooks/useAppSelector';
 import { useDocumentTitle } from '@/hooks/useDocumentTitle';
-import { FiltersBoard } from '@/components/FiltersBoard/FiltersBoard';
 import {
   renderContent,
   TasksItem,

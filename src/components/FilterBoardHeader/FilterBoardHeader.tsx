@@ -1,7 +1,6 @@
 import { memo, type FC } from 'react';
-import { Button } from '../index';
+import { Button, CloseIcon } from '../index';
 import styles from '@/components/FiltersBoard/FiltersBoard.module.scss';
-import { CloseIcon } from '../ui/CloseIcon/CloseIcon';
 
 export type FiltersBoardHeaderProps = {
   handleCloseBoard: () => void;

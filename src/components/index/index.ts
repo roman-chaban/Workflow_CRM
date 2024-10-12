@@ -42,3 +42,8 @@ export { Upload } from '@/components/ui/Upload/Upload';
 export { ViewLink } from '@/components/ui/ViewLink/ViewLink';
 export { ArrowIcon } from '@/components/ui/ArrowIcon/ArrowIcon';
 export { TasksLoader } from '@/components/ui/TasksLoader/TasksLoader';
+export { FiltersBoardHeader } from '@/components/FilterBoardHeader/FilterBoardHeader';
+export { FiltersBoard } from '@/components/FiltersBoard/FiltersBoard';
+export { CloseIcon } from '@/components/ui/CloseIcon/CloseIcon';
+export { PeriodInput } from '@/components/ui/PeriodInput/PeriodInput';
+export { TaskGroup } from '@/components/TaskGroup/TaskGroup';

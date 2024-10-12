@@ -1,10 +1,11 @@
 import { useCallback, type FC, useEffect, useState } from 'react';
-import styles from './FiltersBoard.module.scss';
 import { useAppDispatch } from '@/hooks/useAppDispatch';
+
+import styles from './FiltersBoard.module.scss';
+
 import { onCloseFilterBoard } from '@/store/slices/FiltersBoardSlice';
-import { PeriodInput } from '../ui/PeriodInput/PeriodInput';
-import { TaskGroup } from '../TaskGroup/TaskGroup';
-import { FiltersBoardHeader } from '../FilterBoardHeader/FilterBoardHeader';
+
+import { PeriodInput, FiltersBoardHeader, TaskGroup } from '../index';
 
 export type FiltersBoardProps = {
   isClosedBoard: boolean;

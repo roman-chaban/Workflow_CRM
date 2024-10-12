@@ -1,6 +1,9 @@
 import { memo, type FC } from 'react';
+
 import styles from './TaskGroup.module.scss';
+
 import { Input } from '../index';
+
 import { Task, taskGroups } from '@/data/taskGroups';
 
 export const TaskGroup: FC = memo(() => {
