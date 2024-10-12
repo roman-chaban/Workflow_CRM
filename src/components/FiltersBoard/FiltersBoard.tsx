@@ -1,4 +1,6 @@
-import { useCallback, type FC, useEffect, useState } from 'react';
+'use client';
+
+import { useCallback, type FC, useEffect, useState, useRef } from 'react';
 import { useAppDispatch } from '@/hooks/useAppDispatch';
 
 import styles from './FiltersBoard.module.scss';
@@ -6,6 +8,7 @@ import styles from './FiltersBoard.module.scss';
 import { onCloseFilterBoard } from '@/store/slices/FiltersBoardSlice';
 
 import { PeriodInput, FiltersBoardHeader, TaskGroup } from '../index';
+import { useOnClickOutside } from '@/hooks/useOnClickOutside';
 
 export type FiltersBoardProps = {
   isClosedBoard: boolean;
@@ -14,10 +17,13 @@ export type FiltersBoardProps = {
 export const FiltersBoard: FC<FiltersBoardProps> = ({ isClosedBoard }) => {
   const dispatch = useAppDispatch();
   const [isVisible, setIsVisible] = useState(true);
+  const boardRef = useRef<HTMLElement>(null);
 
   const handleCloseBoard = useCallback(() => {
     dispatch(onCloseFilterBoard());
   }, [dispatch]);
+
+  useOnClickOutside(boardRef, handleCloseBoard);
 
   useEffect(() => {
     if (isClosedBoard) {
@@ -35,6 +41,7 @@ export const FiltersBoard: FC<FiltersBoardProps> = ({ isClosedBoard }) => {
     <div className={styles['filters__board']}>
       {isVisible && (
         <aside
+          ref={boardRef}
           className={`${styles['filters__board-container']} ${
             isClosedBoard ? styles['is-closing'] : styles['is-open']
           }`}

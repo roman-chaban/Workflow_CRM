@@ -1,3 +1,5 @@
+'use client';
+
 import { memo, useState, type FC } from 'react';
 
 import { Input } from '../Input/Input';

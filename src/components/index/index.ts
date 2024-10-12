@@ -47,3 +47,6 @@ export { FiltersBoard } from '@/components/FiltersBoard/FiltersBoard';
 export { CloseIcon } from '@/components/ui/CloseIcon/CloseIcon';
 export { PeriodInput } from '@/components/ui/PeriodInput/PeriodInput';
 export { TaskGroup } from '@/components/TaskGroup/TaskGroup';
+export { ClientModalWrapper } from '@/components/ClientModalWrapper/ClientModalWrapper';
+export { PageWrapper } from '@/components/containers/PageWrapper/PageWrapper';
+export { MainWrapper } from '@/components/containers/MainWrapper/MainWrapper';

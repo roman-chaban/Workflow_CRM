@@ -1,4 +1,3 @@
-
 import type { Metadata } from 'next';
 import {
   Box,
@@ -14,9 +13,6 @@ import styles from '@/styles/pages/Home.module.scss';
 
 export const metadata: Metadata = {
   title: 'Workflow CRM | Dashboard',
-  description:
-    'Workflow CRM is a powerful Customer Relationship Management system designed to streamline sales processes, enhance customer service, and facilitate project management. With a comprehensive suite of tools, this platform empowers businesses to manage contacts, track deals, organize tasks, and generate insightful reports, ultimately improving customer interactions and boosting operational efficiency.',
-  icons: '/favicon/crm_logo.svg',
 };
 
 export default function Home() {

@@ -1,45 +1,39 @@
-'use client';
+import type { Metadata } from 'next';
 
 import '@/styles/fonts/_fonts.scss';
 import '@/styles/main/main.scss';
 
-import { Sidebar, Header, Modal } from '@/components/index/index';
+import { Header } from '@/components/index/index';
 
-import { useState } from 'react';
 import { Providers } from '@/store/providers/providers';
+
+import {
+  ClientModalWrapper,
+  PageWrapper,
+  MainWrapper,
+} from '@/components/index/index';
+
+export const metadata: Metadata = {
+  title: 'Workflow CRM | Dashboard',
+  description:
+    'Workflow CRM is a powerful Customer Relationship Management system designed to streamline sales processes, enhance customer service, and facilitate project management. With a comprehensive suite of tools, this platform empowers businesses to manage contacts, track deals, organize tasks, and generate insightful reports, ultimately improving customer interactions and boosting operational efficiency.',
+  icons: '/favicon/crm_logo.svg',
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-
-  const handleOpenModal = () => {
-    setIsOpen(true);
-  };
-
-  const handleCloseModal = () => {
-    setIsOpen(false);
-  };
-
   return (
     <html lang="en">
-      <head>
-        <link
-          rel="shortcut icon"
-          href="/favicon/crm_logo.svg"
-          type="image/x-icon"
-        />
-      </head>
       <body>
         <Providers>
-          <Sidebar onOpenModal={handleOpenModal} />
-          {isOpen && <Modal onClose={handleCloseModal} />}
-          <div className="page">
+          <ClientModalWrapper />
+          <PageWrapper className="page">
             <Header />
-            <main className="main">{children}</main>
-          </div>
+            <MainWrapper className="main">{children}</MainWrapper>
+          </PageWrapper>
         </Providers>
       </body>
     </html>
