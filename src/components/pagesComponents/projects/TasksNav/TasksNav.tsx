@@ -10,10 +10,11 @@ import { menuItems } from '@/constants/menuItems';
 import { TasksActiveNav } from '../../TasksActiveNav/TasksActiveNav';
 import { useAppDispatch } from '@/hooks/useAppDispatch';
 import { toggleFilterBoard } from '@/store/slices/FiltersBoardSlice';
+import { TasksItem } from '@/fixtures/renderContent/renderContent';
 
 interface TasksNavProps {
-  activeItem: string;
-  onMenuClick: (item: string) => void;
+  activeItem: TasksItem;
+  onMenuClick: (item: TasksItem) => void;
 }
 
 export const TasksNav: FC<TasksNavProps> = ({ activeItem, onMenuClick }) => {
@@ -33,7 +34,7 @@ export const TasksNav: FC<TasksNavProps> = ({ activeItem, onMenuClick }) => {
               key={item.id}
               item={item}
               isActive={activeItem === item.id}
-              onClick={() => onMenuClick(item.id)}
+              onClick={() => onMenuClick(item.id as TasksItem)}
             />
           ))}
         </div>
