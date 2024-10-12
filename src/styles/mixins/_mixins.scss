@@ -184,3 +184,10 @@
   border-radius: rem(14px);
   height: rem(45px);
 }
+
+@mixin labelTitleGray {
+  font-weight: 700;
+  line-height: 171%;
+  font-size: size.$font-size-14px;
+  color: color.$color-gray;
+}

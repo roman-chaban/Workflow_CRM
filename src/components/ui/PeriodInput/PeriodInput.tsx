@@ -1,10 +1,10 @@
-import { useState, type FC } from 'react';
+import { memo, useState, type FC } from 'react';
 import { Input } from '../Input/Input';
 
 import styles from '@/components/FiltersBoard/FiltersBoard.module.scss';
 import Image from 'next/image';
 
-export const PeriodInput: FC = () => {
+export const PeriodInput: FC = memo(() => {
   const [date, setDate] = useState('');
 
   return (
@@ -37,4 +37,6 @@ export const PeriodInput: FC = () => {
       />
     </div>
   );
-};
+});
+
+PeriodInput.displayName = 'PeriodInput';

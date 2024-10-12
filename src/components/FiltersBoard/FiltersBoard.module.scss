@@ -3,6 +3,7 @@
 @use '../../styles/functions/functions' as *;
 @use '../../styles/colors/colors' as color;
 @use '../../styles/globals/globals' as size;
+@use '../../styles/keyframes/keyframes' as *;
 
 .filters__board {
   position: fixed;
@@ -14,12 +15,25 @@
   justify-content: flex-end;
   background: color.$color-modal-background;
   padding: rem(20px) rem(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+
+  &.is-open {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+
+  &.is-closing {
+    transform: translateX(100%) scale(0.95);
+    opacity: 0;
+  }
 
   &-container {
     border-radius: rem(24px);
     width: rem(413px);
     background: color.$color-white;
     box-shadow: color.$color-box-shadow-background;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    animation: slideIn 0.4s ease forwards;
   }
 
   &-header {
@@ -91,3 +105,4 @@
     color: color.$color-gray;
   }
 }
+

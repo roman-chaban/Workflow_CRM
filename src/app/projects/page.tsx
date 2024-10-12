@@ -26,8 +26,8 @@ import { FiltersBoard } from '@/components/FiltersBoard/FiltersBoard';
 export default function Projects() {
   useDocumentTitle('Workflow CRM | Projects');
   const activeItemId = useAppSelector((state) => state.navSlice.activeItemId);
-  const [activeTaskItemId, setActiveTaskItemId] = useState<string>('primary');
   const isOpenBoard = useAppSelector((state) => state.filterSlice.isOpen);
+  const [activeTaskItemId, setActiveTaskItemId] = useState<string>('primary');
 
   const changeAnotherTasksItem =
     activeTaskItemId === 'primary' ? (
@@ -70,7 +70,7 @@ export default function Projects() {
           {renderContent()}
         </Box>
       </Box>
-      {isOpenBoard && <FiltersBoard />}
+      {isOpenBoard && <FiltersBoard isClosedBoard={!isOpenBoard} />}
     </Grid>
   );
 }
