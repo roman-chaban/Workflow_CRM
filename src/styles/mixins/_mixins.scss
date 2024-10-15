@@ -191,3 +191,27 @@
   font-size: size.$font-size-14px;
   color: color.$color-gray;
 }
+
+@mixin checkboxesContainer {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: rem(23px);
+  margin-block-start: rem(18px);
+}
+
+@mixin input {
+}
+
+@mixin label {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  gap: rem(16px);
+}
+
+@mixin text {
+  font-size: size.$font-size-16px;
+  line-height: 150%;
+  color: color.$color-black;
+}

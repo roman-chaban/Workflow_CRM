@@ -1,0 +1,36 @@
+@use '../breakpoints/breakpoints' as *;
+@use '../colors/colors' as color;
+@use '../globals/globals' as size;
+@use '../functions/functions' as *;
+
+.not__found {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+
+  &-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('/images/not-found/Illustration.svg') no-repeat center
+      center;
+    width: 100%;
+    background-size: cover;
+    aspect-ratio: 10 / 9;
+
+    @include respond-to(smedium) {
+      aspect-ratio: 0;
+      max-width: 80%;
+      max-height: 100%;
+    }
+  }
+
+  &-title {
+    position: relative;
+    right: 60px;
+    bottom: 50px;
+    font-size: size.$font-size-40px;
+    font-weight: 700;
+  }
+}
