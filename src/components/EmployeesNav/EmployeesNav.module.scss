@@ -1,0 +1,20 @@
+@use '../../styles/mixins/mixins' as *;
+@use '../../styles/breakpoints/breakpoints' as *;
+@use '../../styles/functions/functions' as *;
+@use '../../styles/colors/colors' as color;
+@use '../../styles/globals/globals' as size;
+@use '../../styles/keyframes/keyframes' as *;
+
+.employees__nav {
+  grid-column: span 12;
+  height: rem(60px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &-title {
+    font-weight: 700;
+    font-size: size.$font-size-36px;
+    color: color.$color-black;
+  }
+}

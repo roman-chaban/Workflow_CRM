@@ -11,6 +11,7 @@ import { PeriodInput, FiltersBoardHeader, TaskGroup } from '../index';
 import { useOnClickOutside } from '@/hooks/useOnClickOutside';
 import { Reporter } from '../Reporter/Reporter';
 import { Assignees } from '../Assignees/Assignees';
+import { Estimate } from '../Estimate/Estimate';
 
 export type FiltersBoardProps = {
   isClosedBoard: boolean;
@@ -54,6 +55,7 @@ export const FiltersBoard: FC<FiltersBoardProps> = ({ isClosedBoard }) => {
             <TaskGroup />
             <Reporter />
             <Assignees />
+            <Estimate />
           </div>
         </aside>
       )}

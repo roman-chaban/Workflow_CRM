@@ -1,0 +1,50 @@
+@use '../../styles/mixins/mixins' as *;
+@use '../../styles/breakpoints/breakpoints' as *;
+@use '../../styles/functions/functions' as *;
+@use '../../styles/colors/colors' as color;
+@use '../../styles/globals/globals' as size;
+@use '../../styles/keyframes/keyframes' as *;
+
+.estimate {
+  width: 100%;
+
+  &__container {
+    padding: rem(21px) rem(29px) rem(22px) rem(29px);
+    border-bottom: 1.5px solid color.$color-border-light;
+  }
+
+  &__input {
+    border: 1px solid color.$color-modal-area-background;
+    border-radius: 14px;
+    width: 100%;
+    max-width: 353px;
+    height: 49px;
+    box-shadow: color.$color-modal-box-shadow;
+    color: color.$color-gray;
+    caret-color: color.$color-gray;
+    padding-inline: rem(18px);
+
+    &::placeholder {
+      color: color.$color-gray;
+    }
+  }
+
+  &__label {
+    width: 100%;
+    min-height: 102px;
+    display: flex;
+    flex-direction: column;
+    gap: rem(7px);
+    position: relative;
+  }
+
+  &__text {
+    @include labelTitleGray;
+  }
+
+  .clock__icon {
+    position: absolute;
+    bottom: rem(44px);
+    right: rem(18px);
+  }
+}
