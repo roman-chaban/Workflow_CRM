@@ -13,7 +13,6 @@ export const EmployeesNavButtons: FC = () => {
 
   const handleChangeTab = (tab: 'activity' | 'list') => {
     setActiveTab(tab);
-    console.log(tab);
   };
   return (
     <div className={styles['employees__nav-buttons']}>
