@@ -1,64 +1,72 @@
 'use client';
 
-import {useState, useEffect} from 'react';
+import { useState, useEffect, useRef } from 'react';
 import styles from '@/styles/pages/Nearest.module.scss';
-import {TEventsItems, EventItem} from '@/types/event-item';
-import {useFetch} from '@/hooks/useFetch';
+import { TEventsItems, EventItem } from '@/types/event-item';
+import { useFetch } from '@/hooks/useFetch';
 import {
-    NearestHeader,
-    NearestEventsList,
-    EventModal,
+  NearestHeader,
+  NearestEventsList,
+  EventModal,
 } from '@/components/index/index';
 
-import {useDocumentTitle} from '@/hooks/useDocumentTitle';
+import { useDocumentTitle } from '@/hooks/useDocumentTitle';
+import { useOnClickOutside } from '@/hooks/useOnClickOutside';
 
 export default function Nearest() {
-    const {data: fetchedData} = useFetch<TEventsItems>({
-        url: '/data/nearest-events.json',
-    });
-    const [events, setEvents] = useState<TEventsItems | []>([]);
-    const [showModal, setShowModal] = useState(false);
-    useDocumentTitle('Workflow CRM | Events');
+  const { data: fetchedData } = useFetch<TEventsItems>({
+    url: '/data/nearest-events.json',
+  });
+  const [events, setEvents] = useState<TEventsItems | []>([]);
+  const [showModal, setShowModal] = useState(false);
+  useDocumentTitle('Workflow CRM | Events');
+  const eventModalRef = useRef<HTMLDivElement>(null);
 
-    useEffect(() => {
-        if (fetchedData) {
-            setEvents(fetchedData);
-        }
-    }, [fetchedData]);
+  useOnClickOutside(eventModalRef, () => setShowModal(false));
 
-    const addNewEvent = (eventData: {
-        title: string;
-        duration: string;
-        colorVariant: string;
-    }) => {
-        const newEvent: EventItem = {
-            id: events.length + 1,
-            title: eventData.title,
-            icon: '/icons/nearest/arrow-up.svg',
-            titleIcon: '/icons/nearest/events/active.svg',
-            day: new Date().toLocaleDateString('en-US', {
-                month: 'short',
-                day: 'numeric',
-            }),
-            hour:
-                new Date().toLocaleTimeString('uk-UA', {
-                    hour: 'numeric',
-                    minute: 'numeric',
-                    hour12: false,
-                }) + 'PM',
-            duration: eventData.duration,
-            colorVariant: eventData.colorVariant,
-        };
-        setEvents((prevEvents) => [...prevEvents, newEvent]);
+  useEffect(() => {
+    if (fetchedData) {
+      setEvents(fetchedData);
+    }
+  }, [fetchedData]);
+
+  const addNewEvent = (eventData: {
+    title: string;
+    duration: string;
+    colorVariant: string;
+  }) => {
+    const newEvent: EventItem = {
+      id: events.length + 1,
+      title: eventData.title,
+      icon: '/icons/nearest/arrow-up.svg',
+      titleIcon: '/icons/nearest/events/active.svg',
+      day: new Date().toLocaleDateString('en-US', {
+        month: 'short',
+        day: 'numeric',
+      }),
+      hour:
+        new Date().toLocaleTimeString('uk-UA', {
+          hour: 'numeric',
+          minute: 'numeric',
+          hour12: false,
+        }) + 'PM',
+      duration: eventData.duration,
+      colorVariant: eventData.colorVariant,
     };
+    setEvents((prevEvents) => [...prevEvents, newEvent]);
+  };
 
-    return (
-        <section className={styles['nearest']}>
-            <NearestHeader onAddEvent={() => setShowModal(true)}/>
-            <NearestEventsList events={events}/>
-            {showModal && (
-                <EventModal onClose={() => setShowModal(false)} onSave={addNewEvent}/>
-            )}
-        </section>
-    );
+  return (
+    <section className={styles['nearest']}>
+      <NearestHeader onAddEvent={() => setShowModal(true)} />
+      <NearestEventsList events={events} />
+      {showModal && (
+        <EventModal
+          onClose={() => setShowModal(false)}
+          onSave={addNewEvent}
+          eventModalRef={eventModalRef}
+        />
+      )}
+    </section>
+  );
 }

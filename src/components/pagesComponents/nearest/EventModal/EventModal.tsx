@@ -1,6 +1,6 @@
 'use client';
 
-import { FC, useState } from 'react';
+import { FC, RefObject, useState } from 'react';
 import styles from './EventModal.module.scss';
 import { Button } from '@/components/ui/Button/Button';
 import { CloudUpload, FormClose } from 'grommet-icons';
@@ -12,9 +12,14 @@ interface EventModalProps {
     duration: string;
     colorVariant: string;
   }) => void;
+  eventModalRef: RefObject<HTMLDivElement>;
 }
 
-export const EventModal: FC<EventModalProps> = ({ onClose, onSave }) => {
+export const EventModal: FC<EventModalProps> = ({
+  onClose,
+  onSave,
+  eventModalRef,
+}) => {
   const [data, setData] = useState({
     title: '',
     duration: '',
@@ -37,7 +42,7 @@ export const EventModal: FC<EventModalProps> = ({ onClose, onSave }) => {
 
   return (
     <div className={styles['modal']}>
-      <div className={styles['modal__container']}>
+      <div ref={eventModalRef} className={styles['modal__container']}>
         <h2 className={styles['modal__title']}>Add New Event</h2>
         <div className={styles['modal__fields']}>
           <label className={styles['modal__field']}>

@@ -212,3 +212,29 @@
   line-height: 150%;
   color: color.$color-black;
 }
+
+@mixin inactiveButton {
+  width: 100%;
+  max-width: rem(150px);
+  min-height: rem(40px);
+  border-radius: rem(24px);
+  font-size: size.$font-size-16px;
+  color: color.$color-black;
+  text-align: center;
+  background: inherit;
+}
+
+@mixin defaultInput {
+  width: 100%;
+  height: rem(50px);
+  border-radius: rem(14px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-inline-start: rem(18px);
+  color: color.$color-gray;
+  caret-color: color.$color-gray;
+  font-size: size.$font-size-16px;
+  background: color.$color-white;
+  box-shadow: color.$color-modal-box-shadow;
+}

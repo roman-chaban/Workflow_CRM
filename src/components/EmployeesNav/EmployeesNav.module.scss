@@ -17,4 +17,34 @@
     font-size: size.$font-size-36px;
     color: color.$color-black;
   }
+
+  &-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: rem(340px);
+    border-radius: rem(24px);
+    background: color.$color-border;
+    min-height: rem(50px);
+    padding: rem(5px);
+
+    & > .list__button {
+      @include inactiveButton;
+    }
+
+    & > .activity__button {
+      @include inactiveButton;
+    }
+
+    & > .active {
+      font-weight: 700;
+      color: color.$color-white;
+      background: color.$color-support-background;
+    }
+  }
+
+  & .add__employee-button {
+    @include addButton;
+  }
 }

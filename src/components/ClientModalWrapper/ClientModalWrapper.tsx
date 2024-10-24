@@ -13,9 +13,7 @@ export const ClientModalWrapper: FC = () => {
     setIsOpen((prevState) => !prevState);
   };
 
-  useOnClickOutside(modalRef, () => {
-    if (isOpen) setIsOpen(false);
-  });
+  useOnClickOutside(modalRef, () => setIsOpen(false));
 
   return (
     <>

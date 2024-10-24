@@ -19,8 +19,8 @@ const options = [
 export const Modal = forwardRef<HTMLDivElement, ModalProps>(
   ({ onClose }, ref: ForwardedRef<HTMLDivElement>) => {
     return (
-      <div className={styles['modal']} ref={ref}>
-        <div className={styles['modal__container']}>
+      <div className={styles['modal']}>
+        <div ref={ref} className={styles['modal__container']}>
           <Button
             type="button"
             onClick={onClose}

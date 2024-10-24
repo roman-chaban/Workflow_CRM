@@ -1,16 +1,33 @@
-import type { FC } from 'react';
+'use client';
+
+import { type FC } from 'react';
 
 import styles from './EmployeesNav.module.scss';
-import { Button } from '@/components/ui/Button/Button';
+import { EmployeesNavButtons } from '../EmployeesNavButtons/EmployeesNavButtons';
+import { Button } from '../index';
+import { Plus } from '../icons/Plus/Plus';
+import { isOpenedModal } from '@/app/employees/page';
 
-export const EmployeesNav: FC = () => {
+interface EmployeesNavProps {
+  isOpened: boolean;
+  setIsOpened: (isOpened: isOpenedModal) => void;
+}
+
+export const EmployeesNav: FC<EmployeesNavProps> = ({
+  isOpened,
+  setIsOpened,
+}) => {
   return (
     <div className={styles['employees__nav']}>
       <h3 className={styles['employees__nav-title']}>Employees</h3>
-      <div>
-        <Button type={'button'}>List</Button>
-        <Button type={'button'}>Activity</Button>
-      </div>
+      <EmployeesNavButtons />
+      <Button
+        type="button"
+        className={styles['add__employee-button']}
+        onClick={() => setIsOpened(!isOpened)}
+      >
+        <Plus color='white' /> Add Employee
+      </Button>
     </div>
   );
 };
