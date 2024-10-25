@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { persistStore, persistReducer } from 'redux-persist';
-import rootReducer from './rootReducer/rootReducer'; // Make sure this imports correctly
+import rootReducer from './rootReducer/rootReducer';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const mockStorage = {
