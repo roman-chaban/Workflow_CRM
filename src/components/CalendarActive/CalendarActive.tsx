@@ -6,29 +6,28 @@ import styles from './CalendarActive.module.scss';
 import { Prev } from '../icons/Prev/Prev';
 import { Next } from '../icons/Next/Next';
 import { Button } from '../index';
+import {
+  ButtonInlineStyles,
+  CalendarDays,
+  CurrentMonth,
+  CurrentYear,
+  DaysOfWeek,
+} from '@/types/calendar-active';
+import { getDaysInMonth, getFirstWorkingDay } from '@/fixtures/getDate/getDate';
 
-const navButtonsInlineStyles = {
+const navButtonsInlineStyles: ButtonInlineStyles = {
   background: 'inherit',
   display: 'flex',
   alignItems: 'center',
 };
 
-const getDaysInMonth = (year: number, month: number) => {
-  return new Date(year, month + 1, 0).getDate();
-};
-
-const getFirstWorkingDay = (year: number, month: number) => {
-  const firstDay = new Date(year, month, 1).getDay();
-  return firstDay === 0 ? 1 : firstDay;
-};
-
-const daysOfWeek = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
+const daysOfWeek: DaysOfWeek = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
 
 export const CalendarActive: FC = () => {
-  const [currentYear, setCurrentYear] = useState<number>(2024);
-  const [currentMonth, setCurrentMonth] = useState<number>(9);
+  const [currentYear, setCurrentYear] = useState<CurrentYear>(2024);
+  const [currentMonth, setCurrentMonth] = useState<CurrentMonth>(9);
 
-  const calendarDays: Array<JSX.Element> = [];
+  const calendarDays: CalendarDays = [];
 
   const daysInMonth = useMemo(
     () => getDaysInMonth(currentYear, currentMonth),
@@ -74,7 +73,7 @@ export const CalendarActive: FC = () => {
 
   return (
     <div className={styles['calendarTableContainer']}>
-      <div className={styles['calendarTable']}>
+      <div className={styles['calendarTable']} data-calendar="CalendarTable">
         <nav className={styles['calendarTableHead']}>
           <Button
             type="button"
