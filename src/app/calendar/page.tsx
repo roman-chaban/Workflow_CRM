@@ -1,3 +1,6 @@
+import { CalendarActive } from '@/components/CalendarActive/CalendarActive';
+import { CalendarNav } from '@/components/CalendarNav/CalendarNav';
+import { Grid } from '@/components/index';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -5,5 +8,10 @@ export const metadata: Metadata = {
 };
 
 export default function Calendar() {
-  return <div>Calendar</div>;
+  return (
+    <Grid tag="section" gridTemplateRows="auto" gap={'28px'}>
+      <CalendarNav />
+      <CalendarActive />
+    </Grid>
+  );
 }
