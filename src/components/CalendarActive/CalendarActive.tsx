@@ -26,7 +26,7 @@ const daysOfWeek = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
 
 export const CalendarActive: FC = () => {
   const [currentYear, setCurrentYear] = useState<number>(2024);
-  const [currentMonth, setCurrentMonth] = useState<number>(10);
+  const [currentMonth, setCurrentMonth] = useState<number>(9);
 
   const calendarDays: Array<JSX.Element> = [];
 
@@ -75,7 +75,7 @@ export const CalendarActive: FC = () => {
   return (
     <div className={styles['calendarTableContainer']}>
       <div className={styles['calendarTable']}>
-        <div className={styles['calendarTableHead']}>
+        <nav className={styles['calendarTableHead']}>
           <Button
             type="button"
             style={navButtonsInlineStyles}
@@ -83,12 +83,12 @@ export const CalendarActive: FC = () => {
           >
             <Prev />
           </Button>
-          <div className={styles['calendarTableHeadTitle']}>
+          <h2 className={styles['calendarTableHeadTitle']}>
             {new Date(currentYear, currentMonth).toLocaleDateString('en-US', {
               year: 'numeric',
               month: 'long',
             })}
-          </div>
+          </h2>
           <Button
             type="button"
             style={navButtonsInlineStyles}
@@ -96,7 +96,7 @@ export const CalendarActive: FC = () => {
           >
             <Next />
           </Button>
-        </div>
+        </nav>
         <div className={styles['calendarTableBody']}>{calendarDays}</div>
       </div>
     </div>
