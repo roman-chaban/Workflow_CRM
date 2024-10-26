@@ -1,0 +1,64 @@
+@use '../../../styles/breakpoints/breakpoints' as *;
+@use '../../../styles/functions/functions' as *;
+@use '../../../styles/functions/functions' as *;
+@use '../../../styles/fillers/fillers' as *;
+@use '../../../styles/mixins/mixins' as *;
+@use '../../../styles/colors/colors' as color;
+@use '../../../styles/globals/globals' as size;
+
+.messengerAreaContainer {
+  border-radius: rem(14px);
+  width: 100%;
+  height: auto;
+  background: color.$color-white;
+  box-shadow: color.$color-box-shadow-background;
+  border: 2px solid color.$color-modal-area-background;
+  display: flex;
+  align-items: flex-end;
+  gap: rem(24px);
+  padding: rem(20px) rem(18px);
+  padding-inline-end: rem(6px);
+
+  & .messengerTextareaLabel {
+    width: 100%;
+  }
+
+  & .messengerTextarea {
+    font-family: 'Nunito Sans', sans-serif;
+    width: 100%;
+    resize: none;
+    color: color.$color-gray;
+    caret-color: color.$color-gray;
+    font-size: size.$font-size-18px;
+    box-sizing: border-box;
+  }
+
+  & .messengerAreaConfigureButtons {
+    display: flex;
+    align-items: center;
+    gap: rem(20px);
+
+    & > button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: inherit;
+    }
+  }
+
+  & .messengerAreaButtons {
+    display: flex;
+    align-items: center;
+    gap: rem(20px);
+  }
+
+  .emojiButton {
+    background: inherit;
+  }
+
+  .sendButton {
+    @include addButton;
+    width: 56px;
+    height: 44px;
+  }
+}

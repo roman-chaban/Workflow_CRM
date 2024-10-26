@@ -1,0 +1,17 @@
+@use '../../../styles/breakpoints/breakpoints' as *;
+@use '../../../styles/functions/functions' as *;
+@use '../../../styles/functions/functions' as *;
+@use '../../../styles/fillers/fillers' as *;
+@use '../../../styles/colors/colors' as color;
+@use '../../../styles/globals/globals' as size;
+
+.messengerChatMain {
+  width: 100%;
+  &Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: rem(720px);
+    padding: rem(24px);
+  }
+}

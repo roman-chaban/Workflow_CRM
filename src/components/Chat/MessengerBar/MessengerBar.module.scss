@@ -1,0 +1,47 @@
+@use '../../../styles/breakpoints/breakpoints' as *;
+@use '../../../styles/functions/functions' as *;
+@use '../../../styles/functions/functions' as *;
+@use '../../../styles/fillers/fillers' as *;
+@use '../../../styles/colors/colors' as color;
+@use '../../../styles/globals/globals' as size;
+
+.messengerBarChatUsers {
+  width: 100%;
+  height: 100%;
+  max-width: rem(400px);
+  border-right: 1.5px solid color.$color-border;
+  grid-column: span 12;
+
+  & > .messengerBar {
+    width: 100%;
+    & > .messengerBarHeader {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: rem(30px) rem(16px) rem(30px) rem(24px);
+      width: 100%;
+      height: rem(102px);
+      border-bottom: 1.5px solid color.$color-border;
+      & .addButton {
+        @extend %Button;
+        background: color.$color-support-background;
+      }
+
+      & .searchButton {
+        @extend %Button;
+        background: color.$color-main-background;
+      }
+      & > .messengerBarHeaderButtons {
+        display: flex;
+        align-items: center;
+        gap: rem(16px);
+      }
+      & > .messengerBarHeaderTitle {
+        color: color.$color-black;
+        font-size: size.$font-size-20px;
+        line-height: 144%;
+        font-weight: 700;
+      }
+    }
+  }
+}

@@ -11,22 +11,14 @@
   background: color.$color-white;
   grid-column: span 12;
 
-  & > .addButton {
-    @extend %Button;
-    background: color.$color-support-background;
-  }
-
-  & > .searchButton {
-    @extend %Button;
-    background: color.$color-main-background;
-  }
-
-  & > .notificationButton {
-    @extend %Button;
-    background: color.$color-main-background;
-  }
-  & > .moreButton {
-    @extend %Button;
-    background: color.$color-main-background;
+  & > .messengerContainer {
+    width: 100%;
+    display: flex;
+    & > .chatMain {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: rem(10px);
+    }
   }
 }

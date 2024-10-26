@@ -1,4 +1,4 @@
-import type { ChangeEvent, CSSProperties, FC } from 'react';
+import type { ChangeEvent, CSSProperties, FC, RefObject } from 'react';
 
 type InputTypes =
   | 'text'
@@ -30,6 +30,7 @@ interface InputProps {
   };
   classNames: InputClassNames;
   inputIcon?: JSX.Element;
+  ref?: RefObject<HTMLInputElement>;
 }
 
 export const Input: FC<InputProps> = ({
@@ -45,6 +46,7 @@ export const Input: FC<InputProps> = ({
     placeholder = '',
     style,
   },
+  ref,
   classNames: {
     label: labelClass,
     labelText: labelTextClass,
@@ -57,6 +59,7 @@ export const Input: FC<InputProps> = ({
       {label && <span className={labelTextClass}>{label}</span>}
       {inputIcon}
       <input
+        ref={ref}
         type={type}
         id={id}
         name={name}

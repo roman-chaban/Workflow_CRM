@@ -1,0 +1,35 @@
+@use '../../../styles/breakpoints/breakpoints' as *;
+@use '../../../styles/functions/functions' as *;
+@use '../../../styles/functions/functions' as *;
+@use '../../../styles/fillers/fillers' as *;
+@use '../../../styles/colors/colors' as color;
+@use '../../../styles/globals/globals' as size;
+
+.messengerHeader {
+  width: 100%;
+  height: rem(102px);
+  border-bottom: 1.5px solid color.$color-border;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: rem(24px);
+
+  &Buttons {
+    display: flex;
+    align-items: center;
+    gap: rem(16px);
+    & > .notificationButton {
+      @extend %Button;
+      background: color.$color-main-background;
+    }
+    & .moreButton {
+      @extend %Button;
+      background: color.$color-main-background;
+    }
+
+    & .searchButton {
+      @extend %Button;
+      background: color.$color-main-background;
+    }
+  }
+}
