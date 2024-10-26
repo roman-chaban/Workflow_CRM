@@ -1,0 +1,10 @@
+@use '../colors/colors' as color;
+@use '../globals/globals' as size;
+@use '../functions/functions' as *;
+@use '../mixins/mixins' as *;
+
+.messenger__heading {
+  grid-column: span 12;
+  @include blockLargeTitle;
+  height: fit-content;
+}

@@ -5,18 +5,8 @@
 @import '../reset/reset';
 
 body {
-  display: grid;
-  box-sizing: border-box;
-  min-height: 100%;
-  grid-template-columns: rem(220px) 1fr;
-  gap: rem(30px);
   font-family: 'Nunito Sans';
   background: color.$color-main-background;
-  padding: rem(20px) rem(20px) rem(25px) rem(20px);
-
-  @include respond-to(lmedium) {
-    gap: 0;
-  }
 }
 
 .main {
@@ -24,12 +14,26 @@ body {
   height: 100%;
 }
 
+.globalWrapper {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: rem(30px);
+  padding: rem(20px) rem(20px) rem(25px) rem(20px);
+  grid-column: span 12;
+
+  @media (max-width: rem(1230px)) {
+    gap: 0;
+  }
+}
+
 .page {
   width: 100%;
+  height: 100%;
   max-width: rem(1440px);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: rem(50px);
   padding-block-end: rem(0px);
 }

@@ -1,0 +1,32 @@
+@use '../../styles/breakpoints/breakpoints' as *;
+@use '../../styles/functions/functions' as *;
+@use '../../styles/colors/colors' as color;
+@use '../../styles/globals/globals' as size;
+@use '../../styles/fillers/fillers' as *;
+
+.messengerChat {
+  width: 100%;
+  height: rem(830px);
+  border-radius: rem(24px);
+  background: color.$color-white;
+  grid-column: span 12;
+
+  & > .addButton {
+    @extend %Button;
+    background: color.$color-support-background;
+  }
+
+  & > .searchButton {
+    @extend %Button;
+    background: color.$color-main-background;
+  }
+
+  & > .notificationButton {
+    @extend %Button;
+    background: color.$color-main-background;
+  }
+  & > .moreButton {
+    @extend %Button;
+    background: color.$color-main-background;
+  }
+}

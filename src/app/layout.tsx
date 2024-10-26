@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import '@/styles/fonts/_fonts.scss';
 import '@/styles/main/main.scss';
 
-import { Header } from '@/components/index/index';
+import { Grid, Header } from '@/components/index/index';
 
 import { Providers } from '@/store/providers/providers';
 
@@ -14,6 +14,7 @@ import {
 } from '@/components/index/index';
 
 import React from 'react';
+import { GlobalWrapper } from '@/components/containers/GlobalWrapper/GlobalWrapper';
 
 export const metadata: Metadata = {
   title: 'Workflow CRM | Dashboard',
@@ -31,11 +32,15 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Providers>
-          <ClientModalWrapper />
-          <PageWrapper className="page">
-            <Header />
-            <MainWrapper className="main">{children}</MainWrapper>
-          </PageWrapper>
+          <Grid tag="div">
+            <GlobalWrapper>
+              <ClientModalWrapper />
+              <PageWrapper className="page">
+                <Header />
+                <MainWrapper className="main">{children}</MainWrapper>
+              </PageWrapper>
+            </GlobalWrapper>
+          </Grid>
         </Providers>
       </body>
     </html>

@@ -15,6 +15,7 @@ interface GridProps {
   boxShadow?: string;
   tag?: 'table' | 'div' | 'section' | 'article';
   position?: 'static' | 'relative' | 'absolute' | 'fixed' | 'sticky';
+  className?: string;
 }
 
 export const Grid: FC<GridProps> = ({
@@ -32,6 +33,7 @@ export const Grid: FC<GridProps> = ({
   borderRadius = '',
   isSection = false,
   position = 'static',
+  className,
 }) => {
   const gridStyles: CSSProperties = {
     width,
@@ -49,5 +51,9 @@ export const Grid: FC<GridProps> = ({
 
   const Tag = tag || (isSection ? 'section' : 'div');
 
-  return <Tag style={gridStyles}>{children}</Tag>;
+  return (
+    <Tag style={gridStyles} className={className}>
+      {children}
+    </Tag>
+  );
 };

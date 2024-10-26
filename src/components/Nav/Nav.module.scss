@@ -24,7 +24,7 @@
   &__menu-link {
     color: color.$color-gray;
     font-size: size.$font-size-16px;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
   }
   &__menu-item--active {
@@ -39,7 +39,7 @@
       content: '';
       border-radius: 2px;
       width: 4px;
-      height: 44px;
+      height: 41px;
       background: color.$color-support-background;
     }
   }

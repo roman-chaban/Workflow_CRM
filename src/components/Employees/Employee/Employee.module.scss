@@ -5,6 +5,11 @@
 .employee {
   width: 100%;
   max-width: rem(175px);
+
+  @media (max-width: 1060px) {
+    max-width: rem(225px);
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -16,6 +21,10 @@
     height: rem(180px);
     background: color.$color-main-background;
     padding: rem(17px) 0 rem(18px) 0;
+
+    @media (max-width: 1060px) {
+      max-width: rem(225px);
+    }
   }
 
   &__progressBorder {

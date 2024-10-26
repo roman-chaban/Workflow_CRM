@@ -4,8 +4,8 @@
 .home {
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: rem(28px);
 }
 
@@ -18,5 +18,9 @@
 
   @include respond-to(smedium) {
     align-items: flex-start;
+  }
+
+  @media (max-width: 1060px) {
+    flex-direction: column;
   }
 }

@@ -61,4 +61,15 @@
   &__date {
     @include dateClock;
   }
+
+  @media (max-width: 1060px) {
+    &__title {
+      max-width: 100%;
+      font-size: size.$font-size-18px;
+    }
+
+    &__subInfo {
+      font-size: size.$font-size-16px;
+    }
+  }
 }

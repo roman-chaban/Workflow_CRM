@@ -9,12 +9,11 @@ import styles from './Workload.module.scss';
 import { ViewLink } from '../ui/ViewLink/ViewLink';
 
 export const Workload: FC = () => {
-  const { data, loading, error } = useFetch<TEmployees>({
+  const { data, loading } = useFetch<TEmployees>({
     url: '/data/employees.json',
   });
 
   if (loading) return <div>Employees Loading...</div>;
-  if (error) return <div>Error loading employees.</div>;
 
   return (
     <div className={styles['workload']}>

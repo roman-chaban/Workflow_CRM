@@ -8,13 +8,16 @@
   border-radius: rem(24px);
   max-width: rem(781px);
   height: 100%;
-  max-height: rem(148px);
   background: color.$color-white;
   box-shadow: color.$color-box-shadow-background;
 
   @include respond-to(smedium) {
     grid-template-columns: 1fr;
     max-height: rem(400px);
+  }
+
+  @media (max-width: 1060px) {
+    max-width: 100%;
   }
 
   display: grid;
@@ -25,7 +28,7 @@
     flex-direction: column;
     gap: rem(22px);
     padding: rem(24px);
-    padding-block-end: 0;
+    padding-block-end: rem(30px);
     border-right: 2px solid color.$color-border-light;
 
     @include respond-to(smedium) {
@@ -116,10 +119,6 @@
   align-items: center;
   gap: rem(43px);
   width: 100%;
-
-  @include respond-to(smedium) {
-    justify-content: space-between;
-  }
 
   &-item {
     color: color.$color-gray-second;

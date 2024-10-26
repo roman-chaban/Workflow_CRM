@@ -32,3 +32,12 @@
   text-align: right;
   color: color.$color-black;
 }
+
+%Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: rem(14px);
+}

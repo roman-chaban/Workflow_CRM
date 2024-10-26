@@ -22,4 +22,8 @@
     flex-direction: column;
     gap: rem(30px);
   }
+
+  @media (max-width: 1060px) {
+    max-width: 100%;
+  }
 }

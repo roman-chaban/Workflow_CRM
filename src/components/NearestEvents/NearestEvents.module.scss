@@ -12,8 +12,8 @@
   box-shadow: color.$color-box-shadow-background;
   border-radius: rem(24px);
 
-  @include respond-to(lmedium) {
-    max-width: rem(350px);
+  @media (max-width: 1080px) {
+    max-width: rem(330px);
   }
 
   &__container {
@@ -21,6 +21,10 @@
     flex-direction: column;
     gap: rem(24px);
     padding: rem(33px) rem(20px) rem(28px) rem(24px);
+
+    @media (max-width: 1060px) {
+      max-width: 100%;
+    }
   }
 
   &__header {
