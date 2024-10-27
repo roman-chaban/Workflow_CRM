@@ -6,9 +6,10 @@ import { useAppSelector } from "@/hooks/useAppSelector";
 import { Employees } from "../Employees/Employees";
 import { ViewLink } from "../ui/ViewLink/ViewLink";
 import { useAppDispatch } from "@/hooks/useAppDispatch";
-import { fetchEmployees } from "@/store/AsyncThunk/AsyncThunk";
 
 import styles from "./Workload.module.scss";
+
+import { fetchEmployees } from "@/store/slices/EmployeesSlice";
 import { LoadingSpinner } from "@/components/ui/LoadingSpinner/LoadingSpinner";
 
 export const Workload: FC = () => {

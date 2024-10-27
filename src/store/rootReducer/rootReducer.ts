@@ -3,8 +3,8 @@ import { PersistPartial } from "redux-persist/es/persistReducer";
 import NavSlice from "../slices/NavSlice";
 import FilterBoardSlice from "../slices/FiltersBoardSlice";
 import EmployeesNavSlice from "../slices/EmployeesNavSlice";
-import EmployeesSlice from "@/store/AsyncThunk/AsyncThunk";
 import CustomersSlice from "@/store/slices/CustomersSlice";
+import EmployeesSlice from "@/store/slices/EmployeesSlice";
 
 const rootReducer = combineReducers({
   navSlice: NavSlice,
