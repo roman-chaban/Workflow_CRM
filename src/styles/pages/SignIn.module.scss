@@ -22,6 +22,9 @@
       flex-direction: column;
     }
 
+    @include respond-to(xsmall) {
+      padding: 0;
+    }
 
     & > .signInBanner {
       width: 100%;
@@ -46,6 +49,7 @@
 
       @include respond-to(xsmall) {
         padding-inline: 0;
+        border-radius: 0;
       }
 
 
@@ -68,6 +72,35 @@
       right: rem(60px);
       top: rem(35px);
       background: inherit;
+
+      @include respond-to(xsmall) {
+        right: rem(20px);
+        top: rem(20px);
+      }
+
+    }
+
+    & > .CloseButtonPrimary {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: rem(60px);
+      height: rem(60px);
+      background: color.$color-white;
+      box-shadow: color.$color-box-shadow-background;
+      border-radius: rem(24px);
+
+
+      @include respond-to(xsmall) {
+        max-width: rem(38px);
+        max-height: rem(38px);
+
+        & .closeIconPrimary {
+          max-width: rem(25px);
+          max-height: rem(25px);
+        }
+      }
+
     }
 
   }
@@ -87,8 +120,9 @@
     margin-block-start: rem(50px);
 
     @include respond-to(xsmall) {
-      aspect-ratio: 0;
+      aspect-ratio: 2;
       max-width: 100%;
+      margin-block-start: rem(20px);
     }
 
   }
