@@ -38,7 +38,8 @@
         flex-direction: column;
         align-items: center;
         max-width: 100%;
-        padding-inline-start: rem(50px);
+        min-height: rem(700px);
+        padding-inline-start: 0;
         border-top-right-radius: rem(24px);
         border-bottom-left-radius: 0;
       }
