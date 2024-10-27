@@ -1,17 +1,21 @@
 "use client";
 
-import { Grid } from "@/components/containers/Grid/Grid";
+import { useState } from "react";
+import { useAppSelector } from "@/hooks/useAppSelector";
 
+import { Grid } from "@/components/containers/Grid/Grid";
 import { EmployeesNav } from "@/components/EmployeesNav/EmployeesNav";
 import { EmployeesModal } from "@/components/ui/EmployeesModal/EmployeesModal";
 import { useAppDispatch } from "@/hooks/useAppDispatch";
-import { useAppSelector } from "@/hooks/useAppSelector";
-import { closeModal, toggleModal } from "@/store/slices/EmployeesNavSlice";
 import { Customers } from "@/components/Customers/Customers";
 
+import { closeModal, toggleModal } from "@/store/slices/EmployeesNavSlice";
+
 export type isOpenedModal = boolean;
+export type ActiveTabs = "list" | "activity";
 
 export default function Employees() {
+  const [activeTab, setActiveTab] = useState<ActiveTabs>("list");
   const isOpened = useAppSelector((state) => state.employeesNav.isOpened);
   const dispatch = useAppDispatch();
 
@@ -23,6 +27,15 @@ export default function Employees() {
     dispatch(closeModal());
   };
 
+  const renderContentByTabs = () => {
+    switch (activeTab) {
+      case "activity":
+        return <div>Activity</div>;
+      case "list":
+        return <Customers />;
+    }
+  };
+
   return (
     <Grid
       tag={"section"}
@@ -31,9 +44,14 @@ export default function Employees() {
       gridTemplateRows={"none"}
       gap={"28px"}
     >
-      <EmployeesNav isOpened={isOpened} setIsOpened={handleToggleModal} />
+      <EmployeesNav
+        isOpened={isOpened}
+        setIsOpened={handleToggleModal}
+        setActiveTab={setActiveTab}
+      />
       <EmployeesModal isOpened={isOpened} onClosed={handleCloseModal} />
-      <Customers />
+
+      {renderContentByTabs()}
     </Grid>
   );
 }
