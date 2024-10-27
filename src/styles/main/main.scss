@@ -5,7 +5,7 @@
 @import '../reset/reset';
 
 body {
-  font-family: 'Nunito Sans';
+  font-family: 'Nunito Sans', sans-serif;
   background: color.$color-main-background;
 }
 
@@ -36,6 +36,13 @@ body {
   justify-content: space-between;
   gap: rem(50px);
   padding-block-end: rem(0px);
+}
+
+.globalAuthWrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  grid-column: span 12;
 }
 
 ::-webkit-scrollbar {

@@ -1,9 +1,11 @@
-@use '../../styles/colors/colors' as color;
+@use '../../styles/mixins/mixins' as *;
 @use '../../styles/functions/functions' as *;
 @use '../../styles/globals/globals' as size;
+@use '../../styles/colors/colors' as color;
 
 .header {
   width: 100%;
+
   &__container {
     width: 100%;
     display: flex;
@@ -24,6 +26,7 @@
     background: color.$color-white;
     box-shadow: color.$color-box-shadow-background;
   }
+
   &__search-input {
     width: 100%;
     display: flex;
@@ -31,12 +34,19 @@
     font-size: size.$font-size-16px;
     color: color.$color-gray;
   }
-  &__notification-button {
-    width: 100%;
+
+  .header__account {
     display: flex;
     align-items: center;
-    border-radius: rem(14px);
-    padding: rem(12px);
-    background: color.$color-white;
+    gap: rem(15px);
   }
+
+  &__notification-button {
+    @include headerButton;
+  }
+
+  & .signInButton {
+    @include headerButton;
+  }
+
 }

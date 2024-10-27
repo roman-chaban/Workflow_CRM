@@ -1,6 +1,6 @@
 import type { ChangeEvent, CSSProperties, FC, RefObject } from 'react';
 
-type InputTypes =
+export type InputTypes =
   | 'text'
   | 'email'
   | 'search'

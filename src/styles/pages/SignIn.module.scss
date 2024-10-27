@@ -1,0 +1,95 @@
+@use '../../styles/colors/colors' as color;
+@use '../../styles/globals/globals' as size;
+@use '../../styles/mixins/mixins' as *;
+@use '../../styles/functions/functions' as  *;
+@use '../../styles/breakpoints/breakpoints' as *;
+
+.signIn {
+  width: 100%;
+  height: 100%;
+  background: color.$color-main-background;
+
+  & > .signInContainer {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: rem(24px);
+    padding: rem(20px) rem(40px) rem(40px) rem(30px);
+
+
+    @include respond-to(medium) {
+      flex-direction: column;
+    }
+
+
+    & > .signInBanner {
+      width: 100%;
+      height: 100%;
+      min-height: rem(800px);
+      max-width: rem(750px);
+      background: color.$color-support-background;
+      border-top-left-radius: rem(24px);
+      border-bottom-left-radius: rem(24px);
+      padding: rem(65px) 0 rem(81px) rem(84px);
+
+      @include respond-to(smedium) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+        padding-inline-start: rem(50px);
+        border-top-right-radius: rem(24px);
+        border-bottom-left-radius: 0;
+      }
+
+      @include respond-to(xsmall) {
+        padding-inline: 0;
+      }
+
+
+      & > .signInHeader {
+        display: flex;
+        align-items: center;
+        gap: rem(30px);
+
+        & .signInHeaderTitle {
+          font-weight: 700;
+          color: color.$color-white;
+          font-size: size.$font-size-30px;
+        }
+
+      }
+    }
+
+    & > .CloseButton {
+      position: absolute;
+      right: rem(60px);
+      top: rem(35px);
+      background: inherit;
+    }
+
+  }
+
+  & .signInTitle {
+    width: 100%;
+    max-width: rem(400px);
+    margin-block-start: rem(40px);
+    font-weight: 700;
+    line-height: 140%;
+    color: color.$color-white;
+    font-size: size.$font-size-40px;
+  }
+
+  & .signInFooter {
+    aspect-ratio: 16 / 9;
+    margin-block-start: rem(50px);
+
+    @include respond-to(xsmall) {
+      aspect-ratio: 0;
+      max-width: 100%;
+    }
+
+  }
+
+}

@@ -14,6 +14,7 @@
 
   & > .messengerBar {
     width: 100%;
+
     & > .messengerBarHeader {
       display: flex;
       align-items: center;
@@ -22,6 +23,7 @@
       width: 100%;
       height: rem(102px);
       border-bottom: 1.5px solid color.$color-border;
+
       & .addButton {
         @extend %Button;
         background: color.$color-support-background;
@@ -31,11 +33,13 @@
         @extend %Button;
         background: color.$color-main-background;
       }
+
       & > .messengerBarHeaderButtons {
         display: flex;
         align-items: center;
         gap: rem(16px);
       }
+
       & > .messengerBarHeaderTitle {
         color: color.$color-black;
         font-size: size.$font-size-20px;

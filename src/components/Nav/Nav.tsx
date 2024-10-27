@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import { FC } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { usePathname } from 'next/navigation';
+import { FC } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
 
-import { NavItem } from '@/types/nav';
+import { NavItem } from "@/types/nav";
 
-import styles from './Nav.module.scss';
+import styles from "./Nav.module.scss";
 
 interface NavProps {
   nav: Array<NavItem>;
@@ -17,16 +17,16 @@ export const Nav: FC<NavProps> = ({ nav }) => {
   const pathname = usePathname();
 
   return (
-    <nav className={styles['nav']}>
-      <ul className={styles['nav__menu']}>
+    <nav className={styles["nav"]}>
+      <ul className={styles["nav__menu"]}>
         {nav.map((item: NavItem) => {
           const isActive = pathname === item.href;
 
           return (
             <li
               key={item.id}
-              className={`${styles['nav__menu-item']} ${
-                isActive ? styles['nav__menu-item--active'] : ''
+              className={`${styles["nav__menu-item"]} ${
+                isActive ? styles["nav__menu-item--active"] : ""
               }`}
             >
               <Image
@@ -34,12 +34,12 @@ export const Nav: FC<NavProps> = ({ nav }) => {
                 alt={item.href}
                 width={24}
                 height={24}
-                className={styles['nav__menu-icon']}
+                className={styles["nav__menu-icon"]}
               />
               <Link
                 href={item.href}
-                className={`${styles['nav__menu-link']} ${
-                  isActive ? styles['nav__menu-item--activeLink'] : ''
+                className={`${styles["nav__menu-link"]} ${
+                  isActive ? styles["nav__menu-item--activeLink"] : ""
                 }`}
               >
                 {item.children}

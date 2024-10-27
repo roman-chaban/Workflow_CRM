@@ -1,31 +1,48 @@
-'use client';
+"use client";
 
-import type { FC } from 'react';
-import { useFetch } from '@/hooks/useFetch';
-import { TEmployees } from '@/types/employees';
-import { Employees } from '../Employees/Employees';
+import { FC, useEffect } from "react";
+import { useAppSelector } from "@/hooks/useAppSelector";
 
-import styles from './Workload.module.scss';
-import { ViewLink } from '../ui/ViewLink/ViewLink';
+import { Employees } from "../Employees/Employees";
+import { ViewLink } from "../ui/ViewLink/ViewLink";
+import { useAppDispatch } from "@/hooks/useAppDispatch";
+import { fetchEmployees } from "@/store/AsyncThunk/AsyncThunk";
+
+import styles from "./Workload.module.scss";
+import { LoadingSpinner } from "@/components/ui/LoadingSpinner/LoadingSpinner";
 
 export const Workload: FC = () => {
-  const { data, loading } = useFetch<TEmployees>({
-    url: '/data/employees.json',
-  });
+  const {
+    entities: employees,
+    loading,
+    error,
+  } = useAppSelector((state) => state.employees);
+  const dispatch = useAppDispatch();
 
-  if (loading) return <div>Employees Loading...</div>;
+  useEffect(() => {
+    dispatch(fetchEmployees());
+  }, [dispatch]);
+
+  if (loading === "pending")
+    return (
+      <div className={styles["workload"]}>
+        <LoadingSpinner />
+      </div>
+    );
+
+  if (loading === "failed") return <div>Employees Error: {error}</div>;
 
   return (
-    <div className={styles['workload']}>
-      <div className={styles['workload__container']}>
-        <div className={styles['workload__header']}>
+    <div className={styles["workload"]}>
+      <div className={styles["workload__container"]}>
+        <div className={styles["workload__header"]}>
           <ViewLink>Workload</ViewLink>
         </div>
 
-        {data && Array.isArray(data) ? (
-          <Employees employees={data} />
+        {employees && Array.isArray(employees) ? (
+          <Employees employees={employees} />
         ) : (
-          'Employees Loading...'
+          <LoadingSpinner />
         )}
       </div>
     </div>

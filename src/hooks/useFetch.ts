@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 export const useFetch = <T>({ url }: { url: string }) => {
   const [data, setData] = useState<T | null>(null);
@@ -9,7 +9,7 @@ export const useFetch = <T>({ url }: { url: string }) => {
       setLoading(true);
       try {
         const response = await fetch(url);
-        if (!response.ok) throw new Error('Network response was not ok');
+        if (!response.ok) throw new Error("Network response was not ok");
         const result: T = await response.json();
         setData(result);
       } catch (error) {

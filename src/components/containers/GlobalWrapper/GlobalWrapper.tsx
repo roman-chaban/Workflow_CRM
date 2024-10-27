@@ -1,11 +1,26 @@
-import type { FC, ReactNode } from 'react';
+"use client";
 
-import '@/styles/main/main.scss';
+import type { FC, ReactNode } from "react";
+
+import "@/styles/main/main.scss";
+import { usePathname } from "next/navigation";
 
 interface GlobalWrapperProps {
   children: ReactNode;
 }
 
 export const GlobalWrapper: FC<GlobalWrapperProps> = ({ children }) => {
-  return <div className="globalWrapper">{children}</div>;
+  const pathname = usePathname();
+
+  const checkGlobalWrapperClassName = pathname === "/auth/signIn";
+
+  return (
+    <div
+      className={
+        checkGlobalWrapperClassName ? "globalAuthWrapper" : "globalWrapper"
+      }
+    >
+      {children}
+    </div>
+  );
 };

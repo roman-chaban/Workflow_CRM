@@ -1,0 +1,36 @@
+@use '../../styles/breakpoints/breakpoints' as *;
+@use '../../styles/functions/functions' as *;
+@use '../../styles/mixins/mixins' as *;
+@use '../../styles/fillers/fillers' as *;
+@use '../../styles/globals/globals' as size;
+@use '../../styles/colors/colors' as color;
+
+
+.filtersBoardFooter {
+  width: 100%;
+
+  &Container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: rem(20px) rem(30px) rem(36px) rem(30px);
+
+    & > .filtersPointedBlock {
+      display: flex;
+      align-items: center;
+      gap: rem(10px);
+
+      & > .filtersPointedBlockTitle {
+        font-size: size.$font-size-16px;
+        color: color.$color-black;
+        line-height: 150%;
+      }
+    }
+  }
+
+  & .filtersSaveButton {
+    @include addButton;
+    max-width: rem(140px);
+  }
+
+}

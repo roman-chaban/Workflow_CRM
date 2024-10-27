@@ -1,0 +1,202 @@
+[
+  {
+    "customerId": "1",
+    "customerName": "Evan Yates",
+    "icon": "",
+    "email": "evanyates@gmail.com",
+    "gender": "Male",
+    "birthday": "Apr 12, 1995",
+    "fullAge": "25",
+    "position": "UI/UX Designer"
+  },
+  {
+    "customerId": "2",
+    "customerName": "Lenora Fowler",
+    "icon": "",
+    "email": "eravi@ec.gov",
+    "gender": "Female",
+    "birthday": "Apr 28, 1998",
+    "fullAge": "23",
+    "position": "UI/UX Designer"
+  },
+  {
+    "customerId": "3",
+    "customerName": "Winnie McGuide",
+    "icon": "",
+    "email": "winnie3498@gmail.com",
+    "gender": "Female",
+    "birthday": "Apr 12, 1995",
+    "fullAge": "25",
+    "position": "Copywriter"
+  },
+  {
+    "customerId": "4",
+    "customerName": "James Williamson",
+    "icon": "",
+    "email": "williamsonj@gmail.com",
+    "gender": "Male",
+    "birthday": "Sep 23, 1992",
+    "fullAge": "28",
+    "position": "iOS Developer"
+  },
+  {
+    "customerId": "5",
+    "customerName": "Emily Tyler",
+    "icon": "",
+    "email": "tyleremily24@gmail.com",
+    "gender": "Female",
+    "birthday": "May 16, 1996",
+    "fullAge": "24",
+    "position": "UI/UX Designer"
+  },
+  {
+    "customerId": "6",
+    "customerName": "Sallie Long",
+    "icon": "",
+    "email": "sallielong@gmail.com",
+    "gender": "Female",
+    "birthday": "Apr 12, 1995",
+    "fullAge": "25",
+    "position": "Copywriter"
+  },
+  {
+    "customerId": "7",
+    "customerName": "Kathryn Guerrero",
+    "icon": "",
+    "email": "kathryn1992@gmail.com",
+    "gender": "Female",
+    "birthday": "Sep 23, 1992",
+    "fullAge": "28",
+    "position": "iOS Developer"
+  },
+  {
+    "customerId": "8",
+    "customerName": "Oliver Brown",
+    "icon": "",
+    "email": "oliver.brown@example.com",
+    "gender": "Male",
+    "birthday": "Jun 5, 1990",
+    "fullAge": "34",
+    "position": "Product Manager"
+  },
+  {
+    "customerId": "9",
+    "customerName": "Sophia Green",
+    "icon": "",
+    "email": "sophia.green@example.com",
+    "gender": "Female",
+    "birthday": "Dec 12, 1994",
+    "fullAge": "29",
+    "position": "Software Engineer"
+  },
+  {
+    "customerId": "10",
+    "customerName": "Liam Johnson",
+    "icon": "",
+    "email": "liam.johnson@example.com",
+    "gender": "Male",
+    "birthday": "Feb 15, 1991",
+    "fullAge": "33",
+    "position": "Data Analyst"
+  },
+  {
+    "customerId": "11",
+    "customerName": "Mia Davis",
+    "icon": "",
+    "email": "mia.davis@example.com",
+    "gender": "Female",
+    "birthday": "Oct 22, 1988",
+    "fullAge": "35",
+    "position": "Web Developer"
+  },
+  {
+    "customerId": "12",
+    "customerName": "Noah Wilson",
+    "icon": "",
+    "email": "noah.wilson@example.com",
+    "gender": "Male",
+    "birthday": "Jan 30, 1993",
+    "fullAge": "31",
+    "position": "Graphic Designer"
+  },
+  {
+    "customerId": "13",
+    "customerName": "Ava Martinez",
+    "icon": "",
+    "email": "ava.martinez@example.com",
+    "gender": "Female",
+    "birthday": "Mar 10, 1996",
+    "fullAge": "28",
+    "position": "SEO Specialist"
+  },
+  {
+    "customerId": "14",
+    "customerName": "Elijah Anderson",
+    "icon": "",
+    "email": "elijah.anderson@example.com",
+    "gender": "Male",
+    "birthday": "Apr 25, 1990",
+    "fullAge": "34",
+    "position": "DevOps Engineer"
+  },
+  {
+    "customerId": "15",
+    "customerName": "Charlotte Harris",
+    "icon": "",
+    "email": "charlotte.harris@example.com",
+    "gender": "Female",
+    "birthday": "Aug 8, 1994",
+    "fullAge": "30",
+    "position": "Marketing Manager"
+  },
+  {
+    "customerId": "16",
+    "customerName": "James Thompson",
+    "icon": "",
+    "email": "james.thompson@example.com",
+    "gender": "Male",
+    "birthday": "Jul 19, 1989",
+    "fullAge": "35",
+    "position": "System Administrator"
+  },
+  {
+    "customerId": "17",
+    "customerName": "Amelia Clark",
+    "icon": "",
+    "email": "amelia.clark@example.com",
+    "gender": "Female",
+    "birthday": "Sep 12, 1995",
+    "fullAge": "29",
+    "position": "Content Strategist"
+  },
+  {
+    "customerId": "18",
+    "customerName": "Lucas Hall",
+    "icon": "",
+    "email": "lucas.hall@example.com",
+    "gender": "Male",
+    "birthday": "Nov 30, 1991",
+    "fullAge": "32",
+    "position": "Network Engineer"
+  },
+  {
+    "customerId": "19",
+    "customerName": "Zoe Lewis",
+    "icon": "",
+    "email": "zoe.lewis@example.com",
+    "gender": "Female",
+    "birthday": "Mar 3, 1997",
+    "fullAge": "27",
+    "position": "Product Designer"
+  },
+  {
+    "customerId": "20",
+    "customerName": "Aiden Young",
+    "icon": "",
+    "email": "aiden.young@example.com",
+    "gender": "Male",
+    "birthday": "Jun 17, 1994",
+    "fullAge": "30",
+    "position": "Business Analyst"
+  }
+]

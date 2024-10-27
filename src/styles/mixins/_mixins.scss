@@ -238,3 +238,12 @@
   background: color.$color-white;
   box-shadow: color.$color-modal-box-shadow;
 }
+
+@mixin headerButton {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: rem(14px);
+  padding: rem(12px);
+  background: color.$color-white;
+}
