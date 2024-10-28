@@ -36,6 +36,11 @@
       border-bottom-left-radius: rem(24px);
       padding: rem(65px) 0 rem(81px) rem(84px);
 
+      @include respond-to(medium) {
+        border-top-right-radius: rem(24px);
+        border-bottom-left-radius: 0;
+      }
+
       @include respond-to(smedium) {
         display: flex;
         flex-direction: column;
@@ -43,13 +48,12 @@
         max-width: 100%;
         min-height: rem(700px);
         padding-inline-start: 0;
-        border-top-right-radius: rem(24px);
-        border-bottom-left-radius: 0;
       }
 
       @include respond-to(xsmall) {
         padding-inline: 0;
         border-radius: 0;
+        min-height: rem(400px);
       }
 
 
@@ -58,10 +62,29 @@
         align-items: center;
         gap: rem(30px);
 
+        @include respond-to(xsmall) {
+          position: absolute;
+          top: rem(15px);
+          left: rem(20px);
+
+          @include respond-to(xsmall) {
+            & .signInLogo {
+              max-width: rem(45px);
+            }
+            gap: rem(15px);
+          }
+
+        }
+
         & .signInHeaderTitle {
           font-weight: 700;
           color: color.$color-white;
           font-size: size.$font-size-30px;
+
+          @include respond-to(xsmall) {
+            font-size: size.$font-size-26px;
+          }
+
         }
 
       }
@@ -75,7 +98,7 @@
 
       @include respond-to(xsmall) {
         right: rem(20px);
-        top: rem(20px);
+        top: rem(25px);
       }
 
     }

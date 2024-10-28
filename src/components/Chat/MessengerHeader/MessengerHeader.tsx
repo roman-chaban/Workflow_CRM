@@ -1,10 +1,10 @@
 import type { FC } from "react";
 
-import styles from "./MessengerHeader.module.scss";
-
 import { SearchButton } from "@/components/ui/buttons/SearchButton/SearchButton";
 import { NotificationButton } from "@/components/ui/buttons/NotificationButton/NotificationButton";
 import { MoreButton } from "@/components/ui/buttons/MoreButton/MoreButton";
+
+import styles from "./MessengerHeader.module.scss";
 
 export const MessengerHeader: FC = () => {
   return (

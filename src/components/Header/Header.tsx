@@ -1,13 +1,15 @@
 "use client";
 
 import { useState, type FC } from "react";
+
 import Image from "next/image";
+import Link from "next/link";
+
+import { PATHS } from "@/constants/paths";
 
 import { Input, Button } from "@/components/index/index";
 
 import styles from "./Header.module.scss";
-import Link from "next/link";
-import { PATHS } from "@/constants/paths";
 
 export const Header: FC = () => {
   const [search, setSearch] = useState<string>("");

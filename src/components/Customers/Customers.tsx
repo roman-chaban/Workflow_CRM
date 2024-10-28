@@ -5,12 +5,12 @@ import { useAppSelector } from "@/hooks/useAppSelector";
 import { useAppDispatch } from "@/hooks/useAppDispatch";
 
 import { Customer as CurrentCustomer } from "@/types/customers";
-import { Customer } from "@/components/Customers/Customer/Customer";
 
+import { Customer } from "@/components/Customers/Customer/Customer";
 import { fetchCustomers } from "@/store/slices/CustomersSlice";
+import { LoadingSpinner } from "@/components/ui/LoadingSpinner/LoadingSpinner";
 
 import styles from "./Customers.module.scss";
-import { LoadingSpinner } from "@/components/ui/LoadingSpinner/LoadingSpinner";
 
 export const Customers: FC = () => {
   const { customers, loading } = useAppSelector((state) => state.customers);

@@ -1,16 +1,17 @@
 "use client";
 
 import { FC, useEffect } from "react";
-import { useAppSelector } from "@/hooks/useAppSelector";
 
-import { Employees } from "../Employees/Employees";
-import { ViewLink } from "../ui/ViewLink/ViewLink";
+import { useAppSelector } from "@/hooks/useAppSelector";
 import { useAppDispatch } from "@/hooks/useAppDispatch";
 
-import styles from "./Workload.module.scss";
+import { LoadingSpinner } from "@/components/ui/LoadingSpinner/LoadingSpinner";
+import { Employees } from "../Employees/Employees";
+import { ViewLink } from "../ui/ViewLink/ViewLink";
 
 import { fetchEmployees } from "@/store/slices/EmployeesSlice";
-import { LoadingSpinner } from "@/components/ui/LoadingSpinner/LoadingSpinner";
+
+import styles from "./Workload.module.scss";
 
 export const Workload: FC = () => {
   const {

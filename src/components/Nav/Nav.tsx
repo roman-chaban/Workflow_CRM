@@ -1,9 +1,11 @@
 "use client";
 
 import { FC } from "react";
+
+import { usePathname } from "next/navigation";
+
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
 
 import { NavItem } from "@/types/nav";
 
@@ -20,7 +22,9 @@ export const Nav: FC<NavProps> = ({ nav }) => {
     <nav className={styles["nav"]}>
       <ul className={styles["nav__menu"]}>
         {nav.map((item: NavItem) => {
-          const isActive = pathname === item.href;
+          const isActive =
+            pathname === item.href ||
+            (pathname === "/nearest" && item.href === "/");
 
           return (
             <li

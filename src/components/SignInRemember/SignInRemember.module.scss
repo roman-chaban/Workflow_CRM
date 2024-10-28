@@ -2,7 +2,7 @@
 @use '../../styles/globals/globals' as size;
 @use '../../styles/mixins/mixins' as *;
 @use '../../styles/functions/functions' as  *;
-
+@use '../../styles/breakpoints/breakpoints' as *;
 
 .signInRemember {
   width: 100%;
@@ -10,6 +10,10 @@
   display: flex;
   justify-content: space-between;
   margin-block-start: rem(30px);
+
+  @include respond-to(xsmall) {
+    max-width: 75%;
+  }
 
   & > .forgotButton {
     font-size: size.$font-size-18px;

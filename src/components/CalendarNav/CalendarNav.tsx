@@ -1,8 +1,9 @@
 import type { FC } from "react";
 
-import styles from "./CalendarNav.module.scss";
 import { Button } from "../index";
 import { Plus } from "../icons/Plus/Plus";
+
+import styles from "./CalendarNav.module.scss";
 
 export const CalendarNav: FC = () => {
   return (

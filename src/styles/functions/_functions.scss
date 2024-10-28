@@ -1,9 +1,10 @@
 @use "sass:math";
+@use "sass:meta";
 
 $base-font-size: 16px;
 
 @function rem($px, $base-font-size: $base-font-size) {
-  @if (type-of($px) == 'number' and $px > 0) {
+  @if (meta.type-of($px) == 'number' and $px > 0) {
     @return math.div($px, $base-font-size) * 1rem;
   } @else {
     @warn "The value #{$px} is not a valid number or less than 0.";

@@ -1,7 +1,8 @@
 import { FC } from 'react';
 
-import styles from './ChatDisplay.module.scss';
 import { Message, Messages } from '@/types/chat-types';
+
+import styles from './ChatDisplay.module.scss';
 
 interface ChatDisplayProps {
   messages: Messages;

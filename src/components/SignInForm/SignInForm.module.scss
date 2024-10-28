@@ -2,6 +2,7 @@
 @use '../../styles/globals/globals' as size;
 @use '../../styles/mixins/mixins' as *;
 @use '../../styles/functions/functions' as  *;
+@use '../../styles/breakpoints/breakpoints' as *;
 
 
 .signInForm {
@@ -16,9 +17,19 @@
   background: color.$color-white;
   box-shadow: color.$color-box-shadow-background;
 
+  @include respond-to(medium) {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: rem(24px);
+  }
+
   &Title {
     @include blockTitle;
     font-size: size.$font-size-24px;
+
+    @include respond-to(xsmall) {
+      font-size: size.$font-size-32px;
+    }
+
   }
 
   .signInFormInputs {
@@ -27,6 +38,10 @@
     display: flex;
     flex-direction: column;
     gap: rem(30px);
+
+    @include respond-to(xsmall) {
+      max-width: 75%;
+    }
 
     .signInFormInputsEmail,
     .signInFormInputsPassword {

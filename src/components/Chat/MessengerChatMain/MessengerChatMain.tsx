@@ -2,12 +2,12 @@
 
 import { useState, type FC } from "react";
 
-import styles from "./MessengerChatMain.module.scss";
-
 import { MessengerArea } from "../MessengerArea/MessengerArea";
 import { ChatDisplay } from "../ChatDisplay/ChatDisplay";
 
 import { ChatText, Messages } from "@/types/chat-types";
+
+import styles from "./MessengerChatMain.module.scss";
 
 export const MessengerChatMain: FC = () => {
   const [chatText, setChatText] = useState<ChatText>("");

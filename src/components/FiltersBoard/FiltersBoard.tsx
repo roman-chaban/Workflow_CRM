@@ -3,7 +3,6 @@
 import { useCallback, type FC, useEffect, useState, useRef } from "react";
 import { useAppDispatch } from "@/hooks/useAppDispatch";
 
-import styles from "./FiltersBoard.module.scss";
 
 import { onCloseFilterBoard } from "@/store/slices/FiltersBoardSlice";
 
@@ -13,6 +12,8 @@ import { Reporter } from "../Reporter/Reporter";
 import { Assignees } from "../Assignees/Assignees";
 import { Estimate } from "../Estimate/Estimate";
 import { FiltersBoardFooter } from "@/components/FiltersBoardFooter/FiltersBoardFooter";
+
+import styles from "./FiltersBoard.module.scss";
 
 export type FiltersBoardProps = {
   isClosedBoard: boolean;

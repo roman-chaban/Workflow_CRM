@@ -1,6 +1,6 @@
-import styles from "@/styles/pages/SignIn.module.scss";
-
 import Image from "next/image";
+
+import styles from "@/styles/pages/SignIn.module.scss";
 
 export const SignInBanner = () => {
   return (
@@ -11,6 +11,7 @@ export const SignInBanner = () => {
           alt={"Workflow Logo"}
           width={50}
           height={50}
+          className={styles["signInLogo"]}
         />
         <h3 className={styles["signInHeaderTitle"]}>Workroom</h3>
       </div>

@@ -1,10 +1,12 @@
 import { type FC } from "react";
 
-import styles from "./EmployeesNav.module.scss";
 import { EmployeesNavButtons } from "../EmployeesNavButtons/EmployeesNavButtons";
 import { Button } from "../index";
 import { Plus } from "../icons/Plus/Plus";
+
 import { ActiveTabs, isOpenedModal } from "@/app/employees/page";
+
+import styles from "./EmployeesNav.module.scss";
 
 interface EmployeesNavProps {
   isOpened: isOpenedModal;

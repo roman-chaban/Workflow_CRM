@@ -1,8 +1,9 @@
 import type { FC } from "react";
 
-import styles from "./MessengerBar.module.scss";
 import { SearchButton } from "@/components/ui/buttons/SearchButton/SearchButton";
 import { AddButton } from "@/components/ui/buttons/AddButton/AddButton";
+
+import styles from "./MessengerBar.module.scss";
 
 export const MessengerBar: FC = () => {
   return (

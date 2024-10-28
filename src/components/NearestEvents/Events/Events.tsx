@@ -1,9 +1,10 @@
 import type { FC } from "react";
 
-import styles from "./Events.module.scss";
+import { Event } from "@/components/NearestEvents/Event/Event";
 
 import { Event as CurrentEvent } from "@/types/events";
-import { Event } from "@/components/NearestEvents/Event/Event";
+
+import styles from "./Events.module.scss";
 
 interface EventsProps {
   events: CurrentEvent[];

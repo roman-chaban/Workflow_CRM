@@ -1,27 +1,30 @@
-'use client';
+"use client";
 
-import { useMemo, useState, type FC } from 'react';
+import { useMemo, useState, type FC } from "react";
 
-import styles from './CalendarActive.module.scss';
-import { Prev } from '../icons/Prev/Prev';
-import { Next } from '../icons/Next/Next';
-import { Button } from '../index';
+import { Prev } from "../icons/Prev/Prev";
+import { Next } from "../icons/Next/Next";
+import { Button } from "../index";
+
 import {
   ButtonInlineStyles,
   CalendarDays,
   CurrentMonth,
   CurrentYear,
   DaysOfWeek,
-} from '@/types/calendar-active';
-import { getDaysInMonth, getFirstWorkingDay } from '@/fixtures/getDate/getDate';
+} from "@/types/calendar-active";
+
+import { getDaysInMonth, getFirstWorkingDay } from "@/fixtures/getDate/getDate";
+
+import styles from "./CalendarActive.module.scss";
 
 const navButtonsInlineStyles: ButtonInlineStyles = {
-  background: 'inherit',
-  display: 'flex',
-  alignItems: 'center',
+  background: "inherit",
+  display: "flex",
+  alignItems: "center",
 };
 
-const daysOfWeek: DaysOfWeek = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
+const daysOfWeek: DaysOfWeek = ["Mon", "Tue", "Wed", "Thu", "Fri"];
 
 export const CalendarActive: FC = () => {
   const [currentYear, setCurrentYear] = useState<CurrentYear>(2024);
@@ -31,22 +34,22 @@ export const CalendarActive: FC = () => {
 
   const daysInMonth = useMemo(
     () => getDaysInMonth(currentYear, currentMonth),
-    [currentYear, currentMonth]
+    [currentYear, currentMonth],
   );
 
   const firstWorkingDay = useMemo(
     () => getFirstWorkingDay(currentYear, currentMonth),
-    [currentYear, currentMonth]
+    [currentYear, currentMonth],
   );
 
   for (let i = 0; i < daysOfWeek.length; i++) {
     calendarDays.push(
-      <div key={daysOfWeek[i]} className={styles['dayOfWeek']}>
-        <div className={styles['dayLabel']}>{daysOfWeek[i]}</div>
-        <div className={styles['dayNumber']}>
-          {i + 1 <= daysInMonth ? i + 1 : ''}
+      <div key={daysOfWeek[i]} className={styles["dayOfWeek"]}>
+        <div className={styles["dayLabel"]}>{daysOfWeek[i]}</div>
+        <div className={styles["dayNumber"]}>
+          {i + 1 <= daysInMonth ? i + 1 : ""}
         </div>
-      </div>
+      </div>,
     );
   }
 
@@ -54,9 +57,9 @@ export const CalendarActive: FC = () => {
     const dayOfWeek = (firstWorkingDay + day - 1) % 7;
     if (dayOfWeek !== 6 && dayOfWeek !== 0) {
       calendarDays.push(
-        <div key={day} className={styles['dayOfWeek']}>
+        <div key={day} className={styles["dayOfWeek"]}>
           {day}
-        </div>
+        </div>,
       );
     }
   }
@@ -72,9 +75,9 @@ export const CalendarActive: FC = () => {
   };
 
   return (
-    <div className={styles['calendarTableContainer']}>
-      <div className={styles['calendarTable']} data-calendar="CalendarTable">
-        <nav className={styles['calendarTableHead']}>
+    <div className={styles["calendarTableContainer"]}>
+      <div className={styles["calendarTable"]} data-calendar="CalendarTable">
+        <nav className={styles["calendarTableHead"]}>
           <Button
             type="button"
             style={navButtonsInlineStyles}
@@ -82,10 +85,10 @@ export const CalendarActive: FC = () => {
           >
             <Prev />
           </Button>
-          <h2 className={styles['calendarTableHeadTitle']}>
-            {new Date(currentYear, currentMonth).toLocaleDateString('en-US', {
-              year: 'numeric',
-              month: 'long',
+          <h2 className={styles["calendarTableHeadTitle"]}>
+            {new Date(currentYear, currentMonth).toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long",
             })}
           </h2>
           <Button
@@ -96,7 +99,7 @@ export const CalendarActive: FC = () => {
             <Next />
           </Button>
         </nav>
-        <div className={styles['calendarTableBody']}>{calendarDays}</div>
+        <div className={styles["calendarTableBody"]}>{calendarDays}</div>
       </div>
     </div>
   );

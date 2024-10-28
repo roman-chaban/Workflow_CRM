@@ -1,9 +1,11 @@
 import type { FC } from "react";
 
-import styles from "./SignInSubmit.module.scss";
-import { Button } from "@/components/ui/Button/Button";
 import Image from "next/image";
 import Link from "next/link";
+
+import { Button } from "@/components/ui/Button/Button";
+
+import styles from "./SignInSubmit.module.scss";
 
 export const SignInSubmit: FC = () => {
   return (

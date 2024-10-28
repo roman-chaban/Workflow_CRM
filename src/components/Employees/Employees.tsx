@@ -1,7 +1,10 @@
-import { TEmployees, Employee as CurrentEmployee } from "@/types/employees";
 import type { FC } from "react";
-import styles from "./Employees.module.scss";
+
+import { TEmployees, Employee as CurrentEmployee } from "@/types/employees";
+
 import { Employee } from "./Employee/Employee";
+
+import styles from "./Employees.module.scss";
 
 interface EmployeesProps {
   employees: TEmployees;

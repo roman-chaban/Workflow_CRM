@@ -2,9 +2,9 @@ import { useState, type FC } from "react";
 
 import { Button } from "../index";
 
-import styles from "@/components/EmployeesNav/EmployeesNav.module.scss";
-
 import { ActiveTabs } from "@/app/employees/page";
+
+import styles from "@/components/EmployeesNav/EmployeesNav.module.scss";
 
 interface EmployeesNavButtonsProps {
   setActiveTab: (tab: ActiveTabs) => void;

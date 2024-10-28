@@ -1,3 +1,4 @@
+
 import styles from '@/styles/pages/NotFound.module.scss';
 
 export default function NotFound() {

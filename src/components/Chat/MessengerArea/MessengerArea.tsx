@@ -2,14 +2,14 @@
 
 import { ChangeEvent, FC, useRef } from "react";
 
-import styles from "./MessengerArea.module.scss";
-
 import { Textarea } from "@/components/index";
 import { EmojiButton } from "@/components/ui/buttons/EmojiButton/EmojiButton";
 import { SendButton } from "@/components/ui/buttons/SendButton/SendButton";
 import { ButtonGroups } from "../ButtonGroups/ButtonGroups";
 
 import { ChatText, TextAreaRef } from "@/types/chat-types";
+
+import styles from "./MessengerArea.module.scss";
 
 interface MessengerAreaProps {
   chatText: ChatText;

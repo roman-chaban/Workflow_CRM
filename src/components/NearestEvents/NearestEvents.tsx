@@ -6,12 +6,13 @@ import { useFetch } from "@/hooks/useFetch";
 import Image from "next/image";
 import Link from "next/link";
 
-import styles from "./NearestEvents.module.scss";
+import { Events } from "@/components/NearestEvents/Events/Events";
+import { LoadingSpinner } from "@/components/ui/LoadingSpinner/LoadingSpinner";
 
 import { Events as CurrentEvents } from "@/types/events";
-import { Events } from "@/components/NearestEvents/Events/Events";
 import { PATHS } from "@/constants/paths";
-import { LoadingSpinner } from "@/components/ui/LoadingSpinner/LoadingSpinner";
+
+import styles from "./NearestEvents.module.scss";
 
 export const NearestEvents: FC = () => {
   const { data: events, loading } = useFetch<CurrentEvents>({

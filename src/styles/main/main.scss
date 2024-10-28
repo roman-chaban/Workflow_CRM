@@ -24,6 +24,11 @@ body {
   @media (max-width: rem(1230px)) {
     gap: 0;
   }
+
+  @include respond-to(medium) {
+    grid-template-columns: 1fr;
+  }
+
 }
 
 .page {

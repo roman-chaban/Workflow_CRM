@@ -2,12 +2,15 @@
 
 import type { FC } from "react";
 
-import styles from "./SignInForm.module.scss";
 import { useForm } from "react-hook-form";
-import { RegisterInput } from "@/components/ui/RegisterInput/RegisterInput";
+
 import Image from "next/image";
+
+import { RegisterInput } from "@/components/ui/RegisterInput/RegisterInput";
 import { SignInRemember } from "@/components/SignInRemember/SignInRemember";
 import { SignInSubmit } from "@/components/SignInSubmit/SignInSubmit";
+
+import styles from "./SignInForm.module.scss";
 
 export interface FormData {
   email: string;

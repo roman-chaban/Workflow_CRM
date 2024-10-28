@@ -1,8 +1,8 @@
 "use client";
 
-import { usePathname } from "next/navigation";
 import { Header } from "@/components/Header/Header";
-import React from "react";
+
+import { usePathname } from "next/navigation";
 
 export const IsHeaderRender = () => {
   const pathname = usePathname();

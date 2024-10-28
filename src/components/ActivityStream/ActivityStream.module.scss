@@ -8,8 +8,9 @@
   width: 100%;
   @include blockContainer(100%, rem(570px), rem(439px), rem(24px));
   height: 538px;
-  @include respond-to(lmedium) {
-    max-width: rem(350px);
+
+  @media (max-width: 1080px) {
+    max-width: rem(330px);
   }
 
   &__container {
@@ -19,6 +20,7 @@
     height: 100%;
     justify-content: space-between;
   }
+
   &__header-title {
     @include blockTitle;
   }
@@ -71,9 +73,9 @@
 
   &__upload {
     @include activityChildContainer(
-      rem(15px) rem(10px) rem(15px) rem(20px),
-      rem(22px),
-      rem(78px)
+                    rem(15px) rem(10px) rem(15px) rem(20px),
+                    rem(22px),
+                    rem(78px)
     );
   }
 
@@ -87,9 +89,9 @@
 
   &__attached {
     @include activityChildContainer(
-      rem(14px) rem(9px) rem(15px) rem(20px),
-      rem(16px),
-      rem(62px)
+                    rem(14px) rem(9px) rem(15px) rem(20px),
+                    rem(16px),
+                    rem(62px)
     );
     align-items: center;
   }

@@ -1,13 +1,15 @@
 "use client";
 
-import styles from "@/styles/pages/Nearest.module.scss";
+import { useRef, useState } from "react";
+import { useOnClickOutside } from "@/hooks/useOnClickOutside";
+import { useDocumentTitle } from "@/hooks/useDocumentTitle";
+
 import { NearestEventsList } from "@/components/pagesComponents/nearest/NearestEventsList/NearestEventsList";
 import { NearestHeader } from "@/components/pagesComponents/nearest/NearestHeader/NearestHeader";
 import { SectionWrapper } from "@/components/containers/SectionWrapper/SectionWrapper";
-import { useRef, useState } from "react";
 import { EventModal } from "@/components/pagesComponents/nearest/EventModal/EventModal";
-import { useOnClickOutside } from "@/hooks/useOnClickOutside";
-import { useDocumentTitle } from "@/hooks/useDocumentTitle";
+
+import styles from "@/styles/pages/Nearest.module.scss";
 
 export default function Nearest() {
   useDocumentTitle("Workflow CRM | Events");

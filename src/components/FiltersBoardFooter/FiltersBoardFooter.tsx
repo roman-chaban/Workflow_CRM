@@ -1,6 +1,7 @@
 import type { FC } from "react";
 
 import Image from "next/image";
+
 import { Button } from "@/components/ui/Button/Button";
 
 import styles from "./FiltersBoardFooter.module.scss";

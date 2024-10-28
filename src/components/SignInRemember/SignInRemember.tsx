@@ -1,9 +1,11 @@
 import type { FC } from "react";
+
+import { useForm } from "react-hook-form";
+
 import { Button } from "@/components/ui/Button/Button";
+import { RegisterInput } from "@/components/ui/RegisterInput/RegisterInput";
 
 import styles from "./SignInRemember.module.scss";
-import { RegisterInput } from "@/components/ui/RegisterInput/RegisterInput";
-import { useForm } from "react-hook-form";
 
 interface MemberData {
   checkbox: boolean;

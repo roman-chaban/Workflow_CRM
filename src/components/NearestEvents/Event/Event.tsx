@@ -1,6 +1,8 @@
 import type { FC } from "react";
-import { Event as CurrentEvent } from "@/types/events";
+
 import Image from "next/image";
+
+import { Event as CurrentEvent } from "@/types/events";
 
 import styles from "./Event.module.scss";
 

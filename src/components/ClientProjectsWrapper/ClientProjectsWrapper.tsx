@@ -1,7 +1,10 @@
 "use client";
 
-import { ProjectsNav } from "@/components/pagesComponents/projects/ProjectsNav/ProjectsNav";
 import { useState } from "react";
+import { useDocumentTitle } from "@/hooks/useDocumentTitle";
+import { useAppSelector } from "@/hooks/useAppSelector";
+
+import { ProjectsNav } from "@/components/pagesComponents/projects/ProjectsNav/ProjectsNav";
 import {
   Grid,
   ProjectsSidebar,
@@ -9,13 +12,12 @@ import {
   TasksNav,
   FiltersBoard,
 } from "@/components/index/index";
-import styles from "@/styles/pages/Projects.module.scss";
-import { useAppSelector } from "@/hooks/useAppSelector";
 import {
   renderContent,
   TasksItem,
 } from "@/fixtures/renderContent/renderContent";
-import { useDocumentTitle } from "@/hooks/useDocumentTitle";
+
+import styles from "@/styles/pages/Projects.module.scss";
 
 export const ClientProjectsWrapper = () => {
   useDocumentTitle("Workflow CRM | Projects");
