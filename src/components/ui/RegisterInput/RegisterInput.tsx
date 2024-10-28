@@ -4,7 +4,7 @@ import { InputTypes } from "@/components/ui/Input/Input";
 
 interface RegisterInputClassNames {
   label: string;
-  labelText: string;
+  labelText?: string;
   input: string;
   error?: string;
 }

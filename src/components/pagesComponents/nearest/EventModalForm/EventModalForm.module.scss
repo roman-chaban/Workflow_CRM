@@ -1,0 +1,96 @@
+@use '../../../../styles/colors/colors' as color;
+@use '../../../../styles/globals/globals' as size;
+@use '../../../../styles/breakpoints/breakpoints' as *;
+@use '../../../../styles/functions/functions' as *;
+@use '../../../../styles/mixins/mixins' as *;
+
+
+.eventModalForm {
+  width: 100%;
+  margin-block-start: rem(30px);
+  display: flex;
+  flex-direction: column;
+  gap: rem(20px);
+
+
+  & .nameInput {
+    @include defaultInput;
+    border: 2.5px solid color.$color-border;
+  }
+
+  & .nameLabel {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: rem(10px);
+    @include labelTitle;
+  }
+
+  & .select {
+    @include defaultInput;
+    border: 2.5px solid color.$color-border;
+    justify-content: space-between;
+    position: relative;
+    padding-inline-end: rem(18px);
+    cursor: pointer;
+
+    &::after {
+      content: '';
+      background: url('../../../../../public/images/modal/arrow-down.svg') no-repeat center center;
+      width: rem(24px);
+      height: rem(24px);
+      object-fit: cover;
+      transition: transform 0.3s ease;
+      transform: rotate(180deg);
+    }
+
+    &.open::after {
+      transform: rotate(0deg);
+    }
+  }
+
+  & .selectContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: rem(10px);
+    position: relative;
+  }
+
+  & .selectLabel {
+    @include labelTitle;
+  }
+
+  & .optionsContainer {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    padding: rem(10px);
+    max-width: rem(545px);
+    border-radius: rem(24px);
+    position: absolute;
+    top: rem(110px);
+    border: 2.5px solid color.$color-border;
+    background: color.$color-white;
+    box-shadow: color.$color-box-shadow-background;
+
+
+  }
+
+  & .option {
+    font-size: size.$font-size-16px;
+    font-weight: 600;
+    min-height: rem(50px);
+    padding: rem(5px);
+    border-radius: rem(14px);
+    display: flex;
+    align-items: center;
+    transition: background .5s linear 0s;
+    cursor: pointer;
+    color: color.$color-black;
+
+    &:hover {
+      background: color.$color-border;
+      border-radius: rem(14px);
+    }
+  }
+
+}

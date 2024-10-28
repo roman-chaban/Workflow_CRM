@@ -5,6 +5,7 @@ import FilterBoardSlice from "../slices/FiltersBoardSlice";
 import EmployeesNavSlice from "../slices/EmployeesNavSlice";
 import CustomersSlice from "@/store/slices/CustomersSlice";
 import EmployeesSlice from "@/store/slices/EmployeesSlice";
+import EventsSlice from "@/store/slices/EventsSlice";
 
 const rootReducer = combineReducers({
   navSlice: NavSlice,
@@ -12,6 +13,7 @@ const rootReducer = combineReducers({
   employeesNav: EmployeesNavSlice,
   employees: EmployeesSlice,
   customers: CustomersSlice,
+  events: EventsSlice,
 });
 
 export default rootReducer;

@@ -1,82 +1,23 @@
 [
     {
         "id": 1,
-        "icon": "/icons/nearest/arrow-up.svg",
-        "titleIcon": "/icons/nearest/events/active.svg",
         "title": "Presentation of the new department",
         "day": "Today",
-        "hour": "6:00 PM",
-        "duration": "4h",
-        "colorVariant": "blue"
+        "hour": "5:00 PM",
+        "duration": "4h"
     },
     {
         "id": 2,
-        "icon": "/icons/nearest/arrow-down.svg",
-        "titleIcon": "/icons/nearest/events/birthday.svg",
         "title": "Anna’s Birthday",
         "day": "Today",
-        "hour": "5:00 PM",
-        "duration": "2h",
-        "colorVariant": "pink"
+        "hour": "6:00 PM",
+        "duration": "4h"
     },
     {
         "id": 3,
-        "icon": "/icons/nearest/arrow-up.svg",
-        "titleIcon": "/icons/nearest/events/meeting.svg",
-        "title": "Meeting with Development Team",
-        "day": "Tomorrow",
-        "hour": "5:00 PM",
-        "duration": "4h",
-        "colorVariant": "orange"
-    },
-    {
-        "id": 4,
-        "icon": "/icons/nearest/arrow-down.svg",
-        "titleIcon": "/icons/nearest/events/birthday.svg",
         "title": "Ray’s Birthday",
         "day": "Tomorrow",
         "hour": "2:00 PM",
-        "duration": "1h 30m",
-        "colorVariant": "pink"
-    },
-    {
-        "id": 5,
-        "icon": "/icons/nearest/arrow-up.svg",
-        "titleIcon": "/icons/nearest/events/active.svg",
-        "title": "Meeting with CEO",
-        "day": "Sep 14",
-        "hour": " 5:00 PM",
-        "duration": "1h",
-        "colorVariant": "blue"
-    },
-    {
-        "id": 6,
-        "icon": "/icons/nearest/arrow-down.svg",
-        "titleIcon": "/icons/nearest/events/tv.svg",
-        "title": "Movie night (Tenet)",
-        "day": "Sep 15",
-        "hour": " 5:00 PM",
-        "duration": "3h",
-        "colorVariant": "purple"
-    },
-    {
-        "id": 7,
-        "icon": "/icons/nearest/arrow-down.svg",
-        "titleIcon": "/icons/nearest/events/birthday.svg",
-        "title": "Lucas’s Birthday",
-        "day": "Sep 29",
-        "hour": " 5:30 PM",
-        "duration": "2h",
-        "colorVariant": "pink"
-    },
-    {
-        "id": 8,
-        "icon": "/icons/nearest/arrow-up.svg",
-        "titleIcon": "/icons/nearest/events/active.svg",
-        "title": "Meeting with CTO",
-        "day": "Sep 30",
-        "hour": " 12:00 PM",
-        "duration": "1h",
-        "colorVariant": "blue"
+        "duration": "4h"
     }
 ]

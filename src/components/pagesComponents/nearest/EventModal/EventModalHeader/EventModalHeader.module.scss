@@ -1,0 +1,34 @@
+@use '../../../../../styles/colors/colors' as color;
+@use '../../../../../styles/globals/globals' as size;
+@use '../../../../../styles/functions/functions' as *;
+@use '../../../../../styles/mixins/mixins' as *;
+
+
+.eventModalHeader {
+  width: 100%;
+  grid-column: span 12;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  position: relative;
+  min-height: rem(75px);
+
+  &Title {
+    @include blockTitle;
+  }
+
+
+  &CloseButton {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: rem(14px);
+    background: color.$color-main-background;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+}

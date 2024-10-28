@@ -9,4 +9,4 @@ export interface Event {
   icon: string;
 }
 
-export type TEvents = Array<Event>;
+export type Events = Array<Event>;

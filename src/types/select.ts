@@ -18,4 +18,6 @@ export interface SelectClassNames {
   option: string;
   optionsContainer: string;
   selectContainer: string;
+  open?: string;
+  optionsOpen?: string;
 }

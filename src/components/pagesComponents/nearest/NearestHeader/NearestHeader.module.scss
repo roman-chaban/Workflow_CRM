@@ -7,20 +7,23 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+
   &-top {
     display: flex;
     flex-direction: column;
     gap: rem(8px);
   }
+
   &-back {
     @include viewAllLink;
     gap: rem(8px);
   }
-  &-title {
+
+  & .nearestHeaderTitle {
     @include blockLargeTitle;
   }
 
-  &-add {
+  & .nearestHeaderAddButton {
     @include addButton;
   }
 }

@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { SelectProps } from '@/types/select';
-import { useId, useState, type FC } from 'react';
+import { SelectProps } from "@/types/select";
+import React, { useId, useState, type FC } from "react";
 
 export const Select: FC<SelectProps> = ({
   options,
@@ -11,7 +11,7 @@ export const Select: FC<SelectProps> = ({
   classNames,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedValue, setSelectedValue] = useState(defaultValue || '');
+  const [selectedValue, setSelectedValue] = useState(defaultValue || "");
   const selectId = useId();
 
   const handleSelectOption = (value: string) => {
@@ -22,6 +22,11 @@ export const Select: FC<SelectProps> = ({
     }
   };
 
+  const handleToggleSelect = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+    setIsOpen((prevState) => !prevState);
+  };
+
   return (
     <div className={classNames.selectContainer}>
       <label htmlFor={selectId} className={classNames.label}>
@@ -30,17 +35,17 @@ export const Select: FC<SelectProps> = ({
 
       <button
         id={selectId}
-        className={classNames.select}
-        onClick={() => setIsOpen((prev) => !prev)}
+        className={`${classNames.select} ${isOpen ? classNames.open : ""}`}
+        onClick={handleToggleSelect}
         aria-haspopup="listbox"
         aria-expanded={isOpen}
       >
-        {selectedValue || defaultValue || 'Choose an option'}
+        {selectedValue || defaultValue || "Choose an option"}
       </button>
 
       {isOpen && (
         <ul
-          className={classNames.optionsContainer}
+          className={`${classNames.optionsContainer} ${isOpen ? classNames.optionsOpen : ""}`}
           role="listbox"
           aria-labelledby={selectId}
         >

@@ -1,32 +1,32 @@
-'use client';
+"use client";
 
-import type { FC } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
+import type { FC } from "react";
+import { useFetch } from "@/hooks/useFetch";
 
-import { useFetch } from '@/hooks/useFetch';
+import Image from "next/image";
+import Link from "next/link";
 
-import { Events } from './Events/Events';
-import { TEvents } from '@/types/events';
+import styles from "./NearestEvents.module.scss";
 
-import styles from './NearestEvents.module.scss';
-import { PATHS } from '@/constants/paths';
+import { Events as CurrentEvents } from "@/types/events";
+import { Events } from "@/components/NearestEvents/Events/Events";
+import { PATHS } from "@/constants/paths";
+import { LoadingSpinner } from "@/components/ui/LoadingSpinner/LoadingSpinner";
 
 export const NearestEvents: FC = () => {
-  const { data, loading, error } = useFetch<TEvents>({
-    url: '/data/events.json',
+  const { data: events, loading } = useFetch<CurrentEvents>({
+    url: "data/nearest-events.json",
   });
 
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error...</div>;
+  if (loading) return <LoadingSpinner />;
 
   return (
-    <div className={styles['nearest']}>
-      <div className={styles['nearest__container']}>
-        <div className={styles['nearest__header']}>
-          <h3 className={styles['nearest__header-title']}>Nearest Events</h3>
-          <Link href={PATHS.NEAREST} className={styles['nearest__header-link']}>
-            View all{' '}
+    <div className={styles["nearest"]}>
+      <div className={styles["nearest__container"]}>
+        <div className={styles["nearest__header"]}>
+          <h3 className={styles["nearest__header-title"]}>Nearest Events</h3>
+          <Link href={PATHS.NEAREST} className={styles["nearest__header-link"]}>
+            View all{" "}
             <Image
               src="/icons/workload/arrow-right.svg"
               alt="Arrow Icon"
@@ -35,7 +35,7 @@ export const NearestEvents: FC = () => {
             />
           </Link>
         </div>
-        {data && Array.isArray(data) && <Events events={data} />}
+        {events && Array.isArray(events) && <Events events={events} />}
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ import type {
   FC,
   ReactNode,
   RefObject,
-} from 'react';
+} from "react";
 
 export type TextareaType = {
   className: string;
@@ -14,8 +14,8 @@ export type TextareaType = {
   style?: CSSProperties;
   htmlFor: string;
   children?: ReactNode;
-  value: string;
-  onChange: ChangeEventHandler<HTMLTextAreaElement>;
+  value?: string;
+  onChange?: ChangeEventHandler<HTMLTextAreaElement>;
   placeholder: string;
   ref?: RefObject<HTMLTextAreaElement>;
 };
@@ -30,7 +30,7 @@ export const Textarea: FC<TextareaType> = ({
   onChange,
   labelClassName,
   placeholder,
-  htmlFor = '',
+  htmlFor = "",
   ref,
 }) => {
   return (
