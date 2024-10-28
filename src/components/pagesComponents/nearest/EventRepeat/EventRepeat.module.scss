@@ -1,0 +1,64 @@
+@use '../../../../styles/colors/colors' as color;
+@use '../../../../styles/globals/globals' as size;
+@use '../../../../styles/breakpoints/breakpoints' as *;
+@use '../../../../styles/functions/functions' as *;
+@use '../../../../styles/mixins/mixins' as *;
+
+.eventRepeat {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: rem(38px);
+  align-items: flex-end;
+
+  & .eventRepeatSwitcher {
+    width: 100%;
+    background: color.$color-main-background;
+    border-radius: rem(14px);
+    min-height: rem(100px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: rem(20px);
+
+    &Title {
+      @include itemTitle;
+    }
+
+  }
+
+  & .saveButton {
+    @include addButton;
+    max-width: rem(140.5px);
+  }
+
+  & .switcherButton {
+    width: 51px;
+    height: 31px;
+    background: color.$color-light-gray;
+    border-radius: rem(18px);
+    padding: rem(4px);
+    position: relative;
+    transition: background 0.3s ease;
+    opacity: 0.9;
+  }
+
+  & .switcherCircle {
+    display: block;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background: color.$color-white;
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    transform: translateY(-50%);
+    transition: left 0.3s ease;
+
+  }
+
+  & #switcherActive {
+    background: color.$color-success;
+    left: calc(100% - 27px);
+  }
+
+}

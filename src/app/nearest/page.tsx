@@ -7,8 +7,10 @@ import { SectionWrapper } from "@/components/containers/SectionWrapper/SectionWr
 import { useRef, useState } from "react";
 import { EventModal } from "@/components/pagesComponents/nearest/EventModal/EventModal";
 import { useOnClickOutside } from "@/hooks/useOnClickOutside";
+import { useDocumentTitle } from "@/hooks/useDocumentTitle";
 
 export default function Nearest() {
+  useDocumentTitle("Workflow CRM | Events");
   const [isModal, setIsModal] = useState(false);
   const modalRef = useRef<HTMLDivElement>(null);
 

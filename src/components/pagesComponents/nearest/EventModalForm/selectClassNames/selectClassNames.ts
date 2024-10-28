@@ -5,7 +5,7 @@ export const selectClassNames = {
   select: styles["select"],
   defaultOption: styles["defaultOption"],
   option: styles["option"],
-  optionsContainer: styles["optionsContainer"],
+  optionsContainer: `${styles["optionsContainer"]} ${styles["optionsPriorityContainer"]}`,
   selectContainer: styles["selectContainer"],
   open: styles["open"],
   optionsOpen: styles["optionsOpen"],

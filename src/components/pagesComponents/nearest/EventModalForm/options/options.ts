@@ -10,3 +10,8 @@ export const options: Option[] = [
   { label: "Lucas’s Birthday", value: "7" },
   { label: "Meeting with CTO", value: "8" },
 ];
+
+export const priorityOptions: Option[] = [
+  { value: "Low", label: "Low" },
+  { value: "Medium", label: "Medium" },
+];
