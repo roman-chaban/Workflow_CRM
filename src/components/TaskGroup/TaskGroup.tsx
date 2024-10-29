@@ -24,9 +24,9 @@ export const TaskGroup: FC = memo(() => {
                 onChange: () => {},
               }}
               classNames={{
-                input: styles["taskGroup__input"],
-                label: styles["taskGroup__label"],
-                labelText: styles["taskGroup__text"],
+                input: styles["checkboxInput"],
+                label: styles["checkboxLabel"],
+                labelText: styles["checkboxLabel"],
               }}
             />
           ))}

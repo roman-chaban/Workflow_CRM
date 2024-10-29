@@ -51,6 +51,75 @@
     z-index: 4;
   }
 
+  & .dateTimePicker {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  & .trackerLabelText {
+    @include labelTitle;
+  }
+
+  & .trackerLabel {
+    width: 100%;
+    max-width: rem(260px);
+    display: flex;
+    flex-flow: column nowrap;
+    gap: rem(10px);
+  }
+
+  & .trackerInput {
+    @include defaultInput;
+    border: 1.5px solid color.$color-border;
+    max-width: rem(260px);
+    justify-content: space-between;
+    position: relative;
+
+    &::before {
+      content: 'Select Date';
+    }
+
+    &::after {
+      content: '';
+      background: url('../../../../../public/images/modal/calendar.svg') center center no-repeat;
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      right: rem(10px);
+      background-size: cover;
+    }
+
+    &[type='time']::after {
+      content: '';
+      background: url('../../../../../public/images/modal/clock.svg') center center no-repeat;
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      right: rem(10px);
+      background-size: cover;
+    }
+
+    &[type='time']::before {
+      content: 'Select Time';
+    }
+
+
+    &::-webkit-calendar-picker-indicator {
+      opacity: 0;
+      -webkit-appearance: none;
+    }
+
+
+    &::-webkit-datetime-edit-fields-wrapper {
+      width: 100%;
+      display: none;
+    }
+
+  }
+
+
   & .descriptionArea {
     @include descriptionArea;
     padding: rem(11px) rem(18px);

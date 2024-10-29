@@ -1,13 +1,14 @@
-import type { ChangeEvent, CSSProperties, FC, RefObject } from 'react';
+import type { ChangeEvent, CSSProperties, FC, RefObject } from "react";
 
 export type InputTypes =
-  | 'text'
-  | 'email'
-  | 'search'
-  | 'password'
-  | 'checkbox'
-  | 'radio'
-  | 'date';
+  | "text"
+  | "email"
+  | "search"
+  | "password"
+  | "checkbox"
+  | "radio"
+  | "date"
+  | "time";
 
 interface InputClassNames {
   label: string;
@@ -35,15 +36,15 @@ interface InputProps {
 
 export const Input: FC<InputProps> = ({
   properties: {
-    htmlFor = '',
-    label = '',
-    type = 'text',
-    id = '',
-    name = '',
+    htmlFor = "",
+    label = "",
+    type = "text",
+    id = "",
+    name = "",
     value,
     onChange,
-    className = '',
-    placeholder = '',
+    className = "",
+    placeholder = "",
     style,
   },
   ref,

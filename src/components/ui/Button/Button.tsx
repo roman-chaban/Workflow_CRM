@@ -1,9 +1,9 @@
-import type { CSSProperties, FC, ReactNode } from 'react';
+import type { CSSProperties, FC, ReactNode } from "react";
 
 interface ButtonProps {
   children: ReactNode;
   className?: string;
-  type: 'reset' | 'button' | 'submit';
+  type: "reset" | "button" | "submit";
   onClick?: () => void;
   disabled?: boolean;
   style?: CSSProperties;

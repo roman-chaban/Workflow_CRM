@@ -1,0 +1,39 @@
+@use '../../../../../styles/colors/colors' as color;
+@use '../../../../../styles/globals/globals' as size;
+@use '../../../../../styles/breakpoints/breakpoints' as *;
+@use '../../../../../styles/functions/functions' as *;
+@use '../../../../../styles/mixins/mixins' as *;
+
+.completeDaysBlock {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: rem(15px);
+
+  & .completeLabels {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(12px);
+
+    & .active {
+      color: color.$color-white;
+      background: color.$color-support-background;
+      font-weight: 700;
+    }
+
+  }
+
+  & .completeLabel {
+    @include labelTitle;
+  }
+
+  & .completeDayButton {
+    @include completeButton;
+    border: none;
+    background: color.$color-main-background;
+    max-height: rem(50px);
+    font-weight: 600;
+    line-height: 129%;
+  }
+
+}

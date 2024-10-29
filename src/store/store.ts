@@ -1,7 +1,7 @@
-import { configureStore } from '@reduxjs/toolkit';
-import { persistStore, persistReducer } from 'redux-persist';
-import rootReducer from './rootReducer/rootReducer';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import { configureStore } from "@reduxjs/toolkit";
+import { persistStore, persistReducer } from "redux-persist";
+import rootReducer from "./rootReducer/rootReducer";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const mockStorage = {
   setItem: async () => {},
@@ -10,8 +10,8 @@ const mockStorage = {
 };
 
 const persistConfig = {
-  key: 'root',
-  storage: typeof window !== 'undefined' ? AsyncStorage : mockStorage,
+  key: "root",
+  storage: typeof window !== "undefined" ? AsyncStorage : mockStorage,
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
@@ -21,7 +21,7 @@ const store = configureStore({
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {
-        ignoredActions: ['persist/PERSIST', 'persist/REHYDRATE'],
+        ignoredActions: ["persist/PERSIST", "persist/REHYDRATE"],
       },
     }),
 });

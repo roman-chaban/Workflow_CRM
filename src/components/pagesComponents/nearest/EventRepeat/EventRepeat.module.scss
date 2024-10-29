@@ -8,7 +8,13 @@
   display: flex;
   flex-flow: column nowrap;
   gap: rem(38px);
-  align-items: flex-end;
+
+  & .eventRepeatSwitcherBlock {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: rem(30px);
+    height: auto;
+  }
 
   & .eventRepeatSwitcher {
     width: 100%;
@@ -29,6 +35,7 @@
   & .saveButton {
     @include addButton;
     max-width: rem(140.5px);
+    margin-inline-start: auto;
   }
 
   & .switcherButton {
@@ -40,6 +47,10 @@
     position: relative;
     transition: background 0.3s ease;
     opacity: 0.9;
+  }
+
+  & .switcherBackground {
+    background: color.$color-support-background;
   }
 
   & .switcherCircle {
@@ -57,7 +68,6 @@
   }
 
   & #switcherActive {
-    background: color.$color-success;
     left: calc(100% - 27px);
   }
 

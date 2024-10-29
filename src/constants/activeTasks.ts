@@ -8,18 +8,18 @@ export type ActiveTasks = ActiveTask[];
 export const activeTasks: ActiveTasks = [
   {
     id: 1,
-    title: 'To Do',
+    title: "To Do",
   },
   {
     id: 2,
-    title: 'In Progress',
+    title: "In Progress",
   },
   {
     id: 3,
-    title: 'In Review',
+    title: "In Review",
   },
   {
     id: 4,
-    title: 'Done',
+    title: "Done",
   },
 ];

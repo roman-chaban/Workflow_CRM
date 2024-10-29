@@ -1,0 +1,76 @@
+@use '../../../../styles/colors/colors' as color;
+@use '../../../../styles/globals/globals' as size;
+@use '../../../../styles/breakpoints/breakpoints' as *;
+@use '../../../../styles/functions/functions' as *;
+@use '../../../../styles/mixins/mixins' as *;
+
+
+.eventPropertiesBlock {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: rem(29px);
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+
+  &.show {
+    max-height: 500px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  & .rememberLabel {
+    width: fit-content;
+    display: flex;
+    justify-content: flex-end;
+    flex-flow: row-reverse nowrap;
+    gap: rem(15px);
+    @include text;
+    font-size: size.$font-size-18px;
+    position: relative;
+  }
+
+
+  .checkboxLabel {
+    width: 100%;
+    max-width: rem(160px);
+    display: flex;
+    align-items: center;
+    flex-flow: row-reverse nowrap;
+    cursor: pointer;
+  }
+
+  .checkboxLabel {
+    @include checkboxLabel;
+  }
+
+  .checkboxInput {
+    @include checkboxInput(rem(21px), rem(21px));
+
+    &:checked {
+      background-color: color.$color-white;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        width: 7px;
+        height: 11px;
+        border: solid color.$color-support-background;
+        border-width: 0 2px 2px 0;
+        display: block;
+        border-radius: 0.5px;
+      }
+    }
+  }
+
+  & .checkBoxLabelText {
+    @include checkboxLabel;
+  }
+
+}
+

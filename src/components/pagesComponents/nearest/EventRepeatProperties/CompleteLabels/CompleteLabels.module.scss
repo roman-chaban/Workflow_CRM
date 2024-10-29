@@ -1,0 +1,35 @@
+@use '../../../../../styles/colors/colors' as color;
+@use '../../../../../styles/globals/globals' as size;
+@use '../../../../../styles/breakpoints/breakpoints' as *;
+@use '../../../../../styles/functions/functions' as *;
+@use '../../../../../styles/mixins/mixins' as *;
+
+
+.completeLabelsBlock {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: rem(15px);
+
+  & .completeLabel {
+    @include labelTitle;
+  }
+
+  & .completeLabels {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(16px);
+
+    & .active {
+      color: color.$color-white;
+      background: color.$color-support-background;
+      font-weight: 700;
+    }
+  }
+
+
+  & .completeLabelButton {
+    @include completeButton;
+  }
+
+}

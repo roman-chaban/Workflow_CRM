@@ -15,6 +15,7 @@ import {
 } from "@/components/pagesComponents/nearest/EventModalForm/options/options";
 
 import styles from "./EventModalForm.module.scss";
+import { DateTimePicker } from "@/components/pagesComponents/nearest/DateTimePicker/DateTimePicker";
 
 interface FormState {
   name: string;
@@ -54,6 +55,7 @@ export const EventModalForm: FC = () => {
         selectLabel={"Priority"}
         defaultValue={"Low"}
       />
+      <DateTimePicker />
       <Textarea
         className={styles["descriptionArea"]}
         labelClassName={styles["descriptionLabel"]}

@@ -28,9 +28,9 @@ export const Reporter: FC = () => {
                   onChange: () => {},
                 }}
                 classNames={{
-                  input: styles["reporter__input"],
-                  label: styles["reporter__label"],
-                  labelText: styles["reporter__text"],
+                  input: styles["checkboxInput"],
+                  label: styles["checkboxLabel"],
+                  labelText: styles["checkboxLabel"],
                 }}
               />
               <Image
