@@ -41,7 +41,7 @@ export default function Employees() {
       tag={"section"}
       height={"100%"}
       position="relative"
-      gridTemplateRows={"none"}
+      gridTemplateRows={"0fr"}
       gap={"28px"}
     >
       <EmployeesNav

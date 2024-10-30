@@ -54,8 +54,7 @@
     align-items: center;
     gap: rem(5px);
     width: 100%;
-    justify-content: space-between;
-    min-height: rem(40px);
+    min-height: rem(60px);
 
     &Title {
       @include itemTitle;

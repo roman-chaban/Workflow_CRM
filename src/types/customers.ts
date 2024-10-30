@@ -10,3 +10,7 @@ export interface Customer {
 }
 
 export type Customers = Customer[];
+
+
+export type CurrentPage = number;
+export type ItemsPerPage = number;

@@ -1,0 +1,47 @@
+@use '../../../styles/colors/colors' as color;
+@use '../../../styles/globals/globals' as size;
+@use '../../../styles/breakpoints/breakpoints' as *;
+@use '../../../styles/functions/functions' as *;
+@use '../../../styles/mixins/mixins' as *;
+
+
+.paginationContainer {
+  display: flex;
+  justify-content: flex-end;
+
+
+  & .paginationControls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: rem(200px);
+    min-height: rem(50px);
+    border-radius: rem(14px);
+    background: color.$color-white;
+    box-shadow: color.$color-box-shadow-background;
+    padding: rem(12px) rem(16px);
+
+  }
+
+  & button {
+    background: inherit;
+  }
+
+  & .paginationRangeDisplay {
+    @include itemTitle;
+    font-weight: 400;
+  }
+
+}
+
+.paginationButtonsBlock {
+  display: flex;
+  align-items: center;
+  gap: rem(8px);
+
+  & > .paginationNavButton {
+    display: flex;
+    align-items: center;
+  }
+
+}

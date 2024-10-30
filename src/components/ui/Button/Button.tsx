@@ -8,6 +8,7 @@ interface ButtonProps {
   disabled?: boolean;
   style?: CSSProperties;
   ariaPressed?: boolean;
+  id?: number | string;
 }
 
 export const Button: FC<ButtonProps> = ({
@@ -18,9 +19,11 @@ export const Button: FC<ButtonProps> = ({
   disabled,
   onClick,
   ariaPressed,
+  id,
 }) => {
   return (
     <button
+      data-id={id}
       style={style}
       onClick={onClick}
       className={className}
