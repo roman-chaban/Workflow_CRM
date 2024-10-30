@@ -1,9 +1,12 @@
 import type { FC } from "react";
 
-import { Box, Grid } from "../../index";
-import { MessengerBar } from "../MessengerBar/MessengerBar";
-import { MessengerHeader } from "../MessengerHeader/MessengerHeader";
-import { MessengerChatMain } from "../MessengerChatMain/MessengerChatMain";
+import {
+  Box,
+  Grid,
+  MessengerBar,
+  MessengerHeader,
+  MessengerChatMain,
+} from "../../index";
 
 import styles from "./MessengerChat.module.scss";
 

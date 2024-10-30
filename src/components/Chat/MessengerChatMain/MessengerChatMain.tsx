@@ -2,8 +2,7 @@
 
 import { useState, type FC } from "react";
 
-import { MessengerArea } from "../MessengerArea/MessengerArea";
-import { ChatDisplay } from "../ChatDisplay/ChatDisplay";
+import { ChatDisplay, MessengerArea } from "@/components/index/index";
 
 import { ChatText, Messages } from "@/types/chat-types";
 

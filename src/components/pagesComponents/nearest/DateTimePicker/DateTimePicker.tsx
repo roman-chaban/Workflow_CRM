@@ -4,7 +4,7 @@ import type { FC } from "react";
 
 import { useForm } from "react-hook-form";
 
-import { RegisterInput } from "@/components/ui/RegisterInput/RegisterInput";
+import { RegisterInput } from "@/components/index/index";
 
 import styles from "../EventModalForm/EventModalForm.module.scss";
 

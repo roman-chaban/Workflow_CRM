@@ -3,19 +3,22 @@
 import type { FC } from "react";
 import { useForm } from "react-hook-form";
 
-import { RegisterInput } from "@/components/ui/RegisterInput/RegisterInput";
-import { Select } from "@/components/ui/Select/Select";
-import { EventRepeat } from "@/components/pagesComponents/nearest/EventRepeat/EventRepeat";
-import { Textarea } from "@/components/ui/Textarea/Textarea";
+import {
+  RegisterInput,
+  Select,
+  EventRepeat,
+  Textarea,
+  DateTimePicker,
+} from "@/components/index/index";
 
 import { selectClassNames } from "@/components/pagesComponents/nearest/EventModalForm/selectClassNames/selectClassNames";
+
 import {
   options,
   priorityOptions,
 } from "@/components/pagesComponents/nearest/EventModalForm/options/options";
 
 import styles from "./EventModalForm.module.scss";
-import { DateTimePicker } from "@/components/pagesComponents/nearest/DateTimePicker/DateTimePicker";
 
 interface FormState {
   name: string;

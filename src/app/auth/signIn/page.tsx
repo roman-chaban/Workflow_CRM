@@ -1,10 +1,12 @@
 import { Metadata } from "next";
 
 import AuthLayout from "@/app/auth/layout";
-import { SectionWrapper } from "@/components/index";
-import { SignInBanner } from "@/components/SignInElements/SignInBanner/SignInBanner";
-import { SignInForm } from "@/components/SignInElements/SignInForm/SignInForm";
-import { CloseButton } from "@/components/ui/buttons/CloseButton/CloseButton";
+import {
+  SectionWrapper,
+  SignInBanner,
+  SignInForm,
+  CloseButton,
+} from "@/components/index";
 
 import styles from "@/styles/pages/SignIn.module.scss";
 

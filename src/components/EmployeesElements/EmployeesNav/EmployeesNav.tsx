@@ -2,9 +2,7 @@
 
 import { type FC } from "react";
 
-import { EmployeesNavButtons } from "../EmployeesNavButtons/EmployeesNavButtons";
-import { Button } from "../../index";
-import { Plus } from "@/components/ui/icons/Plus/Plus";
+import { Button, EmployeesNavButtons, Plus } from "../../index";
 
 import { ActiveTabs, isOpenedModal } from "@/app/employees/page";
 
@@ -22,12 +20,12 @@ export const EmployeesNav: FC<EmployeesNavProps> = ({
   setIsOpened,
   setActiveTab,
 }) => {
-  const employess = useAppSelector((state) => state.customers.customers);
+  const employees = useAppSelector((state) => state.customers.customers);
 
   return (
     <div className={styles["employees__nav"]}>
       <h3 className={styles["employees__nav-title"]}>
-        Employees ({employess.length})
+        Employees ({employees.length})
       </h3>
       <EmployeesNavButtons setActiveTab={setActiveTab} />
       <Button

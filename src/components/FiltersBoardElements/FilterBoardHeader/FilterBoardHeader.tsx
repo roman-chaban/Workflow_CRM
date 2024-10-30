@@ -1,6 +1,6 @@
 import { memo, type FC } from "react";
 
-import { Button, CloseIcon } from "../../index";
+import { Button, CloseIcon } from "@/components/index/index";
 
 import styles from "@/components/FiltersBoardElements/FiltersBoard/FiltersBoard.module.scss";
 

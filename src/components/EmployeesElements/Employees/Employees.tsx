@@ -2,7 +2,7 @@ import type { FC } from "react";
 
 import { TEmployees, Employee as CurrentEmployee } from "@/types/employees";
 
-import { Employee } from "./Employee/Employee";
+import { Employee } from "@/components/index/index";
 
 import styles from "./Employees.module.scss";
 

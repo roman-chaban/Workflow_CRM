@@ -5,9 +5,9 @@ import { FC, useEffect } from "react";
 import { useAppSelector } from "@/hooks/useAppSelector";
 import { useAppDispatch } from "@/hooks/useAppDispatch";
 
-import { LoadingSpinner } from "@/components/ui/LoadingSpinner/LoadingSpinner";
-import { Employees } from "@/components/EmployeesElements/Employees/Employees";
-import { ViewLink } from "../../ui/ViewLink/ViewLink";
+import { LoadingSpinner, Employees, ViewLink } from "@/components/index/index";
+
+import { PATHS } from "@/constants/paths";
 
 import { fetchEmployees } from "@/store/slices/EmployeesSlice";
 
@@ -38,7 +38,7 @@ export const Workload: FC = () => {
     <div className={styles["workload"]}>
       <div className={styles["workload__container"]}>
         <div className={styles["workload__header"]}>
-          <ViewLink>Workload</ViewLink>
+          <ViewLink href={PATHS.EMPLOYEES}>Workload</ViewLink>
         </div>
 
         {employees && Array.isArray(employees) ? (

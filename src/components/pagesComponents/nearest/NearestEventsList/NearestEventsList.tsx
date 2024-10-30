@@ -1,13 +1,19 @@
 "use client";
 
 import { type FC, useEffect } from "react";
-import styles from "./NearestEventsList.module.scss";
-import { NearestEventsListItem } from "../NearestEventsListItem/NearestEventsListItem";
 import { useAppDispatch } from "@/hooks/useAppDispatch";
 import { useAppSelector } from "@/hooks/useAppSelector";
+
+import {
+  NearestEventsListItem,
+  LoadingSpinner,
+} from "@/components/index/index";
+
 import { fetchEvents } from "@/store/slices/EventsSlice";
+
 import { EventItem } from "@/types/event-item";
-import { LoadingSpinner } from "@/components/ui/LoadingSpinner/LoadingSpinner";
+
+import styles from "./NearestEventsList.module.scss";
 
 export const NearestEventsList: FC = () => {
   const dispatch = useAppDispatch();

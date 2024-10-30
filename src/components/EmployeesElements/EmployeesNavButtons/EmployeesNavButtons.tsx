@@ -1,6 +1,6 @@
 import { useState, type FC } from "react";
 
-import { Button } from "../../index";
+import { Button } from "@/components/index/index";
 
 import { ActiveTabs } from "@/app/employees/page";
 

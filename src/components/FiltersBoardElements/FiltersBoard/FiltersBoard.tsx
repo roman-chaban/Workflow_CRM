@@ -2,16 +2,19 @@
 
 import { useCallback, type FC, useEffect, useState, useRef } from "react";
 import { useAppDispatch } from "@/hooks/useAppDispatch";
-
+import { useOnClickOutside } from "@/hooks/useOnClickOutside";
 
 import { onCloseFilterBoard } from "@/store/slices/FiltersBoardSlice";
 
-import { PeriodInput, FiltersBoardHeader, TaskGroup } from "../../index";
-import { useOnClickOutside } from "@/hooks/useOnClickOutside";
-import { Reporter } from "@/components/CommonElements/Reporter/Reporter";
-import { Assignees } from "@/components/CommonElements/Assignees/Assignees";
-import { Estimate } from "@/components/CommonElements/Estimate/Estimate";
-import { FiltersBoardFooter } from "@/components/FiltersBoardElements/FiltersBoardFooter/FiltersBoardFooter";
+import {
+  PeriodInput,
+  FiltersBoardHeader,
+  TaskGroup,
+  Reporter,
+  Assignees,
+  Estimate,
+  FiltersBoardFooter,
+} from "../../index";
 
 import styles from "./FiltersBoard.module.scss";
 
@@ -21,7 +24,7 @@ export type FiltersBoardProps = {
 
 export const FiltersBoard: FC<FiltersBoardProps> = ({ isClosedBoard }) => {
   const dispatch = useAppDispatch();
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState<boolean>(true);
   const boardRef = useRef<HTMLElement>(null);
 
   const handleCloseBoard = useCallback(() => {

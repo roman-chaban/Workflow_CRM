@@ -1,7 +1,6 @@
 import type { FC } from "react";
 
-import { SearchButton } from "@/components/ui/buttons/SearchButton/SearchButton";
-import { AddButton } from "@/components/ui/buttons/AddButton/AddButton";
+import { SearchButton, AddButton } from "@/components/index/index";
 
 import styles from "./MessengerBar.module.scss";
 

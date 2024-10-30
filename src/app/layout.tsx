@@ -9,9 +9,9 @@ import {
   ClientModalWrapper,
   PageWrapper,
   MainWrapper,
+  IsHeaderRender,
+  GlobalWrapper,
 } from "@/components/index/index";
-import { GlobalWrapper } from "@/components/containers/GlobalWrapper/GlobalWrapper";
-import { IsHeaderRender } from "@/components/CommonElements/IsHeaderRender/IsHeaderRender";
 
 import "@/styles/fonts/_fonts.scss";
 import "@/styles/main/main.scss";

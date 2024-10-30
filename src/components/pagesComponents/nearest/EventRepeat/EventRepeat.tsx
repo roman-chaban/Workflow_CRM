@@ -1,10 +1,12 @@
 import { FC, useState } from "react";
 
-import { Button } from "@/components/ui/Button/Button";
+import {
+  Button,
+  SwitcherButton,
+  EventRepeatProperties,
+} from "@/components/index/index";
 
 import styles from "./EventRepeat.module.scss";
-import { SwitcherButton } from "@/components/ui/buttons/SwitcherButton/SwitcherButton";
-import { EventRepeatProperties } from "@/components/pagesComponents/nearest/EventRepeatProperties/EventRepeatProperties";
 
 export const EventRepeat: FC = () => {
   const [isShowProperties, setIsShowProperties] = useState<boolean>(false);

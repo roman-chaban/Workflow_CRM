@@ -1,9 +1,13 @@
 import type { FC } from "react";
-import styles from "./NearestHeader.module.scss";
+
 import Link from "next/link";
-import { PATHS } from "@/constants/paths";
 import Image from "next/image";
-import { Button } from "@/components/ui/Button/Button";
+
+import { PATHS } from "@/constants/paths";
+
+import { Button } from "@/components/index/index";
+
+import styles from "./NearestHeader.module.scss";
 
 interface NearestHeaderProps {
   onOpenModalAction: () => void;

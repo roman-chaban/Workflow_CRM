@@ -1,11 +1,13 @@
 "use client";
 
-import { ChangeEvent, FC, useRef } from "react";
+import { ChangeEvent, type FC, useRef } from "react";
 
-import { Textarea } from "@/components/index";
-import { EmojiButton } from "@/components/ui/buttons/EmojiButton/EmojiButton";
-import { SendButton } from "@/components/ui/buttons/SendButton/SendButton";
-import { ButtonGroups } from "../ButtonGroups/ButtonGroups";
+import {
+  Textarea,
+  EmojiButton,
+  SendButton,
+  ButtonGroups,
+} from "@/components/index";
 
 import { ChatText, TextAreaRef } from "@/types/chat-types";
 

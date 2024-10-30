@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 
-import { CalendarActive } from "@/components/CalendarElements/CalendarActive/CalendarActive";
-import { CalendarNav } from "@/components/CalendarElements/CalendarNav/CalendarNav";
-import { Grid } from "@/components/index";
+import { Grid, CalendarActive, CalendarNav } from "@/components/index";
 
 export const metadata: Metadata = {
   title: "Workflow CRM | Calendar",

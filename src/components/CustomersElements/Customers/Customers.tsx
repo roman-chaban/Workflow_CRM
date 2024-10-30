@@ -10,10 +10,9 @@ import {
   ItemsPerPage,
 } from "@/types/customers";
 
-import { Customer } from "@/components/CustomersElements/Customer/Customer";
+import { Customer, LoadingSpinner, Pagination } from "@/components/index/index";
+
 import { fetchCustomers } from "@/store/slices/CustomersSlice";
-import { LoadingSpinner } from "@/components/ui/LoadingSpinner/LoadingSpinner";
-import { Pagination } from "@/components/ui/Pagination/Pagination";
 
 import styles from "./Customers.module.scss";
 

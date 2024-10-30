@@ -1,6 +1,6 @@
 import type { FC } from "react";
 
-import { Event } from "@/components/CommonElements/NearestEvents/Event/Event";
+import { Event } from "@/components/index/index";
 
 import { Event as CurrentEvent } from "@/types/events";
 

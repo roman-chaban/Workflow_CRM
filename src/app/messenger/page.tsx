@@ -1,6 +1,5 @@
-import { Grid } from "@/components/index";
-import { Heading } from "@/components/ui/Heading/Heading";
-import { MessengerChat } from "@/components/Chat/MessengerChat/MessengerChat";
+
+import { Grid, Heading, MessengerChat } from "@/components/index";
 
 import styles from "@/styles/pages/Messenger.module.scss";
 

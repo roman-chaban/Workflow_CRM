@@ -1,4 +1,4 @@
-import { Grid } from "@/components/containers/Grid/Grid";
+import { Grid } from "@/components/index/index";
 
 export default function Vacations() {
   return <Grid>Vacations</Grid>;

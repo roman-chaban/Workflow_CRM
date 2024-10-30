@@ -4,10 +4,12 @@ import { useRef, useState } from "react";
 import { useOnClickOutside } from "@/hooks/useOnClickOutside";
 import { useDocumentTitle } from "@/hooks/useDocumentTitle";
 
-import { NearestEventsList } from "@/components/pagesComponents/nearest/NearestEventsList/NearestEventsList";
-import { NearestHeader } from "@/components/pagesComponents/nearest/NearestHeader/NearestHeader";
-import { SectionWrapper } from "@/components/containers/SectionWrapper/SectionWrapper";
-import { EventModal } from "@/components/pagesComponents/nearest/EventModal/EventModal";
+import {
+  NearestEventsList,
+  NearestHeader,
+  SectionWrapper,
+  EventModal,
+} from "@/components/index/index";
 
 import styles from "@/styles/pages/Nearest.module.scss";
 

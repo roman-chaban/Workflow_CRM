@@ -2,10 +2,9 @@
 
 import { type ForwardedRef, forwardRef } from "react";
 
-import { EventModalHeader } from "@/components/pagesComponents/nearest/EventModal/EventModalHeader/EventModalHeader";
+import { EventModalHeader, EventModalForm } from "@/components/index/index";
 
 import styles from "./EventModal.module.scss";
-import { EventModalForm } from "../EventModalForm/EventModalForm";
 
 interface EventModalProps {
   onCloseModalAction: () => void;
