@@ -136,6 +136,12 @@
     line-height: 140%;
     color: color.$color-white;
     font-size: size.$font-size-40px;
+
+    @include respond-to(xsmall) {
+      font-size: size.$font-size-36px;
+      line-height: 130%;
+    }
+
   }
 
   & .signInFooter {

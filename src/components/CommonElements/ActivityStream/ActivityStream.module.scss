@@ -1,0 +1,110 @@
+@use '../../../styles/colors/colors' as color;
+@use '../../../styles/globals/globals' as size;
+@use '../../../styles/mixins/mixins' as *;
+@use '../../../styles/functions/functions' as *;
+@use '../../../styles/breakpoints/breakpoints' as *;
+
+.activity {
+  width: 100%;
+  @include blockContainer(100%, rem(570px), rem(439px), rem(24px));
+  height: 538px;
+
+  @media (max-width: 1080px) {
+    max-width: rem(330px);
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: rem(33px) rem(20px) rem(28px) rem(24px);
+    height: 100%;
+    justify-content: space-between;
+  }
+
+  &__header-title {
+    @include blockTitle;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    margin-block-start: rem(26px);
+  }
+
+  &__profile {
+    width: 100%;
+    display: flex;
+    gap: rem(18px);
+  }
+
+  &__profile-copy {
+    margin-block-start: rem(30px);
+    width: 100%;
+    display: flex;
+    gap: rem(18px);
+  }
+
+  &__profile-image {
+    width: 100%;
+    max-width: rem(50px);
+    height: auto;
+    object-fit: cover;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: rem(1px);
+  }
+
+  &__profile-title {
+    @include itemTitle;
+  }
+
+  &__profile-role {
+    font-size: size.$font-size-14px;
+    color: color.$color-gray;
+  }
+
+  &__updated {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__upload {
+    @include activityChildContainer(
+                    rem(15px) rem(10px) rem(15px) rem(20px),
+                    rem(22px),
+                    rem(78px)
+    );
+  }
+
+  &__upload-icon {
+    @include activityChildIcon;
+  }
+
+  &__upload-title {
+    @include activityChildTitle;
+  }
+
+  &__attached {
+    @include activityChildContainer(
+                    rem(14px) rem(9px) rem(15px) rem(20px),
+                    rem(16px),
+                    rem(62px)
+    );
+    align-items: center;
+  }
+
+  &__attached-icon {
+    @include activityChildIcon;
+  }
+
+  &__attached-title {
+    @include activityChildTitle;
+  }
+
+  &__view-button {
+    @include viewButton;
+  }
+}

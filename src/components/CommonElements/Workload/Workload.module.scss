@@ -1,0 +1,35 @@
+@use '../../../styles/colors/colors' as color;
+@use '../../../styles/globals/globals' as size;
+@use '../../../styles/functions/functions' as *;
+@use '../../../styles/mixins/mixins' as *;
+
+.workload {
+  width: 100%;
+  max-width: rem(800px);
+  @media (max-width: 1060px) {
+    max-width: 100%;
+  }
+  &__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: rem(20px);
+    height: rem(470px);
+    border-radius: rem(24px);
+    background: color.$color-white;
+    box-shadow: color.$color-box-shadow-background;
+    padding: rem(28px) rem(18px) rem(16px) rem(18px);
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__header-title {
+    @include blockTitle;
+  }
+
+  &__header-link {
+    @include viewAllLink;
+  }
+}

@@ -1,0 +1,55 @@
+@use '../../../styles/colors/colors' as color;
+@use '../../../styles/functions/functions' as *;
+@use '../../../styles/globals/globals' as size;
+@use '../../../styles/breakpoints/breakpoints' as *;
+
+.nav {
+  margin-inline-end: rem(8px);
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    gap: rem(15px);
+  }
+
+  &__menu-item {
+    display: flex;
+    align-items: center;
+    gap: rem(16px);
+    padding: rem(10px);
+    max-width: rem(185px);
+
+    @include respond-to(lmedium) {
+      max-width: rem(165px);
+    }
+  }
+
+  &__menu-link {
+    color: color.$color-gray;
+    font-size: size.$font-size-16px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  &__menu-item--active {
+    padding: rem(10px);
+    border-radius: rem(10px);
+    color: color.$color-support-background;
+    background-color: rgba(color.$color-support-background, 0.1);
+    position: relative;
+
+    &::after {
+      position: absolute;
+      right: -17px;
+      content: '';
+      border-radius: 2px;
+      width: 4px;
+      height: 41px;
+      background: color.$color-support-background;
+    }
+  }
+
+  &__menu-item--activeLink {
+    color: color.$color-support-background;
+  }
+}

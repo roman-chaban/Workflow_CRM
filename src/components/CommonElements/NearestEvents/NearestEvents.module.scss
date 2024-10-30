@@ -1,0 +1,43 @@
+@use '../../../styles/colors/colors' as color;
+@use '../../../styles/globals/globals' as size;
+@use '../../../styles/functions/functions' as *;
+@use '../../../styles/mixins/mixins' as *;
+@use '../../../styles/breakpoints/breakpoints' as *;
+
+.nearest {
+  width: 100%;
+  max-width: rem(439px);
+  height: rem(470px);
+  background: color.$color-white;
+  box-shadow: color.$color-box-shadow-background;
+  border-radius: rem(24px);
+
+  @media (max-width: 1080px) {
+    max-width: rem(330px);
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24px);
+    padding: rem(33px) rem(20px) rem(28px) rem(24px);
+
+    @media (max-width: 1060px) {
+      max-width: 100%;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__header-title {
+    @include blockTitle;
+  }
+
+  &__header-link {
+    @include viewAllLink;
+  }
+}

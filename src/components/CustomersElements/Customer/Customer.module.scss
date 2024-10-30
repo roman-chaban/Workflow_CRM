@@ -1,0 +1,72 @@
+@use '../../../styles/colors/colors' as color;
+@use '../../../styles/functions/functions' as *;
+@use '../../../styles/globals/globals' as size;
+@use '../../../styles/breakpoints/breakpoints' as *;
+@use '../../../styles/mixins/mixins' as *;
+
+.customer {
+  width: 100%;
+
+  & > .customerContainer {
+    width: 100%;
+    height: 100px;
+    border-radius: rem(24px);
+    background: color.$color-white;
+    box-shadow: color.$color-box-shadow-background;
+    padding: rem(25px) rem(30px);
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    justify-items: center;
+
+
+    & > .customerPrimaryInfo {
+      display: flex;
+      align-items: center;
+      gap: rem(18px);
+      width: 100%;
+      max-width: rem(359px);
+
+      & > .customerPrimaryInfoTitles {
+        display: flex;
+        flex-direction: column;
+        gap: rem(3px);
+
+        & > .customerPrimaryInfoTitle {
+          font-weight: 700;
+          line-height: 150%;
+          font-size: size.$font-size-18px;
+        }
+
+        & > .customerPrimaryInfoEmail {
+          @include timeTitle;
+          font-size: size.$font-size-16px;
+        }
+
+      }
+
+    }
+
+  }
+
+  & .customerHeader {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: rem(5px);
+    width: 100%;
+    justify-content: space-between;
+    min-height: rem(40px);
+
+    &Title {
+      @include itemTitle;
+      font-weight: 400;
+    }
+
+    &Subtitle {
+      @include timeTitle;
+      font-size: size.$font-size-16px;
+    }
+
+  }
+
+}

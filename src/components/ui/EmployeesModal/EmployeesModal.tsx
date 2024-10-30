@@ -2,10 +2,10 @@ import { ChangeEvent, useRef, useState, type FC } from 'react';
 
 import styles from './EmployeesModal.module.scss';
 import { Button } from '../Button/Button';
-import { Close } from '@/components/icons/Close/Close';
+import { Close } from '@/components/ui/icons/Close/Close';
 import Image from 'next/image';
 import { Input } from '../Input/Input';
-import { Plus } from '@/components/icons/Plus/Plus';
+import { Plus } from '@/components/ui/icons/Plus/Plus';
 import { useOnClickOutside } from '@/hooks/useOnClickOutside';
 
 interface EmployeesModalProps {

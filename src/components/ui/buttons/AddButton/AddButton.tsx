@@ -2,7 +2,7 @@ import type { FC } from 'react';
 
 import { Button } from '@/components/index';
 
-import { Plus } from '@/components/icons/Plus/Plus';
+import { Plus } from '@/components/ui/icons/Plus/Plus';
 
 interface AddButtonProps {
   className: string;

@@ -1,0 +1,58 @@
+@use '../../../styles/functions/functions' as *;
+@use '../../../styles/breakpoints/breakpoints' as *;
+@use '../../../styles/colors/colors' as color;
+@use '../../../styles/globals/globals' as size;
+@use '../../../styles/mixins/mixins' as *;
+
+.taskGroup {
+  width: 100%;
+
+  &__container {
+    padding-block: rem(21px);
+    padding-inline-start: rem(30px);
+    border-bottom: 1.5px solid color.$color-border-light;
+  }
+
+  &__title {
+    @include labelTitleGray;
+  }
+
+  &__checkboxes {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: rem(23px);
+    margin-block-start: rem(18px);
+  }
+
+  .checkboxLabel {
+    @include checkboxLabel;
+  }
+
+
+  .checkboxInput {
+    @include checkboxInput(rem(20px), rem(20px));
+
+    &:checked {
+      background-color: color.$color-white;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        width: 6.5px;
+        height: 10.5px;
+        border: solid color.$color-support-background;
+        border-width: 0 2px 2px 0;
+        display: block;
+        border-radius: 0.5px;
+      }
+    }
+  }
+
+  & .checkBoxLabelText {
+    @include checkboxLabelText;
+  }
+}

@@ -1,0 +1,68 @@
+@use '../../../styles/colors/colors' as color;
+@use '../../../styles/functions/functions' as *;
+@use '../../../styles/globals/globals' as size;
+@use '../../../styles/fillers/fillers' as *;
+
+.calendarTableContainer {
+  width: 100%;
+  grid-column: span 12;
+  height: 100%;
+
+  .calendarTable {
+    width: 100%;
+    background: color.$color-white;
+    box-shadow: color.$color-box-shadow-background;
+    border-radius: rem(24px);
+
+    &Head {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: rem(72px);
+      border-bottom: 1.5px solid color.$color-border;
+
+      &Title {
+        @extend %tableHeaderTitle;
+      }
+    }
+
+    &Body {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      height: rem(715px);
+
+      & > .dayOfWeek:nth-child(-n + 5) {
+        justify-content: space-between;
+      }
+
+      & > .dayOfWeek:nth-last-child(-n + 4) {
+        border-bottom: none;
+      }
+
+      & > .dayOfWeek:last-child {
+        border-right: 1.5px solid color.$color-border;
+      }
+
+      & > .dayOfWeek {
+        width: 100%;
+        display: flex;
+        padding: (11px) (12px) 0 (12px);
+        justify-content: flex-end;
+        border-right: 1.5px solid color.$color-border;
+        border-bottom: 1.5px solid color.$color-border;
+        font-size: size.$font-size-18px;
+        font-weight: 500;
+      }
+
+      & .dayLabel {
+        @extend %dayLabel;
+      }
+
+      & .dayNumber {
+        line-height: rem(30px);
+        @extend %dayNumber;
+      }
+    }
+  }
+}

@@ -2,7 +2,7 @@
   {
     "customerId": "1",
     "customerName": "Evan Yates",
-    "icon": "",
+    "icon": "/icons/customers/primary.svg",
     "email": "evanyates@gmail.com",
     "gender": "Male",
     "birthday": "Apr 12, 1995",
@@ -12,7 +12,7 @@
   {
     "customerId": "2",
     "customerName": "Lenora Fowler",
-    "icon": "",
+    "icon": "/icons/customers/secondary.svg",
     "email": "eravi@ec.gov",
     "gender": "Female",
     "birthday": "Apr 28, 1998",
@@ -22,7 +22,7 @@
   {
     "customerId": "3",
     "customerName": "Winnie McGuide",
-    "icon": "",
+    "icon": "/icons/customers/tertiary.svg",
     "email": "winnie3498@gmail.com",
     "gender": "Female",
     "birthday": "Apr 12, 1995",
@@ -32,7 +32,7 @@
   {
     "customerId": "4",
     "customerName": "James Williamson",
-    "icon": "",
+    "icon": "/icons/customers/four.svg",
     "email": "williamsonj@gmail.com",
     "gender": "Male",
     "birthday": "Sep 23, 1992",
@@ -42,7 +42,7 @@
   {
     "customerId": "5",
     "customerName": "Emily Tyler",
-    "icon": "",
+    "icon": "/icons/customers/five.svg",
     "email": "tyleremily24@gmail.com",
     "gender": "Female",
     "birthday": "May 16, 1996",
@@ -52,7 +52,7 @@
   {
     "customerId": "6",
     "customerName": "Sallie Long",
-    "icon": "",
+    "icon": "/icons/customers/six.svg",
     "email": "sallielong@gmail.com",
     "gender": "Female",
     "birthday": "Apr 12, 1995",
@@ -62,7 +62,7 @@
   {
     "customerId": "7",
     "customerName": "Kathryn Guerrero",
-    "icon": "",
+    "icon": "/icons/customers/seven.svg",
     "email": "kathryn1992@gmail.com",
     "gender": "Female",
     "birthday": "Sep 23, 1992",
@@ -72,7 +72,7 @@
   {
     "customerId": "8",
     "customerName": "Oliver Brown",
-    "icon": "",
+    "icon": "/icons/customers/eight.svg",
     "email": "oliver.brown@example.com",
     "gender": "Male",
     "birthday": "Jun 5, 1990",
@@ -82,7 +82,7 @@
   {
     "customerId": "9",
     "customerName": "Sophia Green",
-    "icon": "",
+    "icon": "/icons/customers/eight.svg",
     "email": "sophia.green@example.com",
     "gender": "Female",
     "birthday": "Dec 12, 1994",
@@ -92,7 +92,7 @@
   {
     "customerId": "10",
     "customerName": "Liam Johnson",
-    "icon": "",
+    "icon": "/icons/customers/seven.svg",
     "email": "liam.johnson@example.com",
     "gender": "Male",
     "birthday": "Feb 15, 1991",
@@ -102,7 +102,7 @@
   {
     "customerId": "11",
     "customerName": "Mia Davis",
-    "icon": "",
+    "icon": "/icons/customers/six.svg",
     "email": "mia.davis@example.com",
     "gender": "Female",
     "birthday": "Oct 22, 1988",
@@ -112,7 +112,7 @@
   {
     "customerId": "12",
     "customerName": "Noah Wilson",
-    "icon": "",
+    "icon": "/icons/customers/five.svg",
     "email": "noah.wilson@example.com",
     "gender": "Male",
     "birthday": "Jan 30, 1993",
@@ -122,7 +122,7 @@
   {
     "customerId": "13",
     "customerName": "Ava Martinez",
-    "icon": "",
+    "icon": "/icons/customers/four.svg",
     "email": "ava.martinez@example.com",
     "gender": "Female",
     "birthday": "Mar 10, 1996",
@@ -132,7 +132,7 @@
   {
     "customerId": "14",
     "customerName": "Elijah Anderson",
-    "icon": "",
+    "icon": "/icons/customers/tertiary.svg",
     "email": "elijah.anderson@example.com",
     "gender": "Male",
     "birthday": "Apr 25, 1990",
@@ -142,7 +142,7 @@
   {
     "customerId": "15",
     "customerName": "Charlotte Harris",
-    "icon": "",
+    "icon": "/icons/customers/secondary.svg",
     "email": "charlotte.harris@example.com",
     "gender": "Female",
     "birthday": "Aug 8, 1994",
@@ -152,7 +152,7 @@
   {
     "customerId": "16",
     "customerName": "James Thompson",
-    "icon": "",
+    "icon": "/icons/customers/primary.svg",
     "email": "james.thompson@example.com",
     "gender": "Male",
     "birthday": "Jul 19, 1989",
@@ -162,7 +162,7 @@
   {
     "customerId": "17",
     "customerName": "Amelia Clark",
-    "icon": "",
+    "icon": "/icons/customers/eight.svg",
     "email": "amelia.clark@example.com",
     "gender": "Female",
     "birthday": "Sep 12, 1995",
@@ -172,7 +172,7 @@
   {
     "customerId": "18",
     "customerName": "Lucas Hall",
-    "icon": "",
+    "icon": "/icons/customers/seven.svg",
     "email": "lucas.hall@example.com",
     "gender": "Male",
     "birthday": "Nov 30, 1991",
@@ -182,7 +182,7 @@
   {
     "customerId": "19",
     "customerName": "Zoe Lewis",
-    "icon": "",
+    "icon": "/icons/customers/six.svg",
     "email": "zoe.lewis@example.com",
     "gender": "Female",
     "birthday": "Mar 3, 1997",
@@ -192,7 +192,7 @@
   {
     "customerId": "20",
     "customerName": "Aiden Young",
-    "icon": "",
+    "icon": "/icons/customers/five.svg",
     "email": "aiden.young@example.com",
     "gender": "Male",
     "birthday": "Jun 17, 1994",

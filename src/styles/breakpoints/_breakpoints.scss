@@ -6,6 +6,7 @@ $breakpoint-smedium: rem(1200px);
 $breakpoint-medium: rem(1024px);
 $breakpoint-small: rem(768px);
 $breakpoint-xsmall: rem(600px);
+$breakpoint-xxsmall: rem(400px);
 
 @mixin respond-to($breakpoint) {
   @if $breakpoint == large {
@@ -30,6 +31,10 @@ $breakpoint-xsmall: rem(600px);
     }
   } @else if $breakpoint == xsmall {
     @media (max-width: $breakpoint-xsmall) {
+      @content;
+    }
+  } @else if ($breakpoint == xxsmall) {
+    @media (max-width: $breakpoint-xxsmall) {
       @content;
     }
   }

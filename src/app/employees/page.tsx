@@ -4,10 +4,10 @@ import { useState } from "react";
 import { useAppSelector } from "@/hooks/useAppSelector";
 
 import { Grid } from "@/components/containers/Grid/Grid";
-import { EmployeesNav } from "@/components/EmployeesNav/EmployeesNav";
+import { EmployeesNav } from "@/components/EmployeesElements/EmployeesNav/EmployeesNav";
 import { EmployeesModal } from "@/components/ui/EmployeesModal/EmployeesModal";
 import { useAppDispatch } from "@/hooks/useAppDispatch";
-import { Customers } from "@/components/Customers/Customers";
+import { Customers } from "@/components/CustomersElements/Customers/Customers";
 
 import { closeModal, toggleModal } from "@/store/slices/EmployeesNavSlice";
 

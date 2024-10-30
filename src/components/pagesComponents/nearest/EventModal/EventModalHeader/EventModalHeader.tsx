@@ -2,7 +2,7 @@ import type { FC } from "react";
 
 import styles from "./EventModalHeader.module.scss";
 import { Button } from "@/components/ui/Button/Button";
-import { Close } from "@/components/icons/Close/Close";
+import { Close } from "@/components/ui/icons/Close/Close";
 
 interface EventModalHeaderProps {
   onCloseModal: () => void;
