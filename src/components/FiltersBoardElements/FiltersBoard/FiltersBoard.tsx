@@ -23,9 +23,9 @@ export type FiltersBoardProps = {
 };
 
 export const FiltersBoard: FC<FiltersBoardProps> = ({ isClosedBoard }) => {
-  const dispatch = useAppDispatch();
   const [isVisible, setIsVisible] = useState<boolean>(true);
   const boardRef = useRef<HTMLElement>(null);
+  const dispatch = useAppDispatch();
 
   const handleCloseBoard = useCallback(() => {
     dispatch(onCloseFilterBoard());

@@ -3,6 +3,7 @@ import type { FC } from "react";
 import { Button } from "@/components/ui/Button/Button";
 import { Next } from "@/components/ui/buttons/PaginationButtons/Next/Next";
 import { Prev } from "@/components/ui/buttons/PaginationButtons/Prev/Prev";
+
 import { classNames } from "@/constants/paginationClassNames";
 
 export interface PaginationProps {

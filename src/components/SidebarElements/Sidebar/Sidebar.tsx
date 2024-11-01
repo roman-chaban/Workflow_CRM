@@ -28,6 +28,7 @@ export const Sidebar: FC<SidebarProps> = ({ onOpenModal }) => {
                 alt="Sidebar Logo"
                 width={50}
                 height={50}
+                className={styles['workflow__logo']}
               />
             </Link>
           </div>

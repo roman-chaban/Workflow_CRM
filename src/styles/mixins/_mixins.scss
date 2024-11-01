@@ -370,3 +370,25 @@
   font-weight: 400;
   line-height: 20px;
 }
+
+@mixin folderContainer {
+  width: 100%;
+  background: color.$color-white;
+  box-shadow: color.$color-box-shadow-background;
+  border-radius: rem(24px);
+  max-width: rem(310px);
+}
+
+@mixin infoNumberLarge {
+  display: inline-block;
+  color: color.$color-black;
+  font-size: size.$font-size-58px;
+  font-weight: 700;
+  line-height: 107%;
+}
+
+@mixin successTitle {
+  font-weight: 600;
+  color: color.$color-low;
+  font-size: size.$font-size-16px;
+}

@@ -1,0 +1,68 @@
+@use '../../../styles/colors/colors' as color;
+@use '../../../styles/globals/globals' as size;
+@use '../../../styles/functions/functions' as *;
+@use '../../../styles/mixins/mixins' as *;
+@use '../../../styles/breakpoints/breakpoints' as *;
+
+
+.infoPortalFolders {
+  grid-column: span 12;
+  display: flex;
+  align-items: center;
+  gap: rem(40px);
+
+  @include respond-to(lmedium) {
+    gap: rem(20px);
+  }
+
+
+  & .infoPortalFolder {
+    @include folderContainer;
+
+
+    & .infoPortalFolderContainer {
+      display: flex;
+      flex-flow: column nowrap;
+      gap: rem(32px);
+      height: 100%;
+      padding: rem(28px) rem(29px);
+
+      @include respond-to(lmedium) {
+        padding-inline: rem(20px);
+      }
+
+      & > .infoPortalFolderIcon {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        max-width: rem(44px);
+        max-height: rem(44px);
+      }
+
+      & > .infoPortalFolderTitles {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: rem(8px);
+
+        & > .infoPortalFolderTitle {
+          @include itemTitle;
+
+          @include respond-to(smedium) {
+            font-size: size.$font-size-15px;
+          }
+
+        }
+      ;
+
+        & > .infoPortalFolderSubtitle {
+          @include timeTitle;
+          font-size: size.$font-size-16px;
+        }
+      ;
+
+      }
+    }
+
+  }
+
+}

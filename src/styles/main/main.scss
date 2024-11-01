@@ -7,6 +7,7 @@
 body {
   font-family: 'Nunito Sans', sans-serif;
   background: color.$color-main-background;
+  min-height: 100vh;
 }
 
 .main {
@@ -20,6 +21,7 @@ body {
   gap: rem(30px);
   padding: rem(20px) rem(20px) rem(25px) rem(20px);
   grid-column: span 12;
+  min-height: 100vh;
 
   @media (max-width: rem(1230px)) {
     gap: 0;

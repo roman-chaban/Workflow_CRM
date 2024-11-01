@@ -1,4 +1,5 @@
-import type { Metadata } from 'next';
+import type { Metadata } from "next";
+
 import {
   Box,
   SectionWrapper,
@@ -7,23 +8,23 @@ import {
   Workload,
   Projects,
   ActivityStream,
-} from '@/components/index/index';
+} from "@/components/index/index";
 
-import styles from '@/styles/pages/Home.module.scss';
+import styles from "@/styles/pages/Home.module.scss";
 
 export const metadata: Metadata = {
-  title: 'Workflow CRM | Dashboard',
+  title: "Workflow CRM | Dashboard",
 };
 
 export default function Home() {
   return (
-    <SectionWrapper className={styles['home']}>
+    <SectionWrapper className={styles["home"]}>
       <DashboardInfo />
-      <Box className={styles['box']}>
+      <Box className={styles["box"]}>
         <Workload />
         <NearestEvents />
       </Box>
-      <Box className={styles['box']}>
+      <Box className={styles["box"]}>
         <Projects />
         <ActivityStream />
       </Box>

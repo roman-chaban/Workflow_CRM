@@ -52,4 +52,5 @@ const EmployeesSlice = createSlice({
     });
   },
 });
+
 export default EmployeesSlice.reducer;

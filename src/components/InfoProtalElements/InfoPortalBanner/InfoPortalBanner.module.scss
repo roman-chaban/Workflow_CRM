@@ -1,0 +1,124 @@
+@use '../../../styles/colors/colors' as color;
+@use '../../../styles/globals/globals' as size;
+@use '../../../styles/functions/functions' as *;
+@use '../../../styles/mixins/mixins' as *;
+@use '../../../styles/breakpoints/breakpoints' as *;
+
+.infoPortalBanner {
+  width: 100%;
+  max-width: rem(1000px);
+  height: rem(220px);
+  background: color.$color-white;
+  box-shadow: color.$color-box-shadow-background;
+  border-radius: rem(24px);
+  display: flex;
+  gap: rem(91px);
+  position: relative;
+
+  &Container {
+    display: flex;
+    flex-direction: column;
+    gap: rem(17px);
+    padding: rem(44px);
+    max-width: rem(520px);
+
+    @include respond-to(lmedium) {
+      max-width: rem(420px);
+    }
+
+    @include respond-to(smedium) {
+      max-width: rem(370px);
+    }
+
+    & .infoPortalBannerHeading {
+      @include blockTitle;
+
+      @include respond-to(smedium) {
+        font-size: size.$font-size-18px;
+      }
+
+    }
+
+    & .infoPortalBannerSubtitle {
+      @include itemTitle;
+      opacity: 0.7;
+      font-weight: 400;
+
+      @include respond-to(smedium) {
+        font-size: size.$font-size-16px;
+      }
+
+    }
+
+  }
+
+  & > .IllustrationImage {
+    width: 100%;
+    height: 100%;
+    max-width: rem(400px);
+    object-fit: cover;
+    padding-inline-end: rem(69px);
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    @include respond-to(smedium) {
+      padding-inline-end: rem(39px);
+      max-width: 49%;
+    }
+
+  }
+
+
+}
+
+.infoPortalCurrentProjects {
+  @include folderContainer;
+
+  & .infoPortalCurrentProjectsContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+    gap: rem(8px);
+    padding: rem(24px) rem(32px);
+  }
+
+  & .currentProjectsTitle {
+    @include labelTitle;
+  }
+
+  & .currentProjectsInfo {
+    display: flex;
+    justify-content: space-between;
+
+    & .statisticsIcon {
+      width: 100%;
+      height: 100%;
+      max-width: 107px;
+      max-height: 67.55px;
+    }
+
+  }
+
+  & .currentProjectsSubInfo {
+    display: flex;
+    flex-flow: column nowrap;
+
+    & .currentProjectsSubInfoNumber {
+      @include infoNumberLarge;
+    }
+
+  }
+
+  & .currentProjectsSubInfoTitle {
+    @include successTitle;
+  }
+
+  & .OngoingTitle {
+    color: color.$color-gray;
+    font-size: size.$font-size-14px;
+    display: inline-block;
+    margin-block-start: rem(10px);
+  }
+
+}

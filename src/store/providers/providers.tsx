@@ -1,9 +1,12 @@
-'use client';
+"use client";
 
-import { Provider } from 'react-redux';
-import React, { ReactNode, useEffect, useState } from 'react';
-import { persistor, store } from '../store';
-import { PersistGate } from 'redux-persist/integration/react';
+import React, { ReactNode, useEffect, useState } from "react";
+
+import { Provider } from "react-redux";
+
+import { persistor, store } from "../store";
+
+import { PersistGate } from "redux-persist/integration/react";
 
 type ProviderType = {
   children: ReactNode;
