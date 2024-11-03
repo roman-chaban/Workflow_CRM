@@ -7,7 +7,7 @@
 
 ### Technology Stack
 
-- **Front-end**: Next.js, React.js, TypeScript, JavaScript.
+- **Front-end**: Next.js [15], React.js, TypeScript, JavaScript.
 - **Libraries**: React Hook Form.
 - **UI Components**: Grommet Icons, Material UI.
 - **Styling**: HTML5, CSS3 (Animations) , SCSS (SCSS.modules), Styled-Components.
