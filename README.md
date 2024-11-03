@@ -5,6 +5,16 @@
 
 **Workflow CRM** is a powerful Customer Relationship Management system designed to streamline sales processes, enhance customer service, and facilitate project management. With a comprehensive suite of tools, this platform empowers businesses to manage contacts, track deals, organize tasks, and generate insightful reports, ultimately improving customer interactions and boosting operational efficiency.
 
+### Technology Stack
+
+- **Front-end**: Next.js, React.js, TypeScript, JavaScript.
+- **Libraries**: React Hook Form.
+- **UI Components**: Grommet Icons, Material UI.
+- **Styling**: HTML5, CSS3 (Animations) , SCSS (SCSS.modules), Styled-Components.
+- **State Management**: Redux.js - Toolkit, Redux Thunk API, Redux Persist.
+- **Package Manager**: npm.
+- **PSD to HTML**: Figma.
+
 ![image](https://github.com/user-attachments/assets/20c8ec68-7a6f-4593-b8fe-fc8936e501e3)
 
 
