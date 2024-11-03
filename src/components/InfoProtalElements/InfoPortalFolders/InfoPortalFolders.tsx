@@ -14,6 +14,7 @@ export const InfoPortalFolders: FC = () => {
           title={folderItem.title}
           icon={folderItem.icon}
           pagesTitle={folderItem.pagesTitle}
+          path={folderItem.path}
         />
       ))}
     </div>

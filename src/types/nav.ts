@@ -1,4 +1,4 @@
-import { PATHS } from '@/constants/paths';
+import { PATHS } from '@/enums/paths';
 
 export interface NavItem {
   id: number;

@@ -2,7 +2,7 @@
 
 import { useCallback, type FC, useEffect, useState, useRef } from "react";
 import { useAppDispatch } from "@/hooks/useAppDispatch";
-import { useOnClickOutside } from "@/hooks/useOnClickOutside";
+import { useClickOutside } from "@/hooks/useClickOutside";
 
 import { onCloseFilterBoard } from "@/store/slices/FiltersBoardSlice";
 
@@ -31,7 +31,7 @@ export const FiltersBoard: FC<FiltersBoardProps> = ({ isClosedBoard }) => {
     dispatch(onCloseFilterBoard());
   }, [dispatch]);
 
-  useOnClickOutside(boardRef, handleCloseBoard);
+  useClickOutside(boardRef, handleCloseBoard);
 
   useEffect(() => {
     if (isClosedBoard) {

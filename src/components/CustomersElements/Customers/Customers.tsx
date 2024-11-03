@@ -15,6 +15,7 @@ import { Customer, LoadingSpinner, Pagination } from "@/components/index/index";
 import { fetchCustomers } from "@/store/slices/CustomersSlice";
 
 import styles from "./Customers.module.scss";
+import { DATA_STATES } from "@/enums/data-states";
 
 export const Customers: FC = () => {
   const { customers, loading } = useAppSelector((state) => state.customers);
@@ -29,7 +30,7 @@ export const Customers: FC = () => {
     dispatch(fetchCustomers());
   }, [dispatch]);
 
-  if (loading === "fulfilled")
+  if (loading === DATA_STATES.FULFILLED)
     return (
       <div className={styles["customers"]}>
         <LoadingSpinner />

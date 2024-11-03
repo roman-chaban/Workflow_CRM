@@ -3,7 +3,7 @@ import type { FC } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import { PATHS } from "@/constants/paths";
+import { PATHS } from "@/enums/paths";
 
 import { Button } from "@/components/index/index";
 

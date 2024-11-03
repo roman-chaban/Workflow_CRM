@@ -1,0 +1,35 @@
+@use '../../../../../styles/functions/functions' as *;
+@use '../../../../../styles/mixins/mixins' as *;
+@use '../../../../../styles/globals/globals' as size;
+@use '../../../../../styles/colors/colors' as color;
+
+.timeTrackerNav {
+  grid-column: span 12;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & .subblock {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: rem(5px);
+
+    & .link {
+      display: flex;
+      align-items: center;
+      gap: rem(8px);
+      @include navLink;
+    }
+
+    & .title {
+      @include blockLargeTitle;
+    }
+  }
+
+  & .addButton {
+    @include addButton;
+    max-width: rem(178px);
+    height: rem(55px);
+    font-size: size.$font-size-18px;
+  }
+}

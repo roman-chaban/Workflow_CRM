@@ -392,3 +392,10 @@
   color: color.$color-low;
   font-size: size.$font-size-16px;
 }
+
+@mixin navLink {
+  font-weight: 600;
+  width: fit-content;
+  color: color.$color-support-background;
+  font-size: size.$font-size-18px;
+}

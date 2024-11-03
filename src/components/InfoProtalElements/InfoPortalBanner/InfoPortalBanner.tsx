@@ -38,6 +38,7 @@ export const InfoPortalBanner: FC<InfoPortalBannerProps> = ({
         width={bannerImageProps.width}
         height={bannerImageProps.height}
         className={styles["IllustrationImage"]}
+        priority
       />
     </div>
   );

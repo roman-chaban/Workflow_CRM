@@ -2,7 +2,7 @@ import type { FC } from "react";
 
 import { ViewLink } from "@/components/ui/ViewLink/ViewLink";
 
-import { PATHS } from "@/constants/paths";
+import { PATHS } from "@/enums/paths";
 
 import styles from "./ProjectsNav.module.scss";
 

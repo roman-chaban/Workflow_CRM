@@ -10,7 +10,7 @@ import { Events } from "@/components/CommonElements/NearestEvents/Events/Events"
 import { LoadingSpinner } from "@/components/ui/LoadingSpinner/LoadingSpinner";
 
 import { Events as CurrentEvents } from "@/types/events";
-import { PATHS } from "@/constants/paths";
+import { PATHS } from "@/enums/paths";
 
 import styles from "./NearestEvents.module.scss";
 

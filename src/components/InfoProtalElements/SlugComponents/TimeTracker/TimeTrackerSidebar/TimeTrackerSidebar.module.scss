@@ -1,0 +1,97 @@
+@use '../../../../../styles/functions/functions' as *;
+@use '../../../../../styles/mixins/mixins' as *;
+@use '../../../../../styles/globals/globals' as size;
+@use '../../../../../styles/colors/colors' as color;
+
+
+.sidebar {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  min-height: 100vh;
+  grid-column: span 3;
+
+  &Container {
+    width: 100%;
+    height: 100%;
+    background: color.$color-white;
+    box-shadow: color.$color-box-shadow-background;
+    border-radius: rem(24px);
+  }
+
+  &Header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: rem(24px);
+    padding-block: rem(13px);
+    border-bottom: 1.5px solid color.$color-border-light;
+
+    &Title {
+      @include itemTitle;
+    }
+
+    &Button {
+      @include addButton;
+      max-width: rem(48px);
+      max-height: rem(48px);
+    }
+
+  }
+
+}
+
+
+.menuItems {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: rem(13px);
+  padding: rem(10px) rem(12px) 0 rem(10px);
+
+  & > .menuListItem {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: rem(5px);
+    width: 100%;
+    max-width: rem(280px);
+    min-height: rem(90px);
+    padding: rem(16px) rem(12px);
+    position: relative;
+    cursor: pointer;
+
+    & > .menuListLink {
+      @include text;
+      font-size: size.$font-size-18px;
+      line-height: 170%;
+    }
+
+    & > .menuListItemModified {
+      display: inline-block;
+      @include labelTitleGray;
+      font-size: size.$font-size-16px;
+      line-height: 100%;
+      font-weight: 400;
+    }
+  }
+
+  & > .active {
+    border-radius: rem(14px);
+    background: color.$color-main-background;
+  }
+
+  & > .active::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -21px;
+    border-radius: rem(2px);
+    width: rem(4.5px);
+    height: rem(90px);
+    background: color.$color-support-background;
+  }
+
+  & .activeTitle {
+    font-weight: 700;
+  }
+
+}

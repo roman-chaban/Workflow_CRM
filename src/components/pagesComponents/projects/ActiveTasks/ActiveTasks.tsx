@@ -1,4 +1,6 @@
-import { FC, useEffect, useState } from 'react';
+import { FC, useEffect, useState } from "react";
+import { useFetch } from "@/hooks/useFetch";
+
 import {
   DndContext,
   closestCenter,
@@ -7,20 +9,22 @@ import {
   useSensor,
   useSensors,
   DragEndEvent,
-} from '@dnd-kit/core';
+} from "@dnd-kit/core";
+
 import {
   arrayMove,
   SortableContext,
   useSortable,
   sortableKeyboardCoordinates,
   verticalListSortingStrategy,
-} from '@dnd-kit/sortable';
-import { CSS } from '@dnd-kit/utilities';
-import { ActiveTask } from '../ActiveTask/ActiveTask';
-import styles from './ActiveTasks.module.scss';
-import { IActiveTask, TActiveTasks } from '@/types/active-task';
-import { TasksLoader } from '@/components/index';
-import { useFetch } from '@/hooks/useFetch';
+} from "@dnd-kit/sortable";
+import { CSS } from "@dnd-kit/utilities";
+
+import { ActiveTask } from "../ActiveTask/ActiveTask";
+import { TasksLoader } from "@/components/index";
+
+import { IActiveTask, TActiveTasks } from "@/types/active-task";
+import styles from "./ActiveTasks.module.scss";
 
 interface SortableItemProps {
   task: IActiveTask;
@@ -33,10 +37,10 @@ const SortableItem: FC<SortableItemProps> = ({ task }) => {
   const style = {
     transform: CSS.Transform.toString(transform),
     transition,
-    width: '100%',
-    maxWidth: '192px',
-    display: 'flex',
-    justifyContent: 'center',
+    width: "100%",
+    maxWidth: "192px",
+    display: "flex",
+    justifyContent: "center",
   };
 
   return (
@@ -48,7 +52,7 @@ const SortableItem: FC<SortableItemProps> = ({ task }) => {
 
 export const ActiveTasks: FC = () => {
   const { data: tasks, loading } = useFetch<TActiveTasks>({
-    url: '/data/active-tasks.json',
+    url: "/data/active-tasks.json",
   });
 
   const [taskList, setTaskList] = useState<IActiveTask[]>([]);
@@ -63,7 +67,7 @@ export const ActiveTasks: FC = () => {
     useSensor(PointerSensor),
     useSensor(KeyboardSensor, {
       coordinateGetter: sortableKeyboardCoordinates,
-    })
+    }),
   );
 
   if (loading) {
@@ -76,10 +80,10 @@ export const ActiveTasks: FC = () => {
     if (active.id !== over?.id) {
       setTaskList((items) => {
         const oldIndex = items.findIndex(
-          (item) => item.taskId.toString() === active.id
+          (item) => item.taskId.toString() === active.id,
         );
         const newIndex = items.findIndex(
-          (item) => item.taskId.toString() === over?.id
+          (item) => item.taskId.toString() === over?.id,
         );
 
         return arrayMove(items, oldIndex, newIndex);
@@ -97,20 +101,20 @@ export const ActiveTasks: FC = () => {
         items={taskList.map((task) => task.taskId.toString())}
         strategy={verticalListSortingStrategy}
       >
-        <div className={styles['active__tasks']}>
+        <div className={styles["active__tasks"]}>
           {taskList.map((task) => (
             <SortableItem key={task.taskId.toString()} task={task} />
           ))}
         </div>
       </SortableContext>
-      <div className={styles['backlog__tasks']}>
-        <h5 className={styles['backlog__heading']}>Backlog</h5>
-        <div className={styles['backlog__items']}>
+      <div className={styles["backlog__tasks"]}>
+        <h5 className={styles["backlog__heading"]}>Backlog</h5>
+        <div className={styles["backlog__items"]}>
           {taskList.slice(0, 3).map((task: IActiveTask) => (
             <ActiveTask
               key={task.taskId.toString()}
               task={task}
-              backlogClassName={styles['backlog__task']}
+              backlogClassName={styles["backlog__task"]}
             />
           ))}
         </div>

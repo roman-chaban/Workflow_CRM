@@ -5,17 +5,20 @@ import Image from "next/image";
 import { Heading } from "@/components/ui/Heading/Heading";
 
 import styles from "./InfoPortalFolder.module.scss";
+import Link from "next/link";
 
 export interface InfoPortalFolderProps {
   icon: string;
   title: string;
   pagesTitle: string;
+  path: string;
 }
 
 export const InfoPortalFolder: FC<InfoPortalFolderProps> = ({
   icon,
   title,
   pagesTitle,
+  path,
 }) => {
   return (
     <div className={styles["infoPortalFolder"]}>
@@ -28,9 +31,9 @@ export const InfoPortalFolder: FC<InfoPortalFolderProps> = ({
           className={styles["infoPortalFolderIcon"]}
         />
         <div className={styles["infoPortalFolderTitles"]}>
-          <Heading level={"h5"} className={styles["infoPortalFolderTitle"]}>
-            {title}
-          </Heading>
+          <Link href={path} className={styles["infoPortalFolderTitle"]}>
+            <Heading level={"h5"}>{title}</Heading>
+          </Link>
           <span className={styles["infoPortalFolderSubtitle"]}>
             {pagesTitle}
           </span>

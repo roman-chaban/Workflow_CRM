@@ -13,6 +13,8 @@ import { fetchEvents } from "@/store/slices/EventsSlice";
 
 import { EventItem } from "@/types/event-item";
 
+import { DATA_STATES } from "@/enums/data-states";
+
 import styles from "./NearestEventsList.module.scss";
 
 export const NearestEventsList: FC = () => {
@@ -23,13 +25,13 @@ export const NearestEventsList: FC = () => {
     dispatch(fetchEvents());
   }, [dispatch]);
 
-  if (loading === "fulfilled")
+  if (loading === DATA_STATES.FULFILLED)
     return (
       <ul className={styles["nearest__events"]}>
         <LoadingSpinner />
       </ul>
     );
-  if (error) return <div>Error</div>;
+  if (error === DATA_STATES.FAILED) return <div>Error</div>;
 
   return (
     <ul className={styles["nearest__events"]}>

@@ -3,7 +3,7 @@
 import { type FC, useRef, useState } from "react";
 
 import { Sidebar, Modal } from "@/components/index/index";
-import { useOnClickOutside } from "@/hooks/useOnClickOutside";
+import { useClickOutside } from "@/hooks/useClickOutside";
 import { usePathname } from "next/navigation";
 
 type IsOpenModal = boolean;
@@ -18,7 +18,7 @@ export const ClientModalWrapper: FC = () => {
     setIsOpen((prevState) => !prevState);
   };
 
-  useOnClickOutside(modalRef, () => setIsOpen(false));
+  useClickOutside(modalRef, () => setIsOpen(false));
 
   return (
     <>

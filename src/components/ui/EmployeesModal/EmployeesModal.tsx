@@ -8,7 +8,7 @@ import { Close } from "@/components/ui/icons/Close/Close";
 import Image from "next/image";
 import { Input } from "../Input/Input";
 import { Plus } from "@/components/ui/icons/Plus/Plus";
-import { useOnClickOutside } from "@/hooks/useOnClickOutside";
+import { useClickOutside } from "@/hooks/useClickOutside";
 
 interface EmployeesModalProps {
   isOpened: boolean;
@@ -21,7 +21,7 @@ export const EmployeesModal: FC<EmployeesModalProps> = ({
 }) => {
   const [member, setMember] = useState("");
   const modalRef = useRef<HTMLDivElement>(null);
-  useOnClickOutside(modalRef, () => onClosed());
+  useClickOutside(modalRef, () => onClosed());
 
   const handleCloseModal = () => {
     onClosed();

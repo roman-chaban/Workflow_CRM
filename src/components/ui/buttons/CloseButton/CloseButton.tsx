@@ -2,7 +2,7 @@
 
 import type { FC } from "react";
 
-import { PATHS } from "@/constants/paths";
+import { PATHS } from "@/enums/paths";
 import { Button } from "@/components/ui/Button/Button";
 
 import Image from "next/image";

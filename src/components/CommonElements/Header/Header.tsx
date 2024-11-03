@@ -5,7 +5,7 @@ import { useState, type FC } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { PATHS } from "@/constants/paths";
+import { PATHS } from "@/enums/paths";
 
 import { Input, Button } from "@/components/index";
 

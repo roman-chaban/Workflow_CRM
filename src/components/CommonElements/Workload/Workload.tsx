@@ -7,7 +7,8 @@ import { useAppDispatch } from "@/hooks/useAppDispatch";
 
 import { LoadingSpinner, Employees, ViewLink } from "@/components/index/index";
 
-import { PATHS } from "@/constants/paths";
+import { DATA_STATES } from "@/enums/data-states";
+import { PATHS } from "@/enums/paths";
 
 import { fetchEmployees } from "@/store/slices/EmployeesSlice";
 
@@ -25,14 +26,15 @@ export const Workload: FC = () => {
     dispatch(fetchEmployees());
   }, [dispatch]);
 
-  if (loading === "pending")
+  if (loading === DATA_STATES.FULFILLED)
     return (
       <div className={styles["workload"]}>
         <LoadingSpinner />
       </div>
     );
 
-  if (loading === "failed") return <div>Employees Error: {error}</div>;
+  if (loading === DATA_STATES.FAILED)
+    return <div>Employees Error: {error}</div>;
 
   return (
     <div className={styles["workload"]}>

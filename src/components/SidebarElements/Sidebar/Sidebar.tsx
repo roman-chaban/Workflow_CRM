@@ -6,7 +6,7 @@ import Link from "next/link";
 
 import { Nav, Button } from "@/components/index";
 
-import { PATHS } from "@/constants/paths";
+import { PATHS } from "@/enums/paths";
 import { nav } from "@/types/nav";
 
 import styles from "./Sidebar.module.scss";

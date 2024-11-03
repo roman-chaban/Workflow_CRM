@@ -47,6 +47,10 @@
         & > .infoPortalFolderTitle {
           @include itemTitle;
 
+          & > h5 {
+            font-weight: 700;
+          }
+
           @include respond-to(smedium) {
             font-size: size.$font-size-15px;
           }

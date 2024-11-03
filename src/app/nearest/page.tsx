@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { useOnClickOutside } from "@/hooks/useOnClickOutside";
+import { useClickOutside } from "@/hooks/useClickOutside";
 import { useDocumentTitle } from "@/hooks/useDocumentTitle";
 
 import {
@@ -18,7 +18,7 @@ export default function Nearest() {
   const [isModal, setIsModal] = useState(false);
   const modalRef = useRef<HTMLDivElement>(null);
 
-  useOnClickOutside(modalRef, () => {
+  useClickOutside(modalRef, () => {
     setIsModal(false);
   });
 
