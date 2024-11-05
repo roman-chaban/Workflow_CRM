@@ -1,13 +1,13 @@
-import { Metadata } from "next";
+import { Metadata } from 'next';
 
-import { TimeTracker } from "@/components/InfoProtalElements/SlugComponents/TimeTracker/TimeTracker";
-import { MedicalApp } from "@/components/InfoProtalElements/SlugComponents/MedicalApp/MedicalApp";
+import { TimeTracker } from '@/components/InfoPortalElements/SlugComponents/TimeTracker/TimeTracker';
+import { MedicalApp } from '@/components/InfoPortalElements/SlugComponents/MedicalApp/MedicalApp';
 
-import { SLUG_PATHS } from "@/enums/slug-paths";
+import { SLUG_PATHS } from '@/enums/slug-paths';
 
-import { FolderPageProps } from "@/types/folder-page";
+import { FolderPageProps } from '@/types/folder-page';
 
-import { getMetadata } from "@/fixtures/getMetadata/getMetadata";
+import { getMetadata } from '@/fixtures/getMetadata/getMetadata';
 
 const componentMapping: Record<string, JSX.Element> = {
   [SLUG_PATHS.TIME_TRACKER]: <TimeTracker />,

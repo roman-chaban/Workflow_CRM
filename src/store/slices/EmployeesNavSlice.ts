@@ -1,5 +1,6 @@
-import { isOpenedModal } from '@/app/employees/page';
 import { createSlice } from '@reduxjs/toolkit';
+
+import { isOpenedModal } from '@/app/employees/page';
 
 interface EmployeesNavSliceProps {
   isOpened: isOpenedModal;

@@ -1,6 +1,8 @@
-import CustomersData from "../../../public/data/customers.json";
-import { Customers } from "@/types/customers";
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import CustomersData from '../../../public/data/customers.json';
+
+import { Customers } from '@/types/customers';
+
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 type CustomersLoading = string | null;
 type CustomersError = string | null;
@@ -18,37 +20,37 @@ const initialState: CustomersState = {
 };
 
 export const fetchCustomers = createAsyncThunk<Customers>(
-  "customers/fetchCustomers",
+  'customers/fetchCustomers',
   async (_, thunkAPI) => {
     try {
       if (!CustomersData || CustomersData.length === 0) {
-        return thunkAPI.rejectWithValue("No customers data found");
+        return thunkAPI.rejectWithValue('No customers data found');
       }
       return CustomersData as unknown as Customers;
     } catch (error) {
       return thunkAPI.rejectWithValue(
-        error instanceof Error ? error.message : "Failed to fetch customers",
+        error instanceof Error ? error.message : 'Failed to fetch customers'
       );
     }
-  },
+  }
 );
 
 const CustomersSlice = createSlice({
-  name: "customers",
+  name: 'customers',
   initialState,
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(fetchCustomers.pending, (state) => {
-      state.loading = "pending";
+      state.loading = 'pending';
       state.error = null;
     });
     builder.addCase(fetchCustomers.fulfilled, (state, action) => {
       state.customers = action.payload;
-      state.loading = "succeeded";
+      state.loading = 'succeeded';
       state.error = null;
     });
     builder.addCase(fetchCustomers.rejected, (state, action) => {
-      state.loading = "failed";
+      state.loading = 'failed';
       state.error = action.payload as string;
     });
   },

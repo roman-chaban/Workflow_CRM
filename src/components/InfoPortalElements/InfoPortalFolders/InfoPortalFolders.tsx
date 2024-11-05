@@ -1,13 +1,13 @@
-import type { FC } from "react";
+import type { FC } from 'react';
 
-import { foldersData } from "@/data/folders";
-import { InfoPortalFolder } from "@/components/InfoProtalElements/InfoPortalFolder/InfoPortalFolder";
+import { foldersData } from '@/data/folders';
+import { InfoPortalFolder } from '@/components/InfoPortalElements/InfoPortalFolder/InfoPortalFolder';
 
-import styles from "../InfoPortalFolder/InfoPortalFolder.module.scss";
+import styles from '../InfoPortalFolder/InfoPortalFolder.module.scss';
 
 export const InfoPortalFolders: FC = () => {
   return (
-    <div className={styles["infoPortalFolders"]}>
+    <div className={styles['infoPortalFolders']}>
       {foldersData.map((folderItem) => (
         <InfoPortalFolder
           key={folderItem.id}

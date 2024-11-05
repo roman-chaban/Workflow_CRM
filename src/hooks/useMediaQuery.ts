@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 type IsMatch = boolean;
 type MediaQuery = string;
@@ -14,9 +14,9 @@ export default function useMediaQuery(mediaQuery: MediaQuery): IsMatch {
 
     const handleChange = (e: MediaQueryListEvent) => setIsMatch(e.matches);
 
-    mediaQueryList.addEventListener("change", handleChange);
+    mediaQueryList.addEventListener('change', handleChange);
 
-    return () => mediaQueryList.removeEventListener("change", handleChange);
+    return () => mediaQueryList.removeEventListener('change', handleChange);
   }, [mediaQuery]);
 
   return isMatch;
