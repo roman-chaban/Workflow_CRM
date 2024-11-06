@@ -1,11 +1,14 @@
-import { combineReducers } from "@reduxjs/toolkit";
-import { PersistPartial } from "redux-persist/es/persistReducer";
-import NavSlice from "../slices/NavSlice";
-import FilterBoardSlice from "../slices/FiltersBoardSlice";
-import EmployeesNavSlice from "../slices/EmployeesNavSlice";
-import CustomersSlice from "@/store/slices/CustomersSlice";
-import EmployeesSlice from "@/store/slices/EmployeesSlice";
-import EventsSlice from "@/store/slices/EventsSlice";
+import { combineReducers } from '@reduxjs/toolkit';
+
+import { PersistPartial } from 'redux-persist/es/persistReducer';
+
+import NavSlice from '../slices/NavSlice';
+import FilterBoardSlice from '../slices/FiltersBoardSlice';
+import EmployeesNavSlice from '../slices/EmployeesNavSlice';
+import CustomersSlice from '@/store/slices/CustomersSlice';
+import EmployeesSlice from '@/store/slices/EmployeesSlice';
+import EventsSlice from '@/store/slices/EventsSlice';
+import DragSlice from '@/store/slices/DragSlice';
 
 const rootReducer = combineReducers({
   navSlice: NavSlice,
@@ -14,6 +17,7 @@ const rootReducer = combineReducers({
   employees: EmployeesSlice,
   customers: CustomersSlice,
   events: EventsSlice,
+  drag: DragSlice,
 });
 
 export default rootReducer;

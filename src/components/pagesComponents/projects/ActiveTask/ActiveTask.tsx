@@ -1,17 +1,35 @@
 import type { FC } from 'react';
 
-import styles from './ActiveTask.module.scss';
-import { IActiveTask } from '@/types/active-task';
 import Image from 'next/image';
 
-interface ActiveTaskProps {
+import { IActiveTask } from '@/types/active-task';
+
+import { DragType } from '@/types/drag-types';
+
+import styles from './ActiveTask.module.scss';
+
+interface ActiveTaskProps extends DragType {
   task: IActiveTask;
-  backlogClassName: string;
+  isDragging: boolean;
 }
 
-export const ActiveTask: FC<ActiveTaskProps> = ({ task, backlogClassName }) => {
+export const ActiveTask: FC<ActiveTaskProps> = ({
+  task,
+  isDragging,
+  onDragOver,
+  onDragStart,
+  onDrop,
+}) => {
   return (
-    <div className={`${styles.active__task} ${backlogClassName}`}>
+    <div
+      className={`${styles['active__task']} ${
+        isDragging ? styles.dragging : ''
+      }`}
+      draggable={true}
+      onDragStart={(event) => onDragStart(event, task.taskId)}
+      onDragOver={onDragOver}
+      onDrop={(event) => onDrop(event, task.taskId)}
+    >
       <div className={styles['active__task-header']}>
         <h5 className={styles['active__task-code']}>{task.code}</h5>
         <h4 className={styles['active__task-title']}>{task.title}</h4>

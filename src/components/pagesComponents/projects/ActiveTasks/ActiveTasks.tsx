@@ -1,124 +1,90 @@
-import { FC, useEffect, useState } from "react";
-import { useFetch } from "@/hooks/useFetch";
+'use client';
+
+import React, { type FC, useEffect } from 'react';
+
+import { useFetch } from '@/hooks/useFetch';
+import { useAppDispatch } from '@/hooks/useAppDispatch';
+import { useAppSelector } from '@/hooks/useAppSelector';
+
+import { ActiveTask } from '../ActiveTask/ActiveTask';
+import { LoadingSpinner } from '@/components/index';
+
+import { TActiveTasks } from '@/types/active-task';
 
 import {
-  DndContext,
-  closestCenter,
-  KeyboardSensor,
-  PointerSensor,
-  useSensor,
-  useSensors,
-  DragEndEvent,
-} from "@dnd-kit/core";
+  setDraggingTaskId,
+  setTasks,
+  updateTaskOver,
+} from '@/store/slices/DragSlice';
 
-import {
-  arrayMove,
-  SortableContext,
-  useSortable,
-  sortableKeyboardCoordinates,
-  verticalListSortingStrategy,
-} from "@dnd-kit/sortable";
-import { CSS } from "@dnd-kit/utilities";
-
-import { ActiveTask } from "../ActiveTask/ActiveTask";
-import { TasksLoader } from "@/components/index";
-
-import { IActiveTask, TActiveTasks } from "@/types/active-task";
-import styles from "./ActiveTasks.module.scss";
-
-interface SortableItemProps {
-  task: IActiveTask;
-}
-
-const SortableItem: FC<SortableItemProps> = ({ task }) => {
-  const { attributes, listeners, setNodeRef, transform, transition } =
-    useSortable({ id: task.taskId.toString() });
-
-  const style = {
-    transform: CSS.Transform.toString(transform),
-    transition,
-    width: "100%",
-    maxWidth: "192px",
-    display: "flex",
-    justifyContent: "center",
-  };
-
-  return (
-    <div ref={setNodeRef} style={style} {...attributes} {...listeners}>
-      <ActiveTask task={task} backlogClassName="" />
-    </div>
-  );
-};
+import styles from './ActiveTasks.module.scss';
 
 export const ActiveTasks: FC = () => {
-  const { data: tasks, loading } = useFetch<TActiveTasks>({
-    url: "/data/active-tasks.json",
+  const { data, loading } = useFetch<TActiveTasks>({
+    url: '/data/active-tasks.json',
   });
 
-  const [taskList, setTaskList] = useState<IActiveTask[]>([]);
+  const dispatch = useAppDispatch();
+  const tasks = useAppSelector((state) => state.drag.tasks);
+  const draggingTaskId = useAppSelector((state) => state.drag.draggingTaskId);
 
   useEffect(() => {
-    if (tasks) {
-      setTaskList(tasks);
+    if (data) {
+      dispatch(setTasks(data));
     }
-  }, [tasks]);
+  }, [data, dispatch]);
 
-  const sensors = useSensors(
-    useSensor(PointerSensor),
-    useSensor(KeyboardSensor, {
-      coordinateGetter: sortableKeyboardCoordinates,
-    }),
-  );
+  const handleDragStart = (
+    event: React.DragEvent<HTMLDivElement>,
+    taskId: string
+  ) => {
+    dispatch(setDraggingTaskId(taskId));
+  };
 
-  if (loading) {
-    return <TasksLoader />;
-  }
+  const handleDragOver = (event: React.DragEvent<HTMLDivElement>) => {
+    event.preventDefault();
+  };
 
-  const handleDragEnd = (event: DragEndEvent) => {
-    const { active, over } = event;
+  const handleDrop = (
+    event: React.DragEvent<HTMLDivElement>,
+    targetTaskId: string
+  ) => {
+    event.preventDefault();
 
-    if (active.id !== over?.id) {
-      setTaskList((items) => {
-        const oldIndex = items.findIndex(
-          (item) => item.taskId.toString() === active.id,
-        );
-        const newIndex = items.findIndex(
-          (item) => item.taskId.toString() === over?.id,
-        );
+    if (draggingTaskId && tasks) {
+      const updatedTasks = [...tasks];
+      const draggedIndex = updatedTasks.findIndex(
+        (task) => task.taskId === draggingTaskId
+      );
+      const targetIndex = updatedTasks.findIndex(
+        (task) => task.taskId === targetTaskId
+      );
 
-        return arrayMove(items, oldIndex, newIndex);
-      });
+      if (draggedIndex !== -1 && targetIndex !== -1) {
+        dispatch(updateTaskOver({ draggedIndex, targetIndex }));
+      }
+      dispatch(setDraggingTaskId(null));
     }
   };
 
+  if (loading) return <LoadingSpinner />;
+
+  if (!tasks) {
+    return <div>No tasks available</div>;
+  }
+
   return (
-    <DndContext
-      sensors={sensors}
-      collisionDetection={closestCenter}
-      onDragEnd={handleDragEnd}
-    >
-      <SortableContext
-        items={taskList.map((task) => task.taskId.toString())}
-        strategy={verticalListSortingStrategy}
-      >
-        <div className={styles["active__tasks"]}>
-          {taskList.map((task) => (
-            <SortableItem key={task.taskId.toString()} task={task} />
-          ))}
-        </div>
-      </SortableContext>
-      <div className={styles["backlog__tasks"]}>
-        <h5 className={styles["backlog__heading"]}>Backlog</h5>
-        <div className={styles["backlog__items"]}>
-          {taskList.slice(0, 3).map((task: IActiveTask) => (
-            <ActiveTask
-              key={task.taskId.toString()}
-              task={task}
-              backlogClassName={styles["backlog__task"]}
-            />
-          ))}
-        </div>
-      </div>
-    </DndContext>
+    <ul className={styles['active__tasks']}>
+      {tasks.map((task) => (
+        <ActiveTask
+          key={task.taskId}
+          task={task}
+          onDragStart={handleDragStart}
+          onDragOver={handleDragOver}
+          onDrop={handleDrop}
+          isDragging={task.taskId === draggingTaskId}
+        />
+      ))}
+    </ul>
   );
 };

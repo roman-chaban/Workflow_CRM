@@ -16,6 +16,7 @@
   background: color.$color-white;
   box-shadow: color.$color-box-shadow-background;
   padding: rem(20px);
+  transition: transform 0.2s ease-in-out;
 
   &-header {
     display: flex;
