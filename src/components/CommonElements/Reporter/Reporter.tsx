@@ -4,9 +4,9 @@ import Image from "next/image";
 
 import { ArrowIcon, Button, Input } from "../../index";
 
-import { ReporterItem, reporterItems } from "@/data/reporterItems";
-
 import styles from "./Reporter.module.scss";
+
+import { ReporterItem, reporterItems } from "@/config/reporterItems";
 
 export const Reporter: FC = () => {
   return (

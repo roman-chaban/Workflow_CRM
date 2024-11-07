@@ -1,11 +1,11 @@
 import type { FC } from "react";
 
 import Image from "next/image";
+import Link from "next/link";
 
 import { Heading } from "@/components/ui/Heading/Heading";
 
 import styles from "./InfoPortalFolder.module.scss";
-import Link from "next/link";
 
 export interface InfoPortalFolderProps {
   icon: string;

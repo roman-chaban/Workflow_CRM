@@ -1,0 +1,51 @@
+@use '../../../../../styles/globals/globals' as size;
+@use '../../../../../styles/colors/colors' as color;
+@use '../../../../../styles/functions/functions' as *;
+@use '../../../../../styles/mixins/mixins' as *;
+
+.subNav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-column: span 9;
+  height: fit-content;
+
+  &Title {
+    @include blockTitle;
+  }
+
+  &Buttons {
+    width: 100%;
+    max-width: rem(180px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &EditButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(55px);
+    height: rem(55px);
+    background: color.$color-white;
+    box-shadow: color.$color-box-shadow-background;
+    border-radius: rem(14px);
+  }
+
+  &ShareButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: rem(100px);
+    height: rem(55px);
+    border-radius: rem(14px);
+    font-weight: 700;
+    background: color.$color-white;
+    box-shadow: color.$color-box-shadow-background;
+    @include text;
+    font-size: size.$font-size-18px;
+  }
+}

@@ -1,27 +1,27 @@
-'use client';
+"use client";
 
-import React, { type FC, useEffect } from 'react';
+import React, { type FC, useEffect } from "react";
 
-import { useFetch } from '@/hooks/useFetch';
-import { useAppDispatch } from '@/hooks/useAppDispatch';
-import { useAppSelector } from '@/hooks/useAppSelector';
+import { useFetch } from "@/hooks/useFetch";
+import { useAppDispatch } from "@/hooks/useAppDispatch";
+import { useAppSelector } from "@/hooks/useAppSelector";
 
-import { ActiveTask } from '../ActiveTask/ActiveTask';
-import { LoadingSpinner } from '@/components/index';
+import { ActiveTask } from "../ActiveTask/ActiveTask";
+import { LoadingSpinner } from "@/components/index";
 
-import { TActiveTasks } from '@/types/active-task';
+import { TActiveTasks } from "@/types/active-task";
 
 import {
   setDraggingTaskId,
   setTasks,
   updateTaskOver,
-} from '@/store/slices/DragSlice';
+} from "@/store/slices/DragSlice";
 
-import styles from './ActiveTasks.module.scss';
+import styles from "./ActiveTasks.module.scss";
 
 export const ActiveTasks: FC = () => {
   const { data, loading } = useFetch<TActiveTasks>({
-    url: '/data/active-tasks.json',
+    url: "/data/active-tasks.json",
   });
 
   const dispatch = useAppDispatch();
@@ -36,7 +36,7 @@ export const ActiveTasks: FC = () => {
 
   const handleDragStart = (
     event: React.DragEvent<HTMLDivElement>,
-    taskId: string
+    taskId: string,
   ) => {
     dispatch(setDraggingTaskId(taskId));
   };
@@ -47,17 +47,17 @@ export const ActiveTasks: FC = () => {
 
   const handleDrop = (
     event: React.DragEvent<HTMLDivElement>,
-    targetTaskId: string
+    targetTaskId: string,
   ) => {
     event.preventDefault();
 
     if (draggingTaskId && tasks) {
       const updatedTasks = [...tasks];
       const draggedIndex = updatedTasks.findIndex(
-        (task) => task.taskId === draggingTaskId
+        (task) => task.taskId === draggingTaskId,
       );
       const targetIndex = updatedTasks.findIndex(
-        (task) => task.taskId === targetTaskId
+        (task) => task.taskId === targetTaskId,
       );
 
       if (draggedIndex !== -1 && targetIndex !== -1) {
@@ -74,7 +74,7 @@ export const ActiveTasks: FC = () => {
   }
 
   return (
-    <ul className={styles['active__tasks']}>
+    <ul className={styles["active__tasks"]}>
       {tasks.map((task) => (
         <ActiveTask
           key={task.taskId}

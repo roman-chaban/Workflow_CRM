@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 
-import { foldersData } from '@/data/folders';
+import { foldersData } from '@/config/folders';
 import { InfoPortalFolder } from '@/components/InfoPortalElements/InfoPortalFolder/InfoPortalFolder';
 
 import styles from '../InfoPortalFolder/InfoPortalFolder.module.scss';

@@ -1,33 +1,33 @@
-import { memo, type FC } from "react";
+import { memo, type FC } from 'react';
 
-import { Input } from "../../index";
+import { Input } from '../../index';
 
-import { Task, taskGroups } from "@/data/taskGroups";
+import { Task, taskGroups } from '@/config/taskGroups';
 
-import styles from "./TaskGroup.module.scss";
+import styles from './TaskGroup.module.scss';
 
 export const TaskGroup: FC = memo(() => {
   return (
-    <div className={styles["taskGroup"]}>
-      <div className={styles["taskGroup__container"]}>
-        <h5 className={styles["taskGroup__title"]}>Task Group</h5>
-        <div className={styles["taskGroup__checkboxes"]}>
+    <div className={styles['taskGroup']}>
+      <div className={styles['taskGroup__container']}>
+        <h5 className={styles['taskGroup__title']}>Task Group</h5>
+        <div className={styles['taskGroup__checkboxes']}>
           {taskGroups.map((task: Task) => (
             <Input
               key={task.id}
               properties={{
-                type: "checkbox",
+                type: 'checkbox',
                 htmlFor: task.id,
                 id: task.id,
                 name: task.name,
-                value: "",
+                value: '',
                 label: task.label,
                 onChange: () => {},
               }}
               classNames={{
-                input: styles["checkboxInput"],
-                label: styles["checkboxLabel"],
-                labelText: styles["checkboxLabel"],
+                input: styles['checkboxInput'],
+                label: styles['checkboxLabel'],
+                labelText: styles['checkboxLabel'],
               }}
             />
           ))}
@@ -37,4 +37,4 @@ export const TaskGroup: FC = memo(() => {
   );
 });
 
-TaskGroup.displayName = "TaskGroup";
+TaskGroup.displayName = 'TaskGroup';

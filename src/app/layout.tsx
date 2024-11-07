@@ -4,23 +4,17 @@ import { ReactNode } from 'react';
 
 import { Providers } from '@/store/providers/providers';
 
-import { Grid } from '@/components/index/index';
-import {
-  ClientModalWrapper,
-  PageWrapper,
-  MainWrapper,
-  IsHeaderRender,
-  GlobalWrapper,
-} from '@/components/index/index';
-
 import '@/styles/fonts/_fonts.scss';
-import '@/styles/main/main.scss';
+
+import { LayoutWrapper } from '@/components/containers/LayoutWrapper/LayoutWrapper';
 
 export const metadata: Metadata = {
+  applicationName: 'Workflow CRM',
   title: 'Workflow CRM | Dashboard',
   description:
     'Workflow CRM is a powerful Customer Relationship Management system...',
   icons: '/favicon/crm_logo.svg',
+  authors: { name: 'Roman Chaban', url: '' },
 };
 
 const RootLayout = ({ children }: { children: ReactNode }) => {
@@ -28,15 +22,7 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
     <html lang="en">
       <body>
         <Providers>
-          <Grid>
-            <GlobalWrapper>
-              <ClientModalWrapper />
-              <PageWrapper>
-                <IsHeaderRender />
-                <MainWrapper className="main">{children}</MainWrapper>
-              </PageWrapper>
-            </GlobalWrapper>
-          </Grid>
+          <LayoutWrapper>{children}</LayoutWrapper>
         </Providers>
       </body>
     </html>
