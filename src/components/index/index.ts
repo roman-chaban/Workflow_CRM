@@ -57,7 +57,6 @@ export { ButtonGroups } from '@/components/ChatElements/ButtonGroups/ButtonGroup
 export { MessengerArea } from '@/components/ChatElements/MessengerArea/MessengerArea';
 export { MessengerBar } from '@/components/ChatElements/MessengerBar/MessengerBar';
 export { MessengerHeader } from '@/components/ChatElements/MessengerHeader/MessengerHeader';
-export { CalendarNav } from '@/components/CalendarElements/CalendarNav/CalendarNav';
 export { CalendarActive } from '@/components/CalendarElements/CalendarActive/CalendarActive';
 export { SignInBanner } from '@/components/SignInElements/SignInBanner/SignInBanner';
 export { SignInForm } from '@/components/SignInElements/SignInForm/SignInForm';
@@ -66,8 +65,6 @@ export { SignInSubmit } from '@/components/SignInElements/SignInSubmit/SignInSub
 export { Customer } from '@/components/CustomersElements/Customer/Customer';
 export { Customers } from '@/components/CustomersElements/Customers/Customers';
 export { CustomerHeader } from '@/components/CustomersElements/CustomerHeader/CustomerHeader';
-export { EmployeesNav } from '@/components/EmployeesElements/EmployeesNav/EmployeesNav';
-export { EmployeesNavButtons } from '@/components/EmployeesElements/EmployeesNavButtons/EmployeesNavButtons';
 export { AddButton } from '@/components/ui/buttons/AddButton/AddButton';
 export { AttachButton } from '@/components/ui/buttons/AttachButton/AttachButton';
 export { CloseButton } from '@/components/ui/buttons/CloseButton/CloseButton';

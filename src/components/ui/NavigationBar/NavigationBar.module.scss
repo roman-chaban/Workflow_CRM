@@ -1,0 +1,16 @@
+@use '../../../styles/mixins/mixins' as *;
+
+.projectsNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-column: span 12;
+
+  &Title {
+    @include blockLargeTitle;
+  }
+
+  &Button {
+    @include addButton;
+  }
+}
