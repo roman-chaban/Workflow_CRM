@@ -1,16 +1,23 @@
 'use client';
 
 import { FC } from 'react';
-import styles from './TasksNav.module.scss';
+
+import { useAppDispatch } from '@/hooks/useAppDispatch';
+
 import { Button } from '@/components/index';
-import Image from 'next/image';
 import { Heading } from '@/components/ui/Heading/Heading';
 import { MenuButton } from './MenuButton/MenuButton';
-import { menuItems } from '@/constants/menuItems';
 import { TasksActiveNav } from '../../TasksActiveNav/TasksActiveNav';
-import { useAppDispatch } from '@/hooks/useAppDispatch';
+
 import { toggleFilterBoard } from '@/store/slices/FiltersBoardSlice';
+
+import { menuItems } from '@/constants/menuItems';
+
 import { TasksItem } from '@/fixtures/renderContent/renderContent';
+
+import { Notification } from '@/components/ui/icons/Notification/Notification';
+
+import styles from './TasksNav.module.scss';
 
 interface TasksNavProps {
   activeItem: TasksItem;
@@ -43,12 +50,7 @@ export const TasksNav: FC<TasksNavProps> = ({ activeItem, onMenuClick }) => {
           className={styles['notifications__button']}
           onClick={handleOpenFilterBoard}
         >
-          <Image
-            alt="Notifications Icon"
-            src="/icons/projects/notifications.svg"
-            width={24}
-            height={24}
-          />
+          <Notification />
         </Button>
       </div>
       {activeItem === 'secondary' && <TasksActiveNav />}

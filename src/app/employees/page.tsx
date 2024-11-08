@@ -4,7 +4,12 @@ import { useState } from 'react';
 import { useAppSelector } from '@/hooks/useAppSelector';
 import { useAppDispatch } from '@/hooks/useAppDispatch';
 
-import { Grid, Customers, EmployeesModal } from '@/components/index/index';
+import {
+  Grid,
+  Customers,
+  EmployeesModal,
+  FiltersBoard,
+} from '@/components/index/index';
 import { NavigationBar } from '@/components/ui/NavigationBar/NavigationBar';
 
 import { ActiveTabs, GlobalTabs } from '@/types/tabs';
@@ -17,6 +22,7 @@ export default function Employees() {
   const [activeTab, setActiveTab] = useState<ActiveTabs>('list');
   const isOpened = useAppSelector((state) => state.employeesNav.isOpened);
   const employees = useAppSelector((state) => state.customers.customers);
+  const isOpenBoard = useAppSelector((state) => state.filterSlice.isOpen);
   const dispatch = useAppDispatch();
 
   const currentEmployees = `Employees (${employees.length})`;
@@ -61,7 +67,9 @@ export default function Employees() {
         setIsOpened={handleToggleModal}
         setActiveTab={setActiveTab}
         tabs={tabs}
+        isFilterBoardButton
       />
+      {isOpenBoard && <FiltersBoard isClosedBoard={!isOpenBoard} />}
       <EmployeesModal isOpened={isOpened} onClosed={handleCloseModal} />
       {renderContentByTabs()}
     </Grid>

@@ -19,7 +19,6 @@ import {
 import styles from '@/styles/pages/Projects.module.scss';
 import { NavigationBar } from '@/components/ui/NavigationBar/NavigationBar';
 
-
 export const ClientProjectsWrapper = () => {
   useDocumentTitle('Workflow CRM | Projects');
   const activeItemId = useAppSelector((state) => state.navSlice.activeItemId);
@@ -29,7 +28,15 @@ export const ClientProjectsWrapper = () => {
 
   return (
     <Grid isSection gap="1.75rem" tag={'section'} position="relative">
-      <NavigationBar heading="Projects" buttonLabel="Add Project" />
+      <NavigationBar
+        heading="Projects"
+        buttonLabel="Add Project"
+        isNavButtons={false}
+        isOpened={false}
+        setIsOpened={() => {}}
+        setActiveTab={() => {}}
+        tabs={[]}
+      />
       <Box className={styles['box']}>
         <ProjectsSidebar />
         <Box className={styles['tasks__box']}>
