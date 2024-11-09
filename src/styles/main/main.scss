@@ -7,12 +7,12 @@
 body {
   font-family: 'Nunito Sans', sans-serif;
   background: color.$color-main-background;
-  min-height: 100vh;
+  height: 100%;
 }
 
 .main {
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
 }
 
 .globalWrapper {
@@ -30,7 +30,6 @@ body {
   @include respond-to(medium) {
     grid-template-columns: 1fr;
   }
-
 }
 
 .page {

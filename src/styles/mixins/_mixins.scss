@@ -247,7 +247,6 @@
   background: color.$color-white;
 }
 
-
 @mixin select {
   @include defaultInput;
   border: 1.5px solid color.$color-border;
@@ -258,7 +257,8 @@
 
   &::after {
     content: '';
-    background: url('../../../public/images/modal/arrow-down.svg') no-repeat center center;
+    background: url('../../../public/images/modal/arrow-down.svg') no-repeat
+      center center;
     width: rem(24px);
     height: rem(24px);
     object-fit: cover;
@@ -269,9 +269,7 @@
   &.open::after {
     transform: rotate(0deg);
   }
-
 }
-
 
 @mixin selectContainer {
   display: flex;
@@ -280,12 +278,10 @@
   position: relative;
 }
 
-;
 @mixin selectLabel {
   @include labelTitle;
 }
 
-;
 @mixin optionsContainer {
   width: 100%;
   display: flex;
@@ -298,7 +294,6 @@
   border: 1.5px solid color.$color-border;
   background: color.$color-white;
   box-shadow: color.$color-box-shadow-background;
-
 }
 
 @mixin option {
@@ -309,7 +304,7 @@
   border-radius: rem(14px);
   display: flex;
   align-items: center;
-  transition: background .5s linear 0s;
+  transition: background 0.5s linear 0s;
   cursor: pointer;
   color: color.$color-black;
 
@@ -318,7 +313,6 @@
     border-radius: rem(14px);
   }
 }
-
 
 @mixin descriptionArea {
   width: 100%;
@@ -331,7 +325,6 @@
   resize: none;
 }
 
-
 @mixin completeButton {
   border: 1.5px solid color.$color-border;
   border-radius: 10px;
@@ -343,7 +336,6 @@
   font-weight: 400;
 }
 
-
 @mixin checkboxInput($width: $width, $height: $height) {
   appearance: none;
   width: $width;
@@ -354,7 +346,6 @@
   outline: none;
   cursor: pointer;
   position: relative;
-
 }
 
 @mixin checkboxLabel {

@@ -1,0 +1,90 @@
+@use '../../../../styles/mixins/mixins' as *;
+@use '../../../../styles/functions/functions' as *;
+@use '../../../../styles/globals/globals' as size;
+@use '../../../../styles/colors/colors' as color;
+
+.burger {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: color.$color-white;
+  display: flex;
+  flex-direction: column;
+  gap: rem(30px);
+  padding: rem(20px);
+  z-index: 9999;
+
+  &Container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &Header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  & .workflowTitle {
+    font-size: size.$font-size-26px;
+    color: color.$color-support-background;
+    font-weight: 600;
+  }
+
+  &HeaderLogo {
+    display: flex;
+    align-items: center;
+    gap: rem(25px);
+  }
+
+  &Close {
+    @include headerButton;
+    width: rem(45px);
+    height: rem(45px);
+    background: color.$color-support-background;
+    box-shadow: color.$color-support-box-shadow;
+  }
+
+  &Menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    gap: rem(30px);
+    align-items: center;
+    flex-flow: column nowrap;
+
+    &Item {
+      width: 100%;
+      padding: rem(10px);
+      border-radius: rem(14px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.5s ease-in-out 0s;
+      cursor: pointer;
+
+      &:hover {
+        background: color.$color-border;
+      }
+    }
+
+    &Link {
+      display: block;
+      color: color.$color-support-background;
+      font-size: size.$font-size-22px;
+      font-weight: 600;
+      transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
