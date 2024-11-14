@@ -20,10 +20,11 @@
 
   &-buttons {
     display: flex;
+    height: 48px;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    max-width: rem(340px);
+    max-width: rem(440px);
     border-radius: rem(24px);
     background: color.$color-border;
     min-height: rem(50px);
@@ -31,6 +32,7 @@
 
     & > .list__button {
       @include inactiveButton;
+      white-space: nowrap;
     }
 
     & > .activity__button {

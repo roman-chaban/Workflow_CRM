@@ -97,3 +97,4 @@ export { Close } from '@/components/ui/icons/Close/Close';
 export { DateTimePicker } from '@/components/pagesComponents/nearest/DateTimePicker/DateTimePicker';
 export { EventRepeat } from '@/components/pagesComponents/nearest/EventRepeat/EventRepeat';
 export { EventRepeatProperties } from '@/components/pagesComponents/nearest/EventRepeatProperties/EventRepeatProperties';
+export { VacationsCalendar } from '@/components/VacationsCalendar/VacationsCalendar';
